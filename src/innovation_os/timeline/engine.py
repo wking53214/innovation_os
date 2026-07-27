@@ -9,8 +9,8 @@ class TimelineEvent:
     event_id: str
     artifact_id: str
     event_type: str
+    timestamp: datetime
     description: str
-    timestamp: str
 
 
 
@@ -22,20 +22,21 @@ class TimelineEngine:
         self.events: List[TimelineEvent] = []
 
 
-    def record(
+    def add_event(
         self,
         event_id: str,
         artifact_id: str,
         event_type: str,
+        timestamp: datetime,
         description: str,
     ):
 
         event = TimelineEvent(
-            event_id=event_id,
-            artifact_id=artifact_id,
-            event_type=event_type,
-            description=description,
-            timestamp=datetime.utcnow().isoformat(),
+            event_id,
+            artifact_id,
+            event_type,
+            timestamp,
+            description,
         )
 
         self.events.append(event)
@@ -43,13 +44,19 @@ class TimelineEngine:
         return event
 
 
+
     def history(
         self,
         artifact_id: str,
     ):
 
-        return [
+        results = [
             event
             for event in self.events
             if event.artifact_id == artifact_id
         ]
+
+        return sorted(
+            results,
+            key=lambda item: item.timestamp,
+        )

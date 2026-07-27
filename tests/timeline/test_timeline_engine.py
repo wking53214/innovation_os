@@ -1,40 +1,30 @@
+from datetime import datetime
+
 from src.innovation_os.timeline.engine import (
     TimelineEngine,
 )
 
 
-def test_timeline_record():
+def test_timeline_ordering():
 
     engine = TimelineEngine()
 
-    event = engine.record(
-        "EVENT-001",
+
+    engine.add_event(
+        "EVENT-002",
         "PROJECT-001",
-        "CREATED",
-        "Project initialized",
+        "IMPLEMENTED",
+        datetime(2026, 3, 1),
+        "Code created",
     )
 
 
-    assert event.artifact_id == "PROJECT-001"
-    assert event.event_type == "CREATED"
-
-
-def test_timeline_history():
-
-    engine = TimelineEngine()
-
-    engine.record(
+    engine.add_event(
         "EVENT-001",
         "PROJECT-001",
         "IDEA",
+        datetime(2026, 1, 1),
         "Initial concept",
-    )
-
-    engine.record(
-        "EVENT-002",
-        "PROJECT-001",
-        "IMPLEMENTATION",
-        "Code created",
     )
 
 
@@ -43,6 +33,19 @@ def test_timeline_history():
     )
 
 
-    assert len(history) == 2
     assert history[0].event_type == "IDEA"
-    assert history[1].event_type == "IMPLEMENTATION"
+    assert history[1].event_type == "IMPLEMENTED"
+
+
+
+def test_missing_history():
+
+    engine = TimelineEngine()
+
+
+    result = engine.history(
+        "UNKNOWN"
+    )
+
+
+    assert len(result) == 0
