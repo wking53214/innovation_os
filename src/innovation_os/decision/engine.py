@@ -18,6 +18,7 @@ class DecisionEngine:
         assumptions: List[str],
         confidence: float,
         approval: str,
+        alternatives: List[str] = None,
     ) -> Decision:
 
         decision = Decision(
@@ -30,6 +31,7 @@ class DecisionEngine:
             assumptions=assumptions,
             confidence=confidence,
             approval=approval,
+            alternatives=alternatives or [],
         )
 
         self.decisions.append(decision)

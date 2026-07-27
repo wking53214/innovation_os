@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 
 
 @dataclass
@@ -14,4 +14,5 @@ class Decision:
     assumptions: List[str]
     confidence: float
     approval: str
+    alternatives: List[str] = field(default_factory=list)
     created: datetime = field(default_factory=datetime.now)
