@@ -7,10 +7,19 @@ from typing import List
 class TimelineEvent:
 
     event_id: str
-    artifact_id: str
+    project_id: str
     event_type: str
     timestamp: datetime
-    description: str
+    description: str = ""
+
+
+    @property
+    def artifact_id(self):
+        """
+        Backward compatibility
+        with artifact timeline model.
+        """
+        return self.event_id
 
 
 
@@ -22,22 +31,24 @@ class TimelineEngine:
         self.events: List[TimelineEvent] = []
 
 
+
     def add_event(
         self,
         event_id: str,
-        artifact_id: str,
+        project_id: str,
         event_type: str,
         timestamp: datetime,
-        description: str,
+        description: str = "",
     ):
 
         event = TimelineEvent(
             event_id,
-            artifact_id,
+            project_id,
             event_type,
             timestamp,
             description,
         )
+
 
         self.events.append(event)
 
@@ -45,18 +56,22 @@ class TimelineEngine:
 
 
 
-    def history(
-        self,
-        artifact_id: str,
-    ):
-
-        results = [
-            event
-            for event in self.events
-            if event.artifact_id == artifact_id
-        ]
+    def generate(self):
 
         return sorted(
-            results,
+            self.events,
             key=lambda item: item.timestamp,
         )
+
+
+
+    def history(
+        self,
+        project_id: str,
+    ):
+
+        return [
+            event
+            for event in self.generate()
+            if event.project_id == project_id
+        ]
