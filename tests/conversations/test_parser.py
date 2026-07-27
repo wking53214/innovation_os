@@ -1,3 +1,6 @@
+import tempfile
+from pathlib import Path
+
 from src.innovation_os.conversations.parser import (
     ConversationParser,
 )
@@ -5,34 +8,29 @@ from src.innovation_os.conversations.parser import (
 
 def test_conversation_parser():
 
-    parser = ConversationParser()
+    with tempfile.TemporaryDirectory() as directory:
 
-    results = parser.parse(
-        """
-        Problem: AI systems lack governance
+        file = Path(directory) / "chat.txt"
 
-        Idea: Create approval workflows
-
-        Decision: Human review required
-        """,
-        "chat001",
-    )
+        file.write_text(
+            "Building Innovation OS\n"
+            "Need artifact tracking"
+        )
 
 
-    assert len(results) == 3
+        parser = ConversationParser()
 
-    assert results[0].insight_type == "PROBLEM"
-    assert results[1].insight_type == "IDEA"
-    assert results[2].insight_type == "DECISION"
+        result = parser.parse_file(
+            str(file)
+        )
 
 
-def test_conversation_source_tracking():
+        assert result.conversation_id.startswith(
+            "CONVERSATION-"
+        )
 
-    parser = ConversationParser()
+        assert result.title == (
+            "Building Innovation OS"
+        )
 
-    result = parser.parse(
-        "Idea: Knowledge operating system",
-        "conversation01",
-    )
-
-    assert result[0].source == "conversation01"
+        assert result.content_length > 0

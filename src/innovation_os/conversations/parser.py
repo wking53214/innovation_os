@@ -1,13 +1,17 @@
 from dataclasses import dataclass
+from pathlib import Path
 from typing import List
+import hashlib
 
 
 @dataclass
-class ConversationInsight:
+class ConversationArtifact:
 
-    insight_type: str
-    content: str
-    source: str
+    conversation_id: str
+    source_path: str
+    title: str
+    content_length: int
+
 
 
 class ConversationParser:
@@ -15,74 +19,63 @@ class ConversationParser:
 
     def __init__(self):
 
-        self.insights = []
+        self.conversations = []
 
 
-    def parse(
+    def parse_file(
         self,
-        text: str,
-        source: str,
+        file_path: str,
     ):
 
-        results = []
+        path = Path(file_path)
 
-        lines = text.splitlines()
-
-        for line in lines:
-
-            clean = line.strip()
-
-            if not clean:
-                continue
+        content = path.read_text(
+            errors="ignore"
+        )
 
 
-            lowered = clean.lower()
+        artifact = ConversationArtifact(
+            self._create_id(path),
+            str(path),
+            self._extract_title(content),
+            len(content),
+        )
 
 
-            if "problem" in lowered:
-
-                results.append(
-                    ConversationInsight(
-                        "PROBLEM",
-                        clean,
-                        source,
-                    )
-                )
+        self.conversations.append(
+            artifact
+        )
 
 
-            elif "idea" in lowered:
-
-                results.append(
-                    ConversationInsight(
-                        "IDEA",
-                        clean,
-                        source,
-                    )
-                )
+        return artifact
 
 
-            elif "decision" in lowered:
 
-                results.append(
-                    ConversationInsight(
-                        "DECISION",
-                        clean,
-                        source,
-                    )
-                )
+    def _create_id(
+        self,
+        path: Path,
+    ):
 
+        digest = hashlib.sha256(
+            str(path).encode()
+        ).hexdigest()[:12]
 
-            elif "architecture" in lowered:
-
-                results.append(
-                    ConversationInsight(
-                        "CONCEPT",
-                        clean,
-                        source,
-                    )
-                )
+        return (
+            "CONVERSATION-"
+            + digest
+        )
 
 
-        self.insights.extend(results)
+    def _extract_title(
+        self,
+        content: str,
+    ):
 
-        return results
+        for line in content.splitlines():
+
+            if line.strip():
+
+                return line.strip()[:80]
+
+
+        return "Untitled Conversation"
