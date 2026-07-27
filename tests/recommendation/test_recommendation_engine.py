@@ -1,52 +1,38 @@
-from src.innovation_os.recommendation.engine import (
+from src.innovation_os.recommendation.recommendation_engine import (
     RecommendationEngine,
 )
 
 
-def test_recommendation_generation():
+
+def test_high_value_recommendation():
 
     engine = RecommendationEngine()
 
-    engine.add_rule(
-        "governance",
-        "Create governance audit framework",
+
+    result = engine.recommend(
+        "PROJECT-SENTINEL",
+        score=95,
+        relationships=5,
+        duplicates=0,
     )
 
 
-    results = engine.recommend(
-        "PROJECT-001",
-        [
-            "AI",
-            "governance",
-        ],
-    )
+    assert result.action == "Continue Development"
+    assert result.priority == "HIGH"
 
 
-    assert len(results) == 1
-    assert (
-        results[0].recommendation
-        ==
-        "Create governance audit framework"
-    )
-    assert results[0].confidence == 80.0
 
-
-def test_no_recommendation():
+def test_duplicate_recommendation():
 
     engine = RecommendationEngine()
 
-    engine.add_rule(
-        "biology",
-        "Explore biological models",
+
+    result = engine.recommend(
+        "PROJECT-OLD",
+        score=90,
+        relationships=2,
+        duplicates=1,
     )
 
 
-    results = engine.recommend(
-        "PROJECT-001",
-        [
-            "software",
-        ],
-    )
-
-
-    assert len(results) == 0
+    assert result.action == "Review Existing Work"
