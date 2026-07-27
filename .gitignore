@@ -19,3 +19,4 @@ env/
 # OS files
 .DS_Store__pycache__/
 *.pyc
+src/innovation_os.egg-info/

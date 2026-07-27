@@ -1,0 +1,36 @@
+[build-system]
+requires = [
+    "setuptools>=68",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "innovation-os"
+
+version = "0.1.0"
+
+description = "Innovation intelligence operating system"
+
+requires-python = ">=3.11"
+
+dependencies = []
+
+
+[tool.pytest.ini_options]
+
+pythonpath = [
+    "."
+]
+
+testpaths = [
+    "tests"
+]
+
+
+[tool.setuptools.packages.find]
+
+where = [
+    "src"
+]
