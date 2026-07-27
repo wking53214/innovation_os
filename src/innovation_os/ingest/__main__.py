@@ -9,7 +9,7 @@ def main():
 
     if len(sys.argv) < 2:
         print(
-            "Usage: python -m src.innovation_os.ingest <folder>"
+            "Usage: python3 -m src.innovation_os.ingest <folder>"
         )
         return
 
