@@ -22,3 +22,21 @@ class ContinuityPacketExporter:
             )
 
         return filename
+
+
+class ContinuityPacketImporter:
+
+    def import_packet(self, filename: str):
+        with open(filename, "r", encoding="utf-8") as file:
+            packet = json.load(file)
+
+        state = packet["state"]
+
+        return ContinuityState(
+            id=state["id"],
+            title=state["title"],
+            current_problem=state["current_problem"],
+            active_concepts=state["active_concepts"],
+            active_pins=state["active_pins"],
+            next_action=state["next_action"],
+        )
