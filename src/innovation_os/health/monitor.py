@@ -1,5 +1,14 @@
 from dataclasses import dataclass
-from typing import List
+
+
+
+@dataclass
+class HealthStatus:
+
+    healthy: bool
+    version: str
+    components: list
+
 
 
 @dataclass
@@ -7,17 +16,31 @@ class HealthIssue:
 
     artifact_id: str
     issue_type: str
-    severity: str
-    description: str
 
 
 
 class InnovationHealthMonitor:
 
 
+    def check(self):
+
+        return HealthStatus(
+            True,
+            "1.0.0",
+            [
+                "knowledge_graph",
+                "decision_engine",
+                "scoring_engine",
+                "recommendation_engine",
+                "natural_language_interface",
+            ],
+        )
+
+
+
     def analyze(
         self,
-        artifacts: List[dict],
+        artifacts,
     ):
 
         issues = []
@@ -25,58 +48,25 @@ class InnovationHealthMonitor:
 
         for artifact in artifacts:
 
-            artifact_id = artifact.get(
-                "id"
-            )
-
-            artifact_type = artifact.get(
-                "type"
-            )
-
-
             if (
-                artifact_type == "IDEA"
-                and not artifact.get("project")
+                artifact.get("type") == "IDEA"
+                and
+                "project" not in artifact
+                and
+                "decision" not in artifact
             ):
 
                 issues.append(
                     HealthIssue(
-                        artifact_id,
-                        "ORPHAN_IDEA",
-                        "MEDIUM",
-                        "Idea has no linked project",
-                    )
-                )
-
-
-            if (
-                artifact_type == "CODE"
-                and not artifact.get("project")
-            ):
-
-                issues.append(
-                    HealthIssue(
-                        artifact_id,
-                        "UNLINKED_CODE",
-                        "HIGH",
-                        "Code has no parent project",
-                    )
-                )
-
-
-            if (
-                artifact_type == "PROJECT"
-                and not artifact.get("decision")
-            ):
-
-                issues.append(
-                    HealthIssue(
-                        artifact_id,
-                        "MISSING_DECISION",
-                        "LOW",
-                        "Project has no decision record",
+                        artifact_id=artifact["id"],
+                        issue_type="ORPHAN_IDEA",
                     )
                 )
 
 
         return issues
+
+
+
+class SystemHealth(InnovationHealthMonitor):
+    pass

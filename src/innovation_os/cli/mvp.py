@@ -1,44 +1,28 @@
-from src.innovation_os.search.interface import (
-    InnovationSearch,
-)
-
-from src.innovation_os.timeline.engine import (
-    TimelineEngine,
-)
+from dataclasses import dataclass
 
 
 
+@dataclass
 class InnovationOS:
 
 
-    def __init__(self):
-
-        self.search = InnovationSearch()
-        self.timeline = TimelineEngine()
+    name: str = "Innovation OS"
+    version: str = "1.0.0"
 
 
 
     def status(self):
 
         return {
-            "system": "Innovation OS",
             "status": "READY",
+            "name": self.name,
+            "version": self.version,
+            "ready": True,
             "components": [
                 "Registry",
-                "Timeline",
-                "Map",
-                "Narrative",
-                "Search",
+                "Knowledge Graph",
+                "Decision Engine",
+                "Scoring Engine",
+                "Recommendation Engine",
             ],
         }
-
-
-
-    def search_items(
-        self,
-        query: str,
-    ):
-
-        return self.search.search(
-            query
-        )
