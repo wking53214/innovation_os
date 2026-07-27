@@ -9,7 +9,7 @@ from src.innovation_os.importer.models import (
 
 SUPPORTED = {
     ".md": "Markdown",
-    ".py": "Python",
+
     ".txt": "Text",
 }
 
