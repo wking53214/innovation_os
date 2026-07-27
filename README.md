@@ -1,66 +1,45 @@
 # Innovation OS
 
-## Purpose
+## Governed Innovation Operating System
 
-Innovation OS is a system for capturing, organizing, and evolving ideas, decisions, conversations, code, and artifacts.
+Innovation OS is a framework for capturing, connecting, evaluating, and developing ideas.
 
-The goal is to preserve not only what was created, but why it was created.
+## Traceability Model
 
----
-
-## Core Principle
-
-Ideas are not isolated objects.
-
-They exist as relationships:
-
-Question
-↓
 Problem
 ↓
-Concept
+Idea
 ↓
 Decision
 ↓
-Artifact
+Branch
 ↓
-Code
+Review
 ↓
-Validation
+Solution
+↓
+Approval
+↓
+Implementation
 
----
+## MVP Capabilities
 
-## Current Status
+- Problem Management
+- Ideation Engine
+- Problem Alignment
+- Review Engine
+- Branch Engine
+- Decision Replay
+- Code Registry
+- Solution Engine
+- Forecast Engine
+- Nature Inspired Engine
+- Human Approval Governance
 
-MVP Development
+## Running Tests
 
-Phase 1:
-Foundation and knowledge structure.
+pytest
 
----
+## Running Demo
 
-## Current Capabilities
-
-- Conversation capture
-- Concept tracking
-- Artifact tracking
-- Decision history
-- Question tracking
-- Relationship mapping
-
----
-
-## Future Capabilities
-
-- Code discovery
-- Repository mapping
-- AI-assisted concept extraction
-- Branch tracking
-- Red/blue team analysis
-- Resume state generation
-
----
-
-## Project Philosophy
-
-The system should preserve human reasoning, not just final outputs.
+python3 demos/run_innovation_demo.py
