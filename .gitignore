@@ -17,4 +17,5 @@ env/
 .idea/
 
 # OS files
-.DS_Store
+.DS_Store__pycache__/
+*.pyc
