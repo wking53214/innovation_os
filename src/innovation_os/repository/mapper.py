@@ -1,97 +1,123 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List
-import hashlib
+
 
 
 @dataclass
-class RepositoryArtifact:
+class RepositoryMap:
 
-    repository_id: str
+    name: str
     path: str
-    artifact_type: str
+    files: List[str] = field(
+        default_factory=list
+    )
+    modules: List[str] = field(
+        default_factory=list
+    )
 
 
 
 class RepositoryMapper:
 
 
-    def __init__(self):
+    def map(
+        self,
+        directory: str,
+    ):
 
-        self.artifacts = []
+        root = Path(directory)
+
+
+        files = [
+            str(path.relative_to(root))
+            for path in root.rglob("*")
+            if path.is_file()
+        ]
+
+
+        modules = [
+            file
+            for file in files
+            if file.endswith(".py")
+        ]
+
+
+        return RepositoryMap(
+            name=root.name,
+            path=str(root),
+            files=files,
+            modules=modules,
+        )
+
 
 
     def map_repository(
         self,
         directory: str,
-    ) -> List[RepositoryArtifact]:
-
-        root = Path(directory)
-
-        results = []
-
-
-        for file in root.rglob("*"):
-
-            if file.is_file():
-
-                artifact = RepositoryArtifact(
-                    self._repository_id(root),
-                    str(file),
-                    self._classify(file),
-                )
-
-                self.artifacts.append(
-                    artifact
-                )
-
-                results.append(
-                    artifact
-                )
-
-
-        return results
-
-
-
-    def _repository_id(
-        self,
-        root: Path,
     ):
 
-        digest = hashlib.sha256(
-            str(root).encode()
-        ).hexdigest()[:12]
+        """
+        Legacy compatibility API.
 
-        return (
-            "REPO-"
-            + digest
+        Returns Artifact objects
+        for repository ingestion.
+        """
+
+        from src.innovation_os.registry.artifact_registry import (
+            Artifact,
         )
 
 
-    def _classify(
-        self,
-        file: Path,
-    ):
-
-        suffix = file.suffix.lower()
+        repository = self.map(
+            directory
+        )
 
 
-        if suffix in [
-            ".py",
-            ".js",
-            ".ts",
-        ]:
-
-            return "CODE"
+        artifacts = []
 
 
-        if suffix in [
-            ".md",
-            ".txt",
-        ]:
+        for index, file in enumerate(
+            repository.files,
+            start=1,
+        ):
 
-            return "DOCUMENT"
+            filename = Path(file).name
 
 
-        return "OTHER"
+            if filename.endswith(".py"):
+
+                artifact_type = "CODE"
+
+            elif filename.lower().endswith(
+                (
+                    ".md",
+                    ".txt",
+                    ".rst",
+                    ".pdf",
+                )
+            ):
+
+                artifact_type = "DOCUMENT"
+
+            else:
+
+                artifact_type = "RESOURCE"
+
+
+
+            artifacts.append(
+                Artifact(
+                    artifact_id=f"CODE-{index:05d}",
+                    artifact_type=artifact_type,
+                    name=filename,
+                    source=file,
+                    project_id=repository.name,
+                    metadata={
+                        "repository": repository.name,
+                    },
+                )
+            )
+
+
+        return artifacts
