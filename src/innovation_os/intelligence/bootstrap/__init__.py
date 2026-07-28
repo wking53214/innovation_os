@@ -8,75 +8,54 @@ from innovation_os.intelligence.kernel import (
 
 
 
+
+
 def create_intelligence_kernel():
 
-    kernel = create_kernel()
+    from innovation_os.intelligence.kernel import (
+        IntelligenceKernel
+    )
 
+    kernel = IntelligenceKernel()
 
-    defaults = [
-        "observation",
-        "perception",
-        "context",
-        "knowledge",
-        "inference",
-        "hypothesis",
-    ]
+    kernel.registry.engines.update(
+        {
+            "observation": None,
+            "perception": None,
+            "context": None,
+            "knowledge": None,
+            "inference": None,
+            "hypothesis": None,
+        }
+    )
 
+    kernel.registry.adapters.update(
+        {
+            "pattern": None,
+            "repository": None,
+            "cluster": None,
+            "duplicate": None,
+            "knowledge_graph": None,
+        }
+    )
 
-    for engine in defaults:
+    kernel.registry.contracts.update(
+        {
+            "signal": None,
+            "observation": None,
+            "perception": None,
+            "context": None,
+            "knowledge": None,
+            "evidence": None,
+            "confidence": None,
+            "hypothesis": None,
+            "inference": None,
+            "intelligence_artifact": None,
+        }
+    )
 
-        kernel.register(
-            engine,
-            None
-        )
+    return kernel
 
-
-    adapters = [
-        "pattern",
-        "repository",
-        "cluster",
-        "duplicate",
-        "knowledge_graph",
-    ]
-
-
-    for adapter in adapters:
-
-        kernel.registry.adapters[adapter] = None
-
-
-    contracts = [
-        "signal",
-        "observation",
-        "perception",
-        "context",
-        "knowledge",
-        "evidence",
-        "confidence",
-        "hypothesis",
-        "inference",
-        "intelligence_artifact",
-    ]
-
-
-    for contract in contracts:
-
-        kernel.registry.contracts[contract] = None
-
-
-    
-kernel.registry.engines.update(
-    {
-        "observation": None,
-        "perception": None,
-        "context": None,
-        "knowledge": None,
-        "inference": None,
-        "hypothesis": None,
-    }
-)
-
-return kernel
 
 
 
@@ -85,38 +64,20 @@ def bootstrap_intelligence(
     pipeline
 ):
 
-    kernel = create_intelligence_kernel()
+    from innovation_os.intelligence.system import (
+        create_intelligence_system
+    )
 
+    kernel = create_intelligence_kernel()
 
     system = create_intelligence_system(
         pipeline
     )
-
 
     kernel.register(
         "intelligence_system",
         system
     )
 
+    return kernel
 
-    
-kernel.registry.engines.update(
-    {
-        "observation": None,
-        "perception": None,
-        "context": None,
-        "knowledge": None,
-        "inference": None,
-        "hypothesis": None,
-    }
-)
-
-return kernel
-
-
-
-
-__all__ = [
-    "bootstrap_intelligence",
-    "create_intelligence_kernel",
-]
