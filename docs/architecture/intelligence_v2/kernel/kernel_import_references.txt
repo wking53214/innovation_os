@@ -1,0 +1,11 @@
+src/innovation_os/intelligence/bootstrap/__init__.py:5:from innovation_os.intelligence.kernel import (
+src/innovation_os/intelligence/bootstrap/__init__.py:11:def create_intelligence_kernel():
+src/innovation_os/intelligence/bootstrap/__init__.py:75:    kernel = create_intelligence_kernel()
+src/innovation_os/intelligence/bootstrap/__init__.py:95:    "create_intelligence_kernel",
+src/innovation_os/intelligence/bootstrap/default_kernel.py:1:from innovation_os.intelligence.kernel import (
+src/innovation_os/intelligence/bootstrap/default_kernel.py:34:def create_intelligence_kernel():
+src/innovation_os/intelligence/bootstrap.py:5:from innovation_os.intelligence.kernel import (
+tests/intelligence/kernel/test_cognitive_kernel.py:1:from innovation_os.intelligence.kernel import CognitiveKernel
+tests/intelligence/kernel/test_registry.py:1:from innovation_os.intelligence.kernel import IntelligenceRegistry
+tests/intelligence/bootstrap/test_default_kernel.py:2:    create_intelligence_kernel,
+tests/intelligence/bootstrap/test_default_kernel.py:8:    kernel = create_intelligence_kernel()

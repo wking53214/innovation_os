@@ -1,0 +1,30 @@
+======================================================================
+src/innovation_os/intelligence/kernel/__init__.py
+FunctionDef: create_kernel
+
+======================================================================
+src/innovation_os/intelligence/kernel/cognitive_kernel.py
+ClassDef: CognitiveKernel
+FunctionDef: register_engine
+FunctionDef: register_adapter
+FunctionDef: execute
+
+======================================================================
+src/innovation_os/intelligence/kernel/intelligence_registry.py
+ClassDef: IntelligenceRegistry
+FunctionDef: register_engine
+FunctionDef: register_adapter
+FunctionDef: register_contract
+FunctionDef: get_engine
+FunctionDef: get_adapter
+FunctionDef: get_contract
+FunctionDef: list_engines
+FunctionDef: list_adapters
+
+======================================================================
+src/innovation_os/intelligence/kernel/kernel_runtime.py
+ClassDef: IntelligenceKernel
+FunctionDef: register
+FunctionDef: resolve
+FunctionDef: list_components
+FunctionDef: health
