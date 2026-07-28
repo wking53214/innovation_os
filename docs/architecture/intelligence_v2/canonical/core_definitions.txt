@@ -1,0 +1,48 @@
+======================================================================
+IntelligenceArtifact
+  src/innovation_os/intelligence/contracts/intelligence_artifact.py
+
+======================================================================
+IntelligenceRegistry
+  src/innovation_os/intelligence/kernel/intelligence_registry.py
+  src/innovation_os/intelligence/registry/intelligence_registry.py
+
+======================================================================
+IntelligenceKernel
+  src/innovation_os/intelligence/kernel/kernel_runtime.py
+
+======================================================================
+IntelligenceSystem
+  src/innovation_os/intelligence/system/intelligence_system.py
+
+======================================================================
+IntelligenceRuntime
+  src/innovation_os/intelligence/runtime/runtime.py
+
+======================================================================
+Signal
+  src/innovation_os/intelligence/contracts/signal.py
+
+======================================================================
+Observation
+  src/innovation_os/intelligence/contracts/observation.py
+
+======================================================================
+Perception
+  src/innovation_os/intelligence/contracts/perception.py
+
+======================================================================
+Context
+  src/innovation_os/intelligence/contracts/context.py
+
+======================================================================
+Evidence
+  src/innovation_os/intelligence/contracts/evidence.py
+
+======================================================================
+Hypothesis
+  src/innovation_os/intelligence/contracts/hypothesis.py
+
+======================================================================
+Inference
+  src/innovation_os/intelligence/contracts/inference.py

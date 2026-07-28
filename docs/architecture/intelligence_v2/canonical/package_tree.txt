@@ -1,0 +1,378 @@
+src/innovation_os/intelligence
+├── adapters
+│   ├── base_adapter.py
+│   ├── cluster_adapter.py
+│   ├── duplicate_adapter.py
+│   ├── __init__.py
+│   ├── knowledge_graph_adapter.py
+│   ├── pattern_adapter.py
+│   ├── __pycache__
+│   │   ├── base_adapter.cpython-311.pyc
+│   │   ├── cluster_adapter.cpython-311.pyc
+│   │   ├── duplicate_adapter.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── pattern_adapter.cpython-311.pyc
+│   │   └── repository_adapter.cpython-311.pyc
+│   └── repository_adapter.py
+├── agents
+│   ├── capability_registry.py
+│   ├── __init__.py
+│   ├── intelligence_agent.py
+│   ├── __pycache__
+│   │   ├── capability_registry.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── intelligence_agent.cpython-311.pyc
+│   │   └── task_router.cpython-311.pyc
+│   └── task_router.py
+├── api
+│   ├── __init__.py
+│   ├── intelligence_service.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── intelligence_service.cpython-311.pyc
+│   │   ├── request_models.cpython-311.pyc
+│   │   └── response_models.cpython-311.pyc
+│   ├── request_models.py
+│   └── response_models.py
+├── bootstrap
+│   ├── default_kernel.py
+│   ├── __init__.py
+│   └── __pycache__
+│       ├── default_kernel.cpython-311.pyc
+│       └── __init__.cpython-311.pyc
+├── bootstrap.py
+├── cluster_engine.py
+├── cognition
+│   ├── adaptive_loop.py
+│   ├── cycle.py
+│   ├── __init__.py
+│   ├── learner.py
+│   ├── observer.py
+│   ├── perceiver.py
+│   ├── __pycache__
+│   │   ├── adaptive_loop.cpython-311.pyc
+│   │   ├── cycle.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── learner.cpython-311.pyc
+│   │   ├── observer.cpython-311.pyc
+│   │   ├── perceiver.cpython-311.pyc
+│   │   └── reasoner.cpython-311.pyc
+│   └── reasoner.py
+├── config
+│   ├── __init__.py
+│   ├── intelligence_settings.py
+│   └── __pycache__
+│       ├── __init__.cpython-311.pyc
+│       └── intelligence_settings.cpython-311.pyc
+├── contracts
+│   ├── confidence.py
+│   ├── context.py
+│   ├── evidence.py
+│   ├── hypothesis.py
+│   ├── inference.py
+│   ├── __init__.py
+│   ├── intelligence_artifact.py
+│   ├── knowledge.py
+│   ├── observation.py
+│   ├── perception.py
+│   ├── __pycache__
+│   │   ├── confidence.cpython-311.pyc
+│   │   ├── context.cpython-311.pyc
+│   │   ├── evidence.cpython-311.pyc
+│   │   ├── hypothesis.cpython-311.pyc
+│   │   ├── inference.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── intelligence_artifact.cpython-311.pyc
+│   │   ├── knowledge.cpython-311.pyc
+│   │   ├── observation.cpython-311.pyc
+│   │   ├── perception.cpython-311.pyc
+│   │   └── signal.cpython-311.pyc
+│   └── signal.py
+├── decision
+│   ├── alternative.py
+│   ├── context.py
+│   ├── decision_engine.py
+│   ├── decision_scorer.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── alternative.cpython-311.pyc
+│   │   ├── context.cpython-311.pyc
+│   │   ├── decision_engine.cpython-311.pyc
+│   │   ├── decision_scorer.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── replay.cpython-311.pyc
+│   │   └── risk_engine.cpython-311.pyc
+│   ├── replay.py
+│   └── risk_engine.py
+├── discovery
+│   ├── anomaly_detector.py
+│   ├── discovery_engine.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── anomaly_detector.cpython-311.pyc
+│   │   ├── discovery_engine.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   └── relationship_discovery.cpython-311.pyc
+│   └── relationship_discovery.py
+├── duplicate_engine.py
+├── engines
+│   ├── confidence_engine.py
+│   ├── context_engine.py
+│   ├── evidence_engine.py
+│   ├── hypothesis_engine.py
+│   ├── inference_engine.py
+│   ├── __init__.py
+│   ├── knowledge_engine.py
+│   ├── observation_engine.py
+│   ├── perception_engine.py
+│   └── __pycache__
+│       ├── confidence_engine.cpython-311.pyc
+│       ├── context_engine.cpython-311.pyc
+│       ├── evidence_engine.cpython-311.pyc
+│       ├── hypothesis_engine.cpython-311.pyc
+│       ├── inference_engine.cpython-311.pyc
+│       ├── __init__.cpython-311.pyc
+│       ├── knowledge_engine.cpython-311.pyc
+│       ├── observation_engine.cpython-311.pyc
+│       └── perception_engine.cpython-311.pyc
+├── evolution
+│   ├── concept_mapper.py
+│   ├── __init__.py
+│   ├── knowledge_growth.py
+│   ├── pattern_evolution.py
+│   └── __pycache__
+│       ├── concept_mapper.cpython-311.pyc
+│       ├── __init__.cpython-311.pyc
+│       ├── knowledge_growth.cpython-311.pyc
+│       └── pattern_evolution.cpython-311.pyc
+├── explainer.py
+├── governance
+│   ├── access_control.py
+│   ├── approval.py
+│   ├── compliance_trace.py
+│   ├── decision_guard.py
+│   ├── governor.py
+│   ├── guardrails.py
+│   ├── __init__.py
+│   ├── policy.py
+│   ├── __pycache__
+│   │   ├── access_control.cpython-311.pyc
+│   │   ├── compliance_trace.cpython-311.pyc
+│   │   ├── decision_guard.cpython-311.pyc
+│   │   ├── governor.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   └── runtime_policy.cpython-311.pyc
+│   └── runtime_policy.py
+├── health
+│   ├── health_monitor.py
+│   ├── __init__.py
+│   └── __pycache__
+│       ├── health_monitor.cpython-311.pyc
+│       └── __init__.cpython-311.pyc
+├── __init__.py
+├── integration
+│   ├── adapters
+│   │   ├── audit_adapter.py
+│   │   ├── decision_adapter.py
+│   │   ├── __init__.py
+│   │   ├── knowledge_adapter.py
+│   │   ├── memory_adapter.py
+│   │   ├── provenance_adapter.py
+│   │   └── __pycache__
+│   ├── __init__.py
+│   ├── intelligence_bridge.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── intelligence_bridge.cpython-311.pyc
+│   │   └── system_connector.cpython-311.pyc
+│   └── system_connector.py
+├── kernel
+│   ├── cognitive_kernel.py
+│   ├── __init__.py
+│   ├── intelligence_registry.py
+│   ├── kernel_runtime.py
+│   └── __pycache__
+│       ├── cognitive_kernel.cpython-311.pyc
+│       ├── __init__.cpython-311.pyc
+│       ├── intelligence_registry.cpython-311.pyc
+│       └── kernel_runtime.cpython-311.pyc
+├── knowledge
+│   ├── entity.py
+│   ├── entity_resolution.py
+│   ├── inference.py
+│   ├── __init__.py
+│   ├── knowledge_fabric.py
+│   ├── __pycache__
+│   │   ├── entity.cpython-311.pyc
+│   │   ├── entity_resolution.cpython-311.pyc
+│   │   ├── inference.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── knowledge_fabric.cpython-311.pyc
+│   │   └── relationship.cpython-311.pyc
+│   └── relationship.py
+├── knowledge_graph.py
+├── learning
+│   ├── adaptation_engine.py
+│   ├── feedback_engine.py
+│   ├── __init__.py
+│   ├── learning_engine.py
+│   ├── memory_event.py
+│   └── __pycache__
+│       ├── adaptation_engine.cpython-311.pyc
+│       ├── feedback_engine.cpython-311.pyc
+│       ├── __init__.cpython-311.pyc
+│       ├── learning_engine.cpython-311.pyc
+│       └── memory_event.cpython-311.pyc
+├── lifecycle
+│   ├── __init__.py
+│   ├── lifecycle_manager.py
+│   └── __pycache__
+│       ├── __init__.cpython-311.pyc
+│       └── lifecycle_manager.cpython-311.pyc
+├── memory
+│   ├── artifact_store.py
+│   ├── consolidator.py
+│   ├── __init__.py
+│   ├── intelligence_memory.py
+│   ├── intelligence_memory_system.py
+│   ├── memory_artifact.py
+│   ├── memory_index.py
+│   ├── __pycache__
+│   │   ├── consolidator.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── intelligence_memory.cpython-311.pyc
+│   │   ├── intelligence_memory_system.cpython-311.pyc
+│   │   ├── memory_artifact.cpython-311.pyc
+│   │   ├── memory_index.cpython-311.pyc
+│   │   └── retrieval_engine.cpython-311.pyc
+│   └── retrieval_engine.py
+├── metrics
+│   ├── __init__.py
+│   ├── intelligence_metrics.py
+│   └── __pycache__
+│       ├── __init__.cpython-311.pyc
+│       └── intelligence_metrics.cpython-311.pyc
+├── observability
+│   ├── event_bus.py
+│   ├── execution_trace.py
+│   ├── __init__.py
+│   ├── intelligence_monitor.py
+│   ├── metrics_collector.py
+│   └── __pycache__
+│       ├── event_bus.cpython-311.pyc
+│       ├── execution_trace.cpython-311.pyc
+│       ├── __init__.cpython-311.pyc
+│       ├── intelligence_monitor.cpython-311.pyc
+│       └── metrics_collector.cpython-311.pyc
+├── observation
+│   ├── __init__.py
+│   └── observation_engine.py
+├── orchestration
+│   ├── execution_graph.py
+│   ├── __init__.py
+│   ├── orchestrator.py
+│   ├── priority_engine.py
+│   ├── __pycache__
+│   │   ├── execution_graph.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── orchestrator.cpython-311.pyc
+│   │   ├── priority_engine.cpython-311.pyc
+│   │   └── task_planner.cpython-311.pyc
+│   └── task_planner.py
+├── pattern_engine.py
+├── pipeline
+│   ├── cognitive_pipeline.py
+│   ├── __init__.py
+│   ├── intelligence_pipeline.py
+│   └── __pycache__
+│       ├── cognitive_pipeline.cpython-311.pyc
+│       ├── __init__.cpython-311.pyc
+│       └── intelligence_pipeline.cpython-311.pyc
+├── project_scan.py
+├── provenance
+│   ├── decision_trace.py
+│   ├── evidence_tracker.py
+│   ├── __init__.py
+│   ├── lineage.py
+│   └── __pycache__
+│       ├── decision_trace.cpython-311.pyc
+│       ├── evidence_tracker.cpython-311.pyc
+│       ├── __init__.cpython-311.pyc
+│       └── lineage.cpython-311.pyc
+├── __pycache__
+│   ├── cluster_engine.cpython-311.pyc
+│   ├── duplicate_engine.cpython-311.pyc
+│   ├── explainer.cpython-311.pyc
+│   ├── __init__.cpython-311.pyc
+│   ├── knowledge_graph.cpython-311.pyc
+│   ├── pattern_engine.cpython-311.pyc
+│   ├── project_scan.cpython-311.pyc
+│   └── repository_intelligence.cpython-311.pyc
+├── reasoning
+│   ├── causal_engine.py
+│   ├── explanation_graph.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── causal_engine.cpython-311.pyc
+│   │   ├── explanation_graph.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   └── reasoning_chain.cpython-311.pyc
+│   └── reasoning_chain.py
+├── registry
+│   ├── __init__.py
+│   ├── intelligence_registry.py
+│   └── __pycache__
+│       ├── __init__.cpython-311.pyc
+│       └── intelligence_registry.cpython-311.pyc
+├── repository
+│   ├── architecture_map.py
+│   ├── artifact.py
+│   ├── dependency_analyzer.py
+│   ├── fingerprint_engine.py
+│   ├── __init__.py
+│   ├── module.py
+│   ├── __pycache__
+│   │   ├── architecture_map.cpython-311.pyc
+│   │   ├── artifact.cpython-311.pyc
+│   │   ├── dependency_analyzer.cpython-311.pyc
+│   │   ├── fingerprint_engine.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── module.cpython-311.pyc
+│   │   └── repository_engine.cpython-311.pyc
+│   └── repository_engine.py
+├── repository_intelligence.py
+├── runtime
+│   ├── execution_context.py
+│   ├── __init__.py
+│   ├── intelligence_session.py
+│   ├── __pycache__
+│   │   ├── execution_context.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── intelligence_session.cpython-311.pyc
+│   │   └── runtime.cpython-311.pyc
+│   └── runtime.py
+├── simulation
+│   ├── __init__.py
+│   └── simulation_engine.py
+├── system
+│   ├── __init__.py
+│   ├── intelligence_system.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── intelligence_system.cpython-311.pyc
+│   │   └── system_factory.cpython-311.pyc
+│   └── system_factory.py
+└── telemetry
+    ├── collector.py
+    ├── event.py
+    ├── __init__.py
+    ├── metrics.py
+    ├── __pycache__
+    │   ├── collector.cpython-311.pyc
+    │   ├── event.cpython-311.pyc
+    │   ├── __init__.cpython-311.pyc
+    │   ├── metrics.cpython-311.pyc
+    │   └── telemetry_engine.cpython-311.pyc
+    └── telemetry_engine.py
+
+66 directories, 310 files
