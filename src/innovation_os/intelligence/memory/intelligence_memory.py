@@ -18,3 +18,23 @@ class IntelligenceMemory(IntelligenceMemorySystem):
             index or MemoryIndex(),
             consolidator or MemoryConsolidator(),
         )
+
+
+    def remember(
+        self,
+        artifact
+    ):
+
+        return self.store(
+            artifact
+        )
+
+
+    def recall(
+        self,
+        identifier
+    ):
+
+        return self.index.get(
+            identifier
+        )
