@@ -1,0 +1,5 @@
+src/innovation_os/intelligence/adapters/pattern_adapter.py:class PatternAdapter(IntelligenceAdapter):
+src/innovation_os/intelligence/adapters/cluster_adapter.py:class ClusterAdapter(IntelligenceAdapter):
+src/innovation_os/intelligence/adapters/duplicate_adapter.py:class DuplicateAdapter(IntelligenceAdapter):
+src/innovation_os/intelligence/adapters/repository_adapter.py:class RepositoryAdapter(IntelligenceAdapter):
+src/innovation_os/intelligence/adapters/base_adapter.py:class IntelligenceAdapter(ABC):

@@ -1,0 +1,7 @@
+src/innovation_os/intelligence/adapters/base_adapter.py
+src/innovation_os/intelligence/adapters/cluster_adapter.py
+src/innovation_os/intelligence/adapters/duplicate_adapter.py
+src/innovation_os/intelligence/adapters/__init__.py
+src/innovation_os/intelligence/adapters/knowledge_graph_adapter.py
+src/innovation_os/intelligence/adapters/pattern_adapter.py
+src/innovation_os/intelligence/adapters/repository_adapter.py

@@ -1,0 +1,9 @@
+src/innovation_os/intelligence/adapters/pattern_adapter.py:            "process"
+src/innovation_os/intelligence/adapters/pattern_adapter.py:            result = self.engine.process(data)
+src/innovation_os/intelligence/adapters/cluster_adapter.py:            "process"
+src/innovation_os/intelligence/adapters/cluster_adapter.py:            result = self.engine.process(data)
+src/innovation_os/intelligence/adapters/duplicate_adapter.py:            "process"
+src/innovation_os/intelligence/adapters/duplicate_adapter.py:            result = self.engine.process(data)
+src/innovation_os/intelligence/adapters/repository_adapter.py:            "process"
+src/innovation_os/intelligence/adapters/repository_adapter.py:            result = self.engine.process(data)
+src/innovation_os/intelligence/adapters/base_adapter.py:    def process(self, data):
