@@ -1,0 +1,10 @@
+src/innovation_os/intelligence/contracts/intelligence_artifact.py:@dataclass
+src/innovation_os/intelligence/contracts/signal.py:@dataclass
+src/innovation_os/intelligence/contracts/observation.py:@dataclass
+src/innovation_os/intelligence/contracts/perception.py:@dataclass
+src/innovation_os/intelligence/contracts/context.py:@dataclass
+src/innovation_os/intelligence/contracts/knowledge.py:@dataclass
+src/innovation_os/intelligence/contracts/evidence.py:@dataclass
+src/innovation_os/intelligence/contracts/confidence.py:@dataclass
+src/innovation_os/intelligence/contracts/hypothesis.py:@dataclass
+src/innovation_os/intelligence/contracts/inference.py:@dataclass

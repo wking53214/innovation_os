@@ -1,0 +1,2 @@
+src/innovation_os/intelligence/contracts/intelligence_artifact.py:    def validate(self):
+src/innovation_os/intelligence/contracts/confidence.py:    def validate(self):
