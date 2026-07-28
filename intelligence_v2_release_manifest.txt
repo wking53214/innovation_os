@@ -1,0 +1,16 @@
+INNOVATION_OS INTELLIGENCE V2 RELEASE MANIFEST
+
+Release:
+intelligence-v2-release-candidate
+
+Validation:
+243 tests passing
+
+Tags:
+- intelligence-v2-baseline
+- intelligence-v2-test-stable
+- intelligence-v2-stable
+- intelligence-v2-release-candidate
+
+Current Commit:
+24ef7d72ab17c9c910099ee21dff70f64ae230cd
