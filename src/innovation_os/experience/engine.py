@@ -1,43 +1,41 @@
-from innovation_os.knowledge import KnowledgeStore
-from innovation_os.patterns import PatternDetector
+from .store import ExperienceStore
+from .event import ExperienceEvent
 
 
 class ExperienceEngine:
 
-
     def __init__(self):
 
-        self.memory = KnowledgeStore()
-
-        self.patterns = PatternDetector()
+        self.store = ExperienceStore()
 
 
-
-    def learn(
+    def record(
         self,
-        key,
-        artifact,
+        agent_id,
+        action,
+        outcome,
+        reward=0.0
     ):
 
-        detected = self.patterns.detect(
-            artifact
+        event = ExperienceEvent(
+            agent_id=agent_id,
+            action=action,
+            outcome=outcome,
+            reward=reward
         )
 
-        return self.memory.add(
-            key=key,
-            content=artifact,
-            metadata={
-                "patterns": detected
-            },
+        self.store.record(
+            event
         )
 
+        return event
 
 
-    def recall(
+    def get_history(
         self,
-        key,
+        agent_id=None
     ):
 
-        return self.memory.get(
-            key
+        return self.store.history(
+            agent_id
         )
