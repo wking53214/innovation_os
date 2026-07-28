@@ -1,7 +1,24 @@
-from .base import IntelligenceConnector
-from .repository import RepositoryConnector
+from .contracts import (
+    Connector,
+    ConnectorMetadata,
+    ConnectorEvent,
+)
+
+from .runtime import (
+    ConnectorRegistry,
+    ConnectorManager,
+)
+
+from .providers import (
+    RepositoryConnector,
+)
+
 
 __all__ = [
-    "IntelligenceConnector",
+    "Connector",
+    "ConnectorMetadata",
+    "ConnectorEvent",
+    "ConnectorRegistry",
+    "ConnectorManager",
     "RepositoryConnector",
 ]
