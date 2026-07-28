@@ -1,0 +1,8 @@
+src/innovation_os/intelligence/kernel/__init__.py:from .intelligence_registry import (
+src/innovation_os/intelligence/kernel/cognitive_kernel.py:from .intelligence_registry import IntelligenceRegistry
+src/innovation_os/intelligence/kernel/cognitive_kernel.py:    registry: IntelligenceRegistry = field(
+src/innovation_os/intelligence/kernel/cognitive_kernel.py:        self.registry.register_engine(name, engine)
+src/innovation_os/intelligence/kernel/cognitive_kernel.py:        self.registry.register_adapter(name, adapter)
+src/innovation_os/intelligence/kernel/cognitive_kernel.py:        engine = self.registry.get_engine(engine_name)
+src/innovation_os/intelligence/kernel/kernel_runtime.py:from .intelligence_registry import IntelligenceRegistry
+src/innovation_os/intelligence/kernel/kernel_runtime.py:    registry: IntelligenceRegistry = field(

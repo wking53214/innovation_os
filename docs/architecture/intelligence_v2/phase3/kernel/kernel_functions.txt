@@ -1,0 +1,2 @@
+src/innovation_os/intelligence/kernel/kernel_runtime.py:def create_kernel():
+src/innovation_os/intelligence/kernel/kernel_runtime.py:def create_intelligence_kernel():
