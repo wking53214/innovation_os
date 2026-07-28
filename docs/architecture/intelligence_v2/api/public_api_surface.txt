@@ -1,0 +1,252 @@
+================================================================================
+__init__
+================================================================================
+FROM system: IntelligenceSystem, create_intelligence_system
+FROM bootstrap: bootstrap_intelligence
+
+================================================================================
+adapters.__init__
+================================================================================
+FROM base_adapter: IntelligenceAdapter
+FROM pattern_adapter: PatternAdapter
+FROM cluster_adapter: ClusterAdapter
+FROM duplicate_adapter: DuplicateAdapter
+FROM repository_adapter: RepositoryAdapter
+
+================================================================================
+agents.__init__
+================================================================================
+FROM intelligence_agent: IntelligenceAgent
+FROM task_router: TaskRouter
+FROM capability_registry: CapabilityRegistry
+
+================================================================================
+api.__init__
+================================================================================
+FROM intelligence_service: IntelligenceService
+FROM request_models: IntelligenceRequest
+FROM response_models: IntelligenceResponse
+
+================================================================================
+bootstrap.__init__
+================================================================================
+FROM innovation_os.intelligence.system: create_intelligence_system
+FROM innovation_os.intelligence.kernel: create_kernel
+
+================================================================================
+cognition.__init__
+================================================================================
+FROM cycle: CognitiveCycle
+FROM observer: Observer
+FROM perceiver: Perceiver
+FROM reasoner: Reasoner
+FROM learner: Learner
+FROM adaptive_loop: AdaptiveLoop
+
+================================================================================
+config.__init__
+================================================================================
+FROM intelligence_settings: IntelligenceSettings
+
+================================================================================
+contracts.__init__
+================================================================================
+FROM signal: Signal
+FROM observation: Observation
+FROM perception: Perception
+FROM context: Context
+FROM knowledge: Knowledge
+FROM evidence: Evidence
+FROM confidence: Confidence
+FROM hypothesis: Hypothesis
+FROM inference: Inference
+FROM intelligence_artifact: IntelligenceArtifact
+
+================================================================================
+decision.__init__
+================================================================================
+FROM context: DecisionContext
+FROM alternative: DecisionAlternative
+FROM risk_engine: RiskEngine
+FROM decision_scorer: DecisionScorer
+FROM replay: DecisionReplay
+FROM decision_engine: DecisionIntelligenceEngine
+
+================================================================================
+discovery.__init__
+================================================================================
+FROM discovery_engine: DiscoveryEngine
+FROM relationship_discovery: RelationshipDiscovery
+FROM anomaly_detector: AnomalyDetector
+
+================================================================================
+engines.__init__
+================================================================================
+FROM observation_engine: ObservationEngine
+FROM perception_engine: PerceptionEngine
+FROM context_engine: ContextEngine
+FROM knowledge_engine: KnowledgeEngine
+FROM evidence_engine: EvidenceEngine
+FROM confidence_engine: ConfidenceEngine
+FROM hypothesis_engine: HypothesisEngine
+FROM inference_engine: InferenceEngine
+
+================================================================================
+evolution.__init__
+================================================================================
+FROM knowledge_growth: KnowledgeGrowth
+FROM pattern_evolution: PatternEvolution
+FROM concept_mapper: ConceptMapper
+
+================================================================================
+governance.__init__
+================================================================================
+FROM governor: IntelligenceGovernor
+FROM runtime_policy: RuntimePolicy
+FROM access_control: AccessControl
+FROM decision_guard: DecisionGuard
+FROM compliance_trace: ComplianceTrace
+
+================================================================================
+health.__init__
+================================================================================
+FROM health_monitor: IntelligenceHealthMonitor
+
+================================================================================
+integration.__init__
+================================================================================
+FROM intelligence_bridge: IntelligenceBridge
+FROM system_connector: IntelligenceSystemConnector
+
+================================================================================
+integration.adapters.__init__
+================================================================================
+FROM memory_adapter: IntelligenceMemoryAdapter
+FROM knowledge_adapter: KnowledgeAdapter
+FROM decision_adapter: DecisionAdapter
+FROM provenance_adapter: ProvenanceAdapter
+FROM audit_adapter: AuditAdapter
+
+================================================================================
+kernel.__init__
+================================================================================
+FROM cognitive_kernel: CognitiveKernel
+FROM intelligence_registry: IntelligenceRegistry
+FROM kernel_runtime: IntelligenceKernel
+
+================================================================================
+knowledge.__init__
+================================================================================
+FROM entity: KnowledgeEntity
+FROM relationship: KnowledgeRelationship
+FROM entity_resolution: EntityResolver
+FROM inference: KnowledgeInference
+FROM knowledge_fabric: KnowledgeFabric
+
+================================================================================
+learning.__init__
+================================================================================
+FROM memory_event: MemoryEvent
+FROM feedback_engine: FeedbackEngine
+FROM adaptation_engine: AdaptationEngine
+FROM learning_engine: LearningEngine
+
+================================================================================
+lifecycle.__init__
+================================================================================
+FROM lifecycle_manager: LifecycleManager
+
+================================================================================
+memory.__init__
+================================================================================
+FROM memory_artifact: MemoryArtifact
+FROM memory_index: MemoryIndex
+FROM retrieval_engine: RetrievalEngine
+FROM consolidator: MemoryConsolidator
+FROM intelligence_memory_system: IntelligenceMemorySystem
+FROM intelligence_memory: IntelligenceMemory
+
+================================================================================
+metrics.__init__
+================================================================================
+FROM intelligence_metrics: IntelligenceMetrics
+
+================================================================================
+observability.__init__
+================================================================================
+FROM event_bus: IntelligenceEventBus
+FROM execution_trace: ExecutionTrace
+FROM metrics_collector: MetricsCollector
+FROM intelligence_monitor: IntelligenceMonitor
+
+================================================================================
+observation.__init__
+================================================================================
+
+================================================================================
+orchestration.__init__
+================================================================================
+FROM orchestrator: IntelligenceOrchestrator
+FROM task_planner: TaskPlanner
+FROM execution_graph: ExecutionGraph
+FROM priority_engine: PriorityEngine
+
+================================================================================
+pipeline.__init__
+================================================================================
+FROM intelligence_pipeline: IntelligencePipeline
+FROM cognitive_pipeline: CognitivePipeline
+
+================================================================================
+provenance.__init__
+================================================================================
+FROM lineage: IntelligenceLineage
+FROM evidence_tracker: EvidenceTracker
+FROM decision_trace: DecisionTrace
+
+================================================================================
+reasoning.__init__
+================================================================================
+FROM reasoning_chain: ReasoningChain
+FROM causal_engine: CausalEngine
+FROM explanation_graph: ExplanationGraph
+
+================================================================================
+registry.__init__
+================================================================================
+FROM intelligence_registry: IntelligenceRegistry
+
+================================================================================
+repository.__init__
+================================================================================
+FROM artifact: RepositoryArtifact
+FROM module: IntelligenceModule
+FROM architecture_map: ArchitectureMap
+FROM dependency_analyzer: DependencyAnalyzer
+FROM fingerprint_engine: FingerprintEngine, SystemFingerprint
+FROM repository_engine: RepositoryIntelligenceEngine
+
+================================================================================
+runtime.__init__
+================================================================================
+FROM execution_context: ExecutionContext
+FROM intelligence_session: IntelligenceSession
+FROM runtime: IntelligenceRuntime
+
+================================================================================
+simulation.__init__
+================================================================================
+
+================================================================================
+system.__init__
+================================================================================
+FROM intelligence_system: IntelligenceSystem
+FROM system_factory: create_intelligence_system
+
+================================================================================
+telemetry.__init__
+================================================================================
+FROM event: IntelligenceTelemetryEvent
+FROM collector: TelemetryCollector
+FROM metrics: IntelligenceMetrics
+FROM telemetry_engine: TelemetryEngine
