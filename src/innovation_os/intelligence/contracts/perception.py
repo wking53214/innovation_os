@@ -1,6 +1,8 @@
-"""
-Innovation OS Intelligence Contract
+from dataclasses import dataclass, field
+from typing import Any, Dict
 
-Scaffold generated.
-Implementation pending.
-"""
+
+@dataclass
+class Perception:
+    value: Any = None
+    metadata: Dict[str, Any] = field(default_factory=dict)
