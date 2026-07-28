@@ -1,0 +1,17 @@
+signal
+  |
+observation
+  |
+perception
+  |
+context
+  |
+knowledge
+  |
+evidence
+  |
+confidence
+  |
+hypothesis
+  |
+inference

@@ -1,0 +1,9 @@
+src/innovation_os/intelligence/engines/confidence_engine.py
+src/innovation_os/intelligence/engines/context_engine.py
+src/innovation_os/intelligence/engines/evidence_engine.py
+src/innovation_os/intelligence/engines/hypothesis_engine.py
+src/innovation_os/intelligence/engines/inference_engine.py
+src/innovation_os/intelligence/engines/__init__.py
+src/innovation_os/intelligence/engines/knowledge_engine.py
+src/innovation_os/intelligence/engines/observation_engine.py
+src/innovation_os/intelligence/engines/perception_engine.py
