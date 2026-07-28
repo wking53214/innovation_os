@@ -1,10 +1,18 @@
-from .cognitive_kernel import CognitiveKernel
+from dataclasses import dataclass, field
+
+from .intelligence_registry import IntelligenceRegistry
 
 
-class IntelligenceKernel(CognitiveKernel):
-    """
-    Intelligence runtime kernel compatibility facade.
-    """
+@dataclass
+class IntelligenceKernel:
+
+    registry: IntelligenceRegistry = field(
+        default_factory=IntelligenceRegistry
+    )
+
+    state: dict = field(
+        default_factory=dict
+    )
 
 
     def register(
@@ -13,15 +21,9 @@ class IntelligenceKernel(CognitiveKernel):
         component
     ):
 
-        if hasattr(
-            self.registry,
-            "engines"
-        ):
-            self.registry.engines[name] = component
+        self.state[name] = component
 
-        else:
-            self.state[name] = component
-
+        return component
 
 
     def resolve(
@@ -29,43 +31,38 @@ class IntelligenceKernel(CognitiveKernel):
         name
     ):
 
-        if hasattr(
-            self.registry,
-            "engines"
-        ):
+        return self.state.get(name)
 
-            return self.registry.engines.get(
-                name
-            )
+
+    def start(self):
+
+        self.state["status"] = "running"
+
+        return self
+
+
+    def stop(self):
+
+        self.state["status"] = "stopped"
+
+        return self
+
+
+    def status(self):
 
         return self.state.get(
-            name
+            "status",
+            "initialized"
         )
 
 
 
-    def list_components(self):
+def create_kernel():
 
-        if hasattr(
-            self.registry,
-            "engines"
-        ):
-
-            return list(
-                self.registry.engines.keys()
-            )
-
-        return list(
-            self.state.keys()
-        )
+    return IntelligenceKernel()
 
 
 
-    def health(self):
+def create_intelligence_kernel():
 
-        return {
-            "status": "ready",
-            "components": len(
-                self.list_components()
-            ),
-        }
+    return IntelligenceKernel()
