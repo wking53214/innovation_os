@@ -1,50 +1,58 @@
-from dataclasses import dataclass, field
-
-from .policy import IntelligencePolicy
-from .guardrails import IntelligenceGuardrails
-from .approval import ApprovalDecision
+from dataclasses import dataclass
 
 
 @dataclass
 class IntelligenceGovernor:
     """
-    Governance control point.
+    Compatibility governance coordinator.
+
+    Coordinates policy, access, and decision controls.
     """
 
-    policy: IntelligencePolicy = field(
-        default_factory=IntelligencePolicy
-    )
-
-    guardrails: IntelligenceGuardrails = field(
-        default_factory=IntelligenceGuardrails
-    )
+    policy: object = None
+    access_control: object = None
+    decision_guard: object = None
+    compliance_trace: object = None
 
 
-    def authorize(
+    def evaluate(
         self,
-        operation,
-        confidence=1.0
+        operation: str,
+        confidence: float = 1.0
     ):
 
-        if not self.policy.permits(
-            operation
-        ):
-            return ApprovalDecision(
-                False,
-                "operation_not_allowed"
-            )
+        if self.policy:
+            if not self.policy.allows(operation):
+                self._trace(
+                    operation,
+                    "blocked"
+                )
+                return False
 
+        if self.decision_guard:
+            if not self.decision_guard.approve(confidence):
+                self._trace(
+                    operation,
+                    "rejected"
+                )
+                return False
 
-        if not self.guardrails.validate(
-            confidence
-        ):
-            return ApprovalDecision(
-                False,
-                "confidence_invalid"
-            )
-
-
-        return ApprovalDecision(
-            True,
+        self._trace(
+            operation,
             "approved"
         )
+
+        return True
+
+
+    def _trace(
+        self,
+        operation,
+        status
+    ):
+
+        if self.compliance_trace:
+            self.compliance_trace.record(
+                operation,
+                status
+            )

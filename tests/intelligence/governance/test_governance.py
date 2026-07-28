@@ -70,3 +70,40 @@ def test_compliance_trace():
     )
 
     assert trace.latest()["status"] == "approved"
+
+
+def test_intelligence_governor():
+
+    from innovation_os.intelligence.governance import (
+        IntelligenceGovernor
+    )
+
+    policy = RuntimePolicy(
+        blocked_operations=[
+            "shutdown"
+        ]
+    )
+
+    guard = DecisionGuard(
+        minimum_confidence=0.7
+    )
+
+    trace = ComplianceTrace()
+
+    governor = IntelligenceGovernor(
+        policy=policy,
+        decision_guard=guard,
+        compliance_trace=trace,
+    )
+
+    assert governor.evaluate(
+        "read",
+        0.9
+    )
+
+    assert not governor.evaluate(
+        "shutdown",
+        0.9
+    )
+
+    assert trace.latest()["status"] == "blocked"
