@@ -1,0 +1,56 @@
+======================================================================
+__init__.py
+  src/innovation_os/intelligence/__init__.py
+  src/innovation_os/intelligence/contracts/__init__.py
+  src/innovation_os/intelligence/pipeline/__init__.py
+  src/innovation_os/intelligence/adapters/__init__.py
+  src/innovation_os/intelligence/kernel/__init__.py
+  src/innovation_os/intelligence/engines/__init__.py
+  src/innovation_os/intelligence/learning/__init__.py
+  src/innovation_os/intelligence/simulation/__init__.py
+  src/innovation_os/intelligence/telemetry/__init__.py
+  src/innovation_os/intelligence/metrics/__init__.py
+  src/innovation_os/intelligence/discovery/__init__.py
+  src/innovation_os/intelligence/observation/__init__.py
+  src/innovation_os/intelligence/bootstrap/__init__.py
+  src/innovation_os/intelligence/runtime/__init__.py
+  src/innovation_os/intelligence/memory/__init__.py
+  src/innovation_os/intelligence/system/__init__.py
+  src/innovation_os/intelligence/api/__init__.py
+  src/innovation_os/intelligence/governance/__init__.py
+  src/innovation_os/intelligence/provenance/__init__.py
+  src/innovation_os/intelligence/reasoning/__init__.py
+  src/innovation_os/intelligence/evolution/__init__.py
+  src/innovation_os/intelligence/agents/__init__.py
+  src/innovation_os/intelligence/health/__init__.py
+  src/innovation_os/intelligence/config/__init__.py
+  src/innovation_os/intelligence/lifecycle/__init__.py
+  src/innovation_os/intelligence/registry/__init__.py
+  src/innovation_os/intelligence/integration/__init__.py
+  src/innovation_os/intelligence/integration/adapters/__init__.py
+  src/innovation_os/intelligence/cognition/__init__.py
+  src/innovation_os/intelligence/orchestration/__init__.py
+  src/innovation_os/intelligence/observability/__init__.py
+  src/innovation_os/intelligence/knowledge/__init__.py
+  src/innovation_os/intelligence/decision/__init__.py
+  src/innovation_os/intelligence/repository/__init__.py
+
+======================================================================
+context.py
+  src/innovation_os/intelligence/contracts/context.py
+  src/innovation_os/intelligence/decision/context.py
+
+======================================================================
+inference.py
+  src/innovation_os/intelligence/contracts/inference.py
+  src/innovation_os/intelligence/knowledge/inference.py
+
+======================================================================
+intelligence_registry.py
+  src/innovation_os/intelligence/kernel/intelligence_registry.py
+  src/innovation_os/intelligence/registry/intelligence_registry.py
+
+======================================================================
+observation_engine.py
+  src/innovation_os/intelligence/engines/observation_engine.py
+  src/innovation_os/intelligence/observation/observation_engine.py

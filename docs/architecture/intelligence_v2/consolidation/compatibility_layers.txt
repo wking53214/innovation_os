@@ -1,0 +1,3 @@
+src/innovation_os/intelligence/kernel/kernel_runtime.py:6:    Intelligence runtime kernel compatibility facade.
+src/innovation_os/intelligence/memory/intelligence_memory.py:8:    Backwards compatible intelligence memory facade.
+src/innovation_os/intelligence/governance/governor.py:7:    Compatibility governance coordinator.

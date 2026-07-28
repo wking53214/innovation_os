@@ -1,0 +1,47 @@
+innovation_os.intelligence.adapters
+  <- src/innovation_os/intelligence/bootstrap/default_kernel.py
+
+innovation_os.intelligence.api.request_models
+  <- src/innovation_os/intelligence/api/intelligence_service.py
+
+innovation_os.intelligence.api.response_models
+  <- src/innovation_os/intelligence/api/intelligence_service.py
+
+innovation_os.intelligence.contracts
+  <- src/innovation_os/intelligence/pipeline/intelligence_pipeline.py
+  <- src/innovation_os/intelligence/adapters/pattern_adapter.py
+  <- src/innovation_os/intelligence/adapters/cluster_adapter.py
+  <- src/innovation_os/intelligence/adapters/duplicate_adapter.py
+  <- src/innovation_os/intelligence/adapters/repository_adapter.py
+  <- src/innovation_os/intelligence/engines/observation_engine.py
+  <- src/innovation_os/intelligence/engines/perception_engine.py
+  <- src/innovation_os/intelligence/engines/inference_engine.py
+  <- src/innovation_os/intelligence/engines/hypothesis_engine.py
+  <- src/innovation_os/intelligence/engines/confidence_engine.py
+  <- src/innovation_os/intelligence/engines/evidence_engine.py
+  <- src/innovation_os/intelligence/bootstrap/default_kernel.py
+  <- src/innovation_os/intelligence/runtime/runtime.py
+
+innovation_os.intelligence.engines
+  <- src/innovation_os/intelligence/bootstrap/default_kernel.py
+
+innovation_os.intelligence.kernel
+  <- src/innovation_os/intelligence/bootstrap.py
+  <- src/innovation_os/intelligence/bootstrap/__init__.py
+  <- src/innovation_os/intelligence/bootstrap/default_kernel.py
+
+innovation_os.intelligence.memory
+  <- src/innovation_os/intelligence/system/system_factory.py
+
+innovation_os.intelligence.runtime
+  <- src/innovation_os/intelligence/system/system_factory.py
+
+innovation_os.intelligence.system
+  <- src/innovation_os/intelligence/bootstrap.py
+  <- src/innovation_os/intelligence/bootstrap/__init__.py
+
+innovation_os.intelligence.telemetry
+  <- src/innovation_os/intelligence/system/system_factory.py
+
+innovation_os.intelligence.telemetry.event
+  <- src/innovation_os/intelligence/telemetry/telemetry_engine.py
