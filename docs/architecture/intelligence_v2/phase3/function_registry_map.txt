@@ -1,0 +1,7 @@
+src/innovation_os/intelligence/kernel/kernel_runtime.py:def create_kernel():
+src/innovation_os/intelligence/kernel/kernel_runtime.py:def create_intelligence_kernel():
+src/innovation_os/intelligence/bootstrap/__init__.py:def create_intelligence_kernel():
+src/innovation_os/intelligence/bootstrap/__init__.py:def bootstrap_intelligence(
+src/innovation_os/intelligence/bootstrap/default_kernel.py:def create_intelligence_kernel():
+src/innovation_os/intelligence/system/system_factory.py:def create_intelligence_system(
+src/innovation_os/intelligence/bootstrap.py:def bootstrap_intelligence(
