@@ -1,0 +1,4 @@
+src/innovation_os/intelligence/runtime/__init__.py:from .runtime import IntelligenceRuntime
+src/innovation_os/intelligence/runtime/runtime.py:            intelligence_type="runtime_result",
+src/innovation_os/intelligence/runtime/runtime.py:            source_system="intelligence_runtime",
+src/innovation_os/intelligence/runtime/runtime.py:    def execute(
