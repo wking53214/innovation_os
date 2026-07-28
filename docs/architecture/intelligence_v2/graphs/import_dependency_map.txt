@@ -1,0 +1,630 @@
+__init__
+  -> bootstrap
+  -> system
+
+adapters.__init__
+  -> base_adapter
+  -> cluster_adapter
+  -> duplicate_adapter
+  -> pattern_adapter
+  -> repository_adapter
+
+adapters.base_adapter
+  -> abc
+
+adapters.cluster_adapter
+  -> base_adapter
+  -> innovation_os.intelligence.contracts
+
+adapters.duplicate_adapter
+  -> base_adapter
+  -> innovation_os.intelligence.contracts
+
+adapters.knowledge_graph_adapter
+
+adapters.pattern_adapter
+  -> base_adapter
+  -> innovation_os.intelligence.contracts
+
+adapters.repository_adapter
+  -> base_adapter
+  -> innovation_os.intelligence.contracts
+
+agents.__init__
+  -> capability_registry
+  -> intelligence_agent
+  -> task_router
+
+agents.capability_registry
+  -> dataclasses
+  -> typing
+
+agents.intelligence_agent
+  -> dataclasses
+
+agents.task_router
+  -> dataclasses
+
+api.__init__
+  -> intelligence_service
+  -> request_models
+  -> response_models
+
+api.intelligence_service
+  -> dataclasses
+  -> innovation_os.intelligence.api.request_models
+  -> innovation_os.intelligence.api.response_models
+
+api.request_models
+  -> dataclasses
+  -> typing
+
+api.response_models
+  -> dataclasses
+  -> typing
+
+bootstrap.__init__
+  -> innovation_os.intelligence.kernel
+  -> innovation_os.intelligence.system
+
+bootstrap.default_kernel
+  -> innovation_os.intelligence.adapters
+  -> innovation_os.intelligence.contracts
+  -> innovation_os.intelligence.engines
+  -> innovation_os.intelligence.kernel
+
+bootstrap
+  -> innovation_os.intelligence.kernel
+  -> innovation_os.intelligence.system
+
+cluster_engine
+  -> dataclasses
+  -> typing
+
+cognition.__init__
+  -> adaptive_loop
+  -> cycle
+  -> learner
+  -> observer
+  -> perceiver
+  -> reasoner
+
+cognition.adaptive_loop
+  -> dataclasses
+
+cognition.cycle
+  -> dataclasses
+
+cognition.learner
+  -> dataclasses
+
+cognition.observer
+  -> dataclasses
+
+cognition.perceiver
+  -> dataclasses
+
+cognition.reasoner
+  -> dataclasses
+
+config.__init__
+  -> intelligence_settings
+
+config.intelligence_settings
+  -> dataclasses
+
+contracts.__init__
+  -> confidence
+  -> context
+  -> evidence
+  -> hypothesis
+  -> inference
+  -> intelligence_artifact
+  -> knowledge
+  -> observation
+  -> perception
+  -> signal
+
+contracts.confidence
+  -> dataclasses
+  -> typing
+
+contracts.context
+  -> dataclasses
+  -> typing
+
+contracts.evidence
+  -> dataclasses
+  -> typing
+
+contracts.hypothesis
+  -> dataclasses
+  -> typing
+
+contracts.inference
+  -> dataclasses
+  -> typing
+
+contracts.intelligence_artifact
+  -> dataclasses
+  -> datetime
+  -> typing
+  -> uuid
+
+contracts.knowledge
+  -> dataclasses
+  -> typing
+
+contracts.observation
+  -> dataclasses
+  -> typing
+
+contracts.perception
+  -> dataclasses
+  -> typing
+
+contracts.signal
+  -> dataclasses
+  -> typing
+
+decision.__init__
+  -> alternative
+  -> context
+  -> decision_engine
+  -> decision_scorer
+  -> replay
+  -> risk_engine
+
+decision.alternative
+  -> dataclasses
+
+decision.context
+  -> dataclasses
+
+decision.decision_engine
+  -> dataclasses
+
+decision.decision_scorer
+  -> dataclasses
+
+decision.replay
+  -> dataclasses
+
+decision.risk_engine
+  -> dataclasses
+
+discovery.__init__
+  -> anomaly_detector
+  -> discovery_engine
+  -> relationship_discovery
+
+discovery.anomaly_detector
+  -> dataclasses
+  -> typing
+
+discovery.discovery_engine
+  -> dataclasses
+  -> typing
+
+discovery.relationship_discovery
+  -> dataclasses
+  -> typing
+
+duplicate_engine
+  -> dataclasses
+  -> typing
+
+engines.__init__
+  -> confidence_engine
+  -> context_engine
+  -> evidence_engine
+  -> hypothesis_engine
+  -> inference_engine
+  -> knowledge_engine
+  -> observation_engine
+  -> perception_engine
+
+engines.confidence_engine
+  -> innovation_os.intelligence.contracts
+
+engines.context_engine
+
+engines.evidence_engine
+  -> innovation_os.intelligence.contracts
+
+engines.hypothesis_engine
+  -> innovation_os.intelligence.contracts
+
+engines.inference_engine
+  -> innovation_os.intelligence.contracts
+
+engines.knowledge_engine
+
+engines.observation_engine
+  -> innovation_os.intelligence.contracts
+
+engines.perception_engine
+  -> innovation_os.intelligence.contracts
+
+evolution.__init__
+  -> concept_mapper
+  -> knowledge_growth
+  -> pattern_evolution
+
+evolution.concept_mapper
+  -> dataclasses
+  -> typing
+
+evolution.knowledge_growth
+  -> dataclasses
+  -> typing
+
+evolution.pattern_evolution
+  -> dataclasses
+  -> typing
+
+explainer
+  -> dataclasses
+
+governance.__init__
+  -> access_control
+  -> compliance_trace
+  -> decision_guard
+  -> governor
+  -> runtime_policy
+
+governance.access_control
+  -> dataclasses
+
+governance.approval
+  -> dataclasses
+
+governance.compliance_trace
+  -> dataclasses
+  -> datetime
+
+governance.decision_guard
+  -> dataclasses
+
+governance.governor
+  -> dataclasses
+
+governance.guardrails
+  -> dataclasses
+
+governance.policy
+  -> dataclasses
+  -> typing
+
+governance.runtime_policy
+  -> dataclasses
+
+health.__init__
+  -> health_monitor
+
+health.health_monitor
+  -> dataclasses
+  -> typing
+
+integration.__init__
+  -> intelligence_bridge
+  -> system_connector
+
+integration.adapters.__init__
+  -> audit_adapter
+  -> decision_adapter
+  -> knowledge_adapter
+  -> memory_adapter
+  -> provenance_adapter
+
+integration.adapters.audit_adapter
+  -> dataclasses
+
+integration.adapters.decision_adapter
+  -> dataclasses
+
+integration.adapters.knowledge_adapter
+  -> dataclasses
+
+integration.adapters.memory_adapter
+  -> dataclasses
+
+integration.adapters.provenance_adapter
+  -> dataclasses
+
+integration.intelligence_bridge
+  -> dataclasses
+  -> typing
+
+integration.system_connector
+  -> dataclasses
+
+kernel.__init__
+  -> cognitive_kernel
+  -> intelligence_registry
+  -> kernel_runtime
+
+kernel.cognitive_kernel
+  -> dataclasses
+  -> intelligence_registry
+  -> typing
+
+kernel.intelligence_registry
+  -> dataclasses
+  -> typing
+
+kernel.kernel_runtime
+  -> cognitive_kernel
+
+knowledge.__init__
+  -> entity
+  -> entity_resolution
+  -> inference
+  -> knowledge_fabric
+  -> relationship
+
+knowledge.entity
+  -> dataclasses
+  -> uuid
+
+knowledge.entity_resolution
+  -> dataclasses
+
+knowledge.inference
+  -> dataclasses
+
+knowledge.knowledge_fabric
+  -> dataclasses
+
+knowledge.relationship
+  -> dataclasses
+
+knowledge_graph
+  -> dataclasses
+  -> typing
+
+learning.__init__
+  -> adaptation_engine
+  -> feedback_engine
+  -> learning_engine
+  -> memory_event
+
+learning.adaptation_engine
+  -> dataclasses
+
+learning.feedback_engine
+  -> dataclasses
+
+learning.learning_engine
+  -> dataclasses
+
+learning.memory_event
+  -> dataclasses
+  -> datetime
+
+lifecycle.__init__
+  -> lifecycle_manager
+
+lifecycle.lifecycle_manager
+  -> dataclasses
+
+memory.__init__
+  -> consolidator
+  -> intelligence_memory
+  -> intelligence_memory_system
+  -> memory_artifact
+  -> memory_index
+  -> retrieval_engine
+
+memory.artifact_store
+  -> dataclasses
+  -> typing
+
+memory.consolidator
+
+memory.intelligence_memory
+  -> consolidator
+  -> intelligence_memory_system
+  -> memory_index
+
+memory.intelligence_memory_system
+  -> dataclasses
+
+memory.memory_artifact
+  -> dataclasses
+  -> datetime
+
+memory.memory_index
+
+memory.retrieval_engine
+
+metrics.__init__
+  -> intelligence_metrics
+
+metrics.intelligence_metrics
+  -> dataclasses
+  -> typing
+
+observability.__init__
+  -> event_bus
+  -> execution_trace
+  -> intelligence_monitor
+  -> metrics_collector
+
+observability.event_bus
+  -> dataclasses
+
+observability.execution_trace
+  -> dataclasses
+  -> datetime
+
+observability.intelligence_monitor
+  -> dataclasses
+
+observability.metrics_collector
+  -> dataclasses
+
+observation.__init__
+
+observation.observation_engine
+
+orchestration.__init__
+  -> execution_graph
+  -> orchestrator
+  -> priority_engine
+  -> task_planner
+
+orchestration.execution_graph
+  -> dataclasses
+
+orchestration.orchestrator
+  -> dataclasses
+
+orchestration.priority_engine
+  -> dataclasses
+
+orchestration.task_planner
+  -> dataclasses
+
+pattern_engine
+  -> dataclasses
+  -> typing
+
+pipeline.__init__
+  -> cognitive_pipeline
+  -> intelligence_pipeline
+
+pipeline.cognitive_pipeline
+  -> dataclasses
+  -> intelligence_pipeline
+  -> typing
+
+pipeline.intelligence_pipeline
+  -> dataclasses
+  -> innovation_os.intelligence.contracts
+  -> typing
+
+project_scan
+  -> dataclasses
+  -> src.innovation_os.intelligence.repository_intelligence
+  -> src.innovation_os.repository.mapper
+
+provenance.__init__
+  -> decision_trace
+  -> evidence_tracker
+  -> lineage
+
+provenance.decision_trace
+  -> dataclasses
+  -> typing
+
+provenance.evidence_tracker
+  -> dataclasses
+  -> typing
+
+provenance.lineage
+  -> dataclasses
+  -> typing
+
+reasoning.__init__
+  -> causal_engine
+  -> explanation_graph
+  -> reasoning_chain
+
+reasoning.causal_engine
+  -> dataclasses
+  -> typing
+
+reasoning.explanation_graph
+  -> dataclasses
+  -> typing
+
+reasoning.reasoning_chain
+  -> dataclasses
+  -> typing
+
+registry.__init__
+  -> intelligence_registry
+
+registry.intelligence_registry
+  -> dataclasses
+  -> typing
+
+repository.__init__
+  -> architecture_map
+  -> artifact
+  -> dependency_analyzer
+  -> fingerprint_engine
+  -> module
+  -> repository_engine
+
+repository.architecture_map
+  -> dataclasses
+
+repository.artifact
+  -> dataclasses
+
+repository.dependency_analyzer
+
+repository.fingerprint_engine
+  -> dataclasses
+
+repository.module
+  -> dataclasses
+
+repository.repository_engine
+  -> dataclasses
+
+repository_intelligence
+  -> dataclasses
+  -> typing
+
+runtime.__init__
+  -> execution_context
+  -> intelligence_session
+  -> runtime
+
+runtime.execution_context
+  -> dataclasses
+
+runtime.intelligence_session
+  -> dataclasses
+
+runtime.runtime
+  -> dataclasses
+  -> innovation_os.intelligence.contracts
+
+simulation.__init__
+
+simulation.simulation_engine
+
+system.__init__
+  -> intelligence_system
+  -> system_factory
+
+system.intelligence_system
+  -> dataclasses
+
+system.system_factory
+  -> innovation_os.intelligence.memory
+  -> innovation_os.intelligence.runtime
+  -> innovation_os.intelligence.telemetry
+  -> intelligence_system
+
+telemetry.__init__
+  -> collector
+  -> event
+  -> metrics
+  -> telemetry_engine
+
+telemetry.collector
+
+telemetry.event
+  -> dataclasses
+  -> datetime
+
+telemetry.metrics
+
+telemetry.telemetry_engine
+  -> dataclasses
+  -> innovation_os.intelligence.telemetry.event

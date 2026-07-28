@@ -1,0 +1,184 @@
+src/innovation_os/intelligence/__init__.py
+  from .system import (
+  from .bootstrap import (
+
+src/innovation_os/intelligence/adapters/__init__.py
+  from .base_adapter import IntelligenceAdapter
+  from .pattern_adapter import PatternAdapter
+  from .cluster_adapter import ClusterAdapter
+  from .duplicate_adapter import DuplicateAdapter
+  from .repository_adapter import RepositoryAdapter
+
+src/innovation_os/intelligence/agents/__init__.py
+  from .intelligence_agent import IntelligenceAgent
+  from .task_router import TaskRouter
+  from .capability_registry import CapabilityRegistry
+
+src/innovation_os/intelligence/api/__init__.py
+  from .intelligence_service import IntelligenceService
+  from .request_models import IntelligenceRequest
+  from .response_models import IntelligenceResponse
+
+src/innovation_os/intelligence/bootstrap/__init__.py
+  from innovation_os.intelligence.system import (
+  from innovation_os.intelligence.kernel import (
+
+src/innovation_os/intelligence/cognition/__init__.py
+  from .cycle import CognitiveCycle
+  from .observer import Observer
+  from .perceiver import Perceiver
+  from .reasoner import Reasoner
+  from .learner import Learner
+  from .adaptive_loop import AdaptiveLoop
+
+src/innovation_os/intelligence/config/__init__.py
+  from .intelligence_settings import IntelligenceSettings
+
+src/innovation_os/intelligence/contracts/__init__.py
+  from .signal import Signal
+  from .observation import Observation
+  from .perception import Perception
+  from .context import Context
+  from .knowledge import Knowledge
+  from .evidence import Evidence
+  from .confidence import Confidence
+  from .hypothesis import Hypothesis
+  from .inference import Inference
+  from .intelligence_artifact import IntelligenceArtifact
+
+src/innovation_os/intelligence/decision/__init__.py
+  from .context import DecisionContext
+  from .alternative import DecisionAlternative
+  from .risk_engine import RiskEngine
+  from .decision_scorer import DecisionScorer
+  from .replay import DecisionReplay
+  from .decision_engine import DecisionIntelligenceEngine
+
+src/innovation_os/intelligence/discovery/__init__.py
+  from .discovery_engine import DiscoveryEngine
+  from .relationship_discovery import RelationshipDiscovery
+  from .anomaly_detector import AnomalyDetector
+
+src/innovation_os/intelligence/engines/__init__.py
+  from .observation_engine import ObservationEngine
+  from .perception_engine import PerceptionEngine
+  from .context_engine import ContextEngine
+  from .knowledge_engine import KnowledgeEngine
+  from .evidence_engine import EvidenceEngine
+  from .confidence_engine import ConfidenceEngine
+  from .hypothesis_engine import HypothesisEngine
+  from .inference_engine import InferenceEngine
+
+src/innovation_os/intelligence/evolution/__init__.py
+  from .knowledge_growth import KnowledgeGrowth
+  from .pattern_evolution import PatternEvolution
+  from .concept_mapper import ConceptMapper
+
+src/innovation_os/intelligence/governance/__init__.py
+  from .governor import IntelligenceGovernor
+  from .runtime_policy import RuntimePolicy
+  from .access_control import AccessControl
+  from .decision_guard import DecisionGuard
+  from .compliance_trace import ComplianceTrace
+
+src/innovation_os/intelligence/health/__init__.py
+  from .health_monitor import IntelligenceHealthMonitor
+
+src/innovation_os/intelligence/integration/__init__.py
+  from .intelligence_bridge import IntelligenceBridge
+  from .system_connector import IntelligenceSystemConnector
+
+src/innovation_os/intelligence/integration/adapters/__init__.py
+  from .memory_adapter import IntelligenceMemoryAdapter
+  from .knowledge_adapter import KnowledgeAdapter
+  from .decision_adapter import DecisionAdapter
+  from .provenance_adapter import ProvenanceAdapter
+  from .audit_adapter import AuditAdapter
+
+src/innovation_os/intelligence/kernel/__init__.py
+  from .cognitive_kernel import (
+  from .intelligence_registry import (
+  from .kernel_runtime import (
+
+src/innovation_os/intelligence/knowledge/__init__.py
+  from .entity import KnowledgeEntity
+  from .relationship import KnowledgeRelationship
+  from .entity_resolution import EntityResolver
+  from .inference import KnowledgeInference
+  from .knowledge_fabric import KnowledgeFabric
+
+src/innovation_os/intelligence/learning/__init__.py
+  from .memory_event import MemoryEvent
+  from .feedback_engine import FeedbackEngine
+  from .adaptation_engine import AdaptationEngine
+  from .learning_engine import LearningEngine
+
+src/innovation_os/intelligence/lifecycle/__init__.py
+  from .lifecycle_manager import LifecycleManager
+
+src/innovation_os/intelligence/memory/__init__.py
+  from .memory_artifact import MemoryArtifact
+  from .memory_index import MemoryIndex
+  from .retrieval_engine import RetrievalEngine
+  from .consolidator import MemoryConsolidator
+  from .intelligence_memory_system import IntelligenceMemorySystem
+  from .intelligence_memory import IntelligenceMemory
+
+src/innovation_os/intelligence/metrics/__init__.py
+  from .intelligence_metrics import IntelligenceMetrics
+
+src/innovation_os/intelligence/observability/__init__.py
+  from .event_bus import IntelligenceEventBus
+  from .execution_trace import ExecutionTrace
+  from .metrics_collector import MetricsCollector
+  from .intelligence_monitor import IntelligenceMonitor
+
+src/innovation_os/intelligence/observation/__init__.py
+
+src/innovation_os/intelligence/orchestration/__init__.py
+  from .orchestrator import IntelligenceOrchestrator
+  from .task_planner import TaskPlanner
+  from .execution_graph import ExecutionGraph
+  from .priority_engine import PriorityEngine
+
+src/innovation_os/intelligence/pipeline/__init__.py
+  from .intelligence_pipeline import IntelligencePipeline
+  from .cognitive_pipeline import CognitivePipeline
+
+src/innovation_os/intelligence/provenance/__init__.py
+  from .lineage import IntelligenceLineage
+  from .evidence_tracker import EvidenceTracker
+  from .decision_trace import DecisionTrace
+
+src/innovation_os/intelligence/reasoning/__init__.py
+  from .reasoning_chain import ReasoningChain
+  from .causal_engine import CausalEngine
+  from .explanation_graph import ExplanationGraph
+
+src/innovation_os/intelligence/registry/__init__.py
+  from .intelligence_registry import IntelligenceRegistry
+
+src/innovation_os/intelligence/repository/__init__.py
+  from .artifact import RepositoryArtifact
+  from .module import IntelligenceModule
+  from .architecture_map import ArchitectureMap
+  from .dependency_analyzer import DependencyAnalyzer
+  from .fingerprint_engine import (
+  from .repository_engine import (
+
+src/innovation_os/intelligence/runtime/__init__.py
+  from .execution_context import ExecutionContext
+  from .intelligence_session import IntelligenceSession
+  from .runtime import IntelligenceRuntime
+
+src/innovation_os/intelligence/simulation/__init__.py
+
+src/innovation_os/intelligence/system/__init__.py
+  from .intelligence_system import IntelligenceSystem
+  from .system_factory import create_intelligence_system
+
+src/innovation_os/intelligence/telemetry/__init__.py
+  from .event import IntelligenceTelemetryEvent
+  from .collector import TelemetryCollector
+  from .metrics import IntelligenceMetrics
+  from .telemetry_engine import TelemetryEngine
