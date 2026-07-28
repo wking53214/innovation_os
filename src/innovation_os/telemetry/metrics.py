@@ -1,46 +1,41 @@
-from dataclasses import dataclass, field
-from datetime import datetime, timezone
+class MetricsRegistry:
 
-
-@dataclass
-class Metric:
-
-    name: str
-    value: float
-    timestamp: datetime
-
-
-class Metrics:
 
     def __init__(self):
 
-        self.items = []
+        self.metrics = {}
 
 
-    def record(
+    def increment(
         self,
         name,
-        value
+        amount=1
     ):
 
-        self.items.append(
-            Metric(
-                name=name,
-                value=value,
-                timestamp=datetime.now(
-                    timezone.utc
-                ),
+        self.metrics[name] = (
+            self.metrics.get(
+                name,
+                0
             )
+            + amount
         )
 
 
-    def export(self):
+    def get(
+        self,
+        name
+    ):
 
-        return [
-            {
-                "name": x.name,
-                "value": x.value,
-                "timestamp": x.timestamp.isoformat(),
-            }
-            for x in self.items
-        ]
+        return self.metrics.get(
+            name,
+            0
+        )
+
+
+    def snapshot(
+        self
+    ):
+
+        return dict(
+            self.metrics
+        )

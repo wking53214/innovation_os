@@ -1,33 +1,65 @@
-from .events import IntelligenceEvent
+from datetime import datetime, timezone
 
 
 class IntelligenceLogger:
 
+
     def __init__(self):
 
-        self.events = []
+        self.entries = []
 
 
-    def emit(
+    def log(
         self,
-        event_type,
-        payload,
+        level,
+        message,
+        metadata=None
     ):
 
-        event = IntelligenceEvent(
-            event_type=event_type,
-            payload=payload,
+        entry = {
+            "level": level,
+            "message": message,
+            "metadata": metadata or {},
+            "timestamp": datetime.now(
+                timezone.utc
+            ),
+        }
+
+        self.entries.append(
+            entry
         )
 
-        self.events.append(
-            event
+        return entry
+
+
+    def info(
+        self,
+        message,
+        metadata=None
+    ):
+
+        return self.log(
+            "INFO",
+            message,
+            metadata
         )
 
-        return event
 
+    def error(
+        self,
+        message,
+        metadata=None
+    ):
 
-    def history(self):
-
-        return list(
-            self.events
+        return self.log(
+            "ERROR",
+            message,
+            metadata
         )
+
+
+    def history(
+        self
+    ):
+
+        return self.entries
