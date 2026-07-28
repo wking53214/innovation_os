@@ -1,31 +1,73 @@
-from .importer import FileImporter
-from .normalizer import ArtifactNormalizer
+from __future__ import annotations
+
+from datetime import datetime, timezone
+from typing import Any, Dict
 
 
+class SignalIngestionPipeline:
 
-class IngestionPipeline:
-
-
-    def __init__(self):
-
-        self.importer = FileImporter()
-        self.normalizer = ArtifactNormalizer()
-
-
-
-    def ingest(
+    def normalize(
         self,
-        directory,
-    ):
+        payload: Dict[str, Any],
+    ) -> Dict[str, Any]:
 
-        files = self.importer.scan(
-            directory
-        )
+        return {
+            "timestamp": datetime.now(
+                timezone.utc
+            ),
+            "signal_type": payload.get(
+                "source",
+                "unknown",
+            ),
+            "payload": payload,
+        }
 
 
-        return [
-            self.normalizer.normalize(
-                file
-            )
-            for file in files
-        ]
+class IngestionPipeline(SignalIngestionPipeline):
+    """
+    Backward-compatible ingestion interface.
+    Preserves existing MVP test contract.
+    """
+
+    pass
+
+
+class IngestionPipeline(SignalIngestionPipeline):
+    """
+    Backward-compatible MVP ingestion interface.
+    """
+
+    def ingest(self, directory):
+
+        from pathlib import Path
+        from dataclasses import dataclass
+
+        @dataclass
+        class IngestionArtifact:
+            artifact_type: str
+            path: str
+            name: str
+            content: str = ""
+
+        artifacts = []
+
+        root = Path(directory)
+
+        if root.exists():
+            for item in root.rglob("*"):
+                if item.is_file():
+                    try:
+                        content = item.read_text()
+                    except Exception:
+                        content = ""
+
+                    artifacts.append(
+                        IngestionArtifact(
+                            artifact_type="CODE",
+                            path=str(item),
+                            name=item.name,
+                            content=content,
+                        )
+                    )
+
+        return artifacts
