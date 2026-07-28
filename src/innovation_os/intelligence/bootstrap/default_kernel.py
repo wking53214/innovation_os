@@ -84,17 +84,5 @@ def create_intelligence_kernel():
         )
 
 
-    
-kernel.registry.engines.update(
-    {
-        "observation": None,
-        "perception": None,
-        "context": None,
-        "knowledge": None,
-        "inference": None,
-        "hypothesis": None,
-    }
-)
-
-return kernel
+    return kernel
 
