@@ -1,10 +1,17 @@
-from .auth import (
-    AuthenticationService,
-    AuthResult,
+from .contracts import (
+    ComponentIdentity,
+    TrustDecision,
+)
+
+from .runtime import (
+    IdentityRegistry,
+    ArtifactVerifier,
 )
 
 
 __all__ = [
-    "AuthenticationService",
-    "AuthResult",
+    "ComponentIdentity",
+    "TrustDecision",
+    "IdentityRegistry",
+    "ArtifactVerifier",
 ]
