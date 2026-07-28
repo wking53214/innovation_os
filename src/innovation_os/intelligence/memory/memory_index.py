@@ -1,9 +1,35 @@
 class MemoryIndex:
+    """
+    Storage index supporting IntelligenceArtifact contracts.
+    """
 
 
     def __init__(self):
 
         self.index = {}
+
+
+
+    def _key(
+        self,
+        artifact
+    ):
+
+        if hasattr(
+            artifact,
+            "identifier"
+        ):
+            return artifact.identifier
+
+        if hasattr(
+            artifact,
+            "artifact_id"
+        ):
+            return artifact.artifact_id
+
+        raise AttributeError(
+            "Artifact requires identifier or artifact_id"
+        )
 
 
 
@@ -13,7 +39,7 @@ class MemoryIndex:
     ):
 
         self.index[
-            artifact.identifier
+            self._key(artifact)
         ] = artifact
 
 
