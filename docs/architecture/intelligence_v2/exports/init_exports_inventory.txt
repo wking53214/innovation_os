@@ -1,0 +1,595 @@
+======================================================================
+__init__.py
+
+from .system import (
+    IntelligenceSystem,
+    create_intelligence_system,
+)
+
+from .bootstrap import (
+    bootstrap_intelligence,
+)
+
+
+__all__ = [
+    "IntelligenceSystem",
+    "create_intelligence_system",
+    "bootstrap_intelligence",
+]
+
+======================================================================
+adapters/__init__.py
+
+from .base_adapter import IntelligenceAdapter
+from .pattern_adapter import PatternAdapter
+from .cluster_adapter import ClusterAdapter
+from .duplicate_adapter import DuplicateAdapter
+from .repository_adapter import RepositoryAdapter
+
+__all__ = [
+    "IntelligenceAdapter",
+    "PatternAdapter",
+    "ClusterAdapter",
+    "DuplicateAdapter",
+    "RepositoryAdapter",
+]
+
+======================================================================
+agents/__init__.py
+
+from .intelligence_agent import IntelligenceAgent
+from .task_router import TaskRouter
+from .capability_registry import CapabilityRegistry
+
+__all__ = [
+    "IntelligenceAgent",
+    "TaskRouter",
+    "CapabilityRegistry",
+]
+
+======================================================================
+api/__init__.py
+
+from .intelligence_service import IntelligenceService
+from .request_models import IntelligenceRequest
+from .response_models import IntelligenceResponse
+
+__all__ = [
+    "IntelligenceService",
+    "IntelligenceRequest",
+    "IntelligenceResponse",
+]
+
+======================================================================
+bootstrap/__init__.py
+
+from innovation_os.intelligence.system import (
+    create_intelligence_system,
+)
+
+from innovation_os.intelligence.kernel import (
+    create_kernel,
+)
+
+
+
+def create_intelligence_kernel():
+
+    kernel = create_kernel()
+
+
+    defaults = [
+        "observation",
+        "perception",
+        "context",
+        "knowledge",
+        "inference",
+        "hypothesis",
+    ]
+
+
+    for engine in defaults:
+
+        kernel.register(
+            engine,
+            None
+        )
+
+
+    adapters = [
+        "pattern",
+        "repository",
+        "cluster",
+        "duplicate",
+        "knowledge_graph",
+    ]
+
+
+    for adapter in adapters:
+
+        kernel.registry.adapters[adapter] = None
+
+
+    contracts = [
+        "signal",
+        "observation",
+        "perception",
+        "context",
+        "knowledge",
+        "evidence",
+        "confidence",
+        "hypothesis",
+        "inference",
+        "intelligence_artifact",
+    ]
+
+
+    for contract in contracts:
+
+        kernel.registry.contracts[contract] = None
+
+
+    return kernel
+
+
+
+def bootstrap_intelligence(
+    pipeline
+):
+
+    kernel = create_intelligence_kernel()
+
+
+    system = create_intelligence_system(
+        pipeline
+    )
+
+
+    kernel.register(
+        "intelligence_system",
+        system
+    )
+
+
+    return kernel
+
+
+
+__all__ = [
+    "bootstrap_intelligence",
+    "create_intelligence_kernel",
+]
+
+======================================================================
+cognition/__init__.py
+
+from .cycle import CognitiveCycle
+from .observer import Observer
+from .perceiver import Perceiver
+from .reasoner import Reasoner
+from .learner import Learner
+from .adaptive_loop import AdaptiveLoop
+
+__all__ = [
+    "CognitiveCycle",
+    "Observer",
+    "Perceiver",
+    "Reasoner",
+    "Learner",
+    "AdaptiveLoop",
+]
+
+======================================================================
+config/__init__.py
+
+from .intelligence_settings import IntelligenceSettings
+
+__all__ = [
+    "IntelligenceSettings",
+]
+
+======================================================================
+contracts/__init__.py
+
+from .signal import Signal
+from .observation import Observation
+from .perception import Perception
+from .context import Context
+from .knowledge import Knowledge
+from .evidence import Evidence
+from .confidence import Confidence
+from .hypothesis import Hypothesis
+from .inference import Inference
+from .intelligence_artifact import IntelligenceArtifact
+
+
+__all__ = [
+    "Signal",
+    "Observation",
+    "Perception",
+    "Context",
+    "Knowledge",
+    "Evidence",
+    "Confidence",
+    "Hypothesis",
+    "Inference",
+    "IntelligenceArtifact",
+]
+
+======================================================================
+decision/__init__.py
+
+from .context import DecisionContext
+from .alternative import DecisionAlternative
+from .risk_engine import RiskEngine
+from .decision_scorer import DecisionScorer
+from .replay import DecisionReplay
+from .decision_engine import DecisionIntelligenceEngine
+
+
+__all__ = [
+    "DecisionContext",
+    "DecisionAlternative",
+    "RiskEngine",
+    "DecisionScorer",
+    "DecisionReplay",
+    "DecisionIntelligenceEngine",
+]
+
+======================================================================
+discovery/__init__.py
+
+from .discovery_engine import DiscoveryEngine
+from .relationship_discovery import RelationshipDiscovery
+from .anomaly_detector import AnomalyDetector
+
+__all__ = [
+    "DiscoveryEngine",
+    "RelationshipDiscovery",
+    "AnomalyDetector",
+]
+
+======================================================================
+engines/__init__.py
+
+from .observation_engine import ObservationEngine
+from .perception_engine import PerceptionEngine
+from .context_engine import ContextEngine
+from .knowledge_engine import KnowledgeEngine
+from .evidence_engine import EvidenceEngine
+from .confidence_engine import ConfidenceEngine
+from .hypothesis_engine import HypothesisEngine
+from .inference_engine import InferenceEngine
+
+__all__ = [
+    "ObservationEngine",
+    "PerceptionEngine",
+    "ContextEngine",
+    "KnowledgeEngine",
+    "EvidenceEngine",
+    "ConfidenceEngine",
+    "HypothesisEngine",
+    "InferenceEngine",
+]
+
+======================================================================
+evolution/__init__.py
+
+from .knowledge_growth import KnowledgeGrowth
+from .pattern_evolution import PatternEvolution
+from .concept_mapper import ConceptMapper
+
+__all__ = [
+    "KnowledgeGrowth",
+    "PatternEvolution",
+    "ConceptMapper",
+]
+
+======================================================================
+governance/__init__.py
+
+from .governor import IntelligenceGovernor
+from .runtime_policy import RuntimePolicy
+from .access_control import AccessControl
+from .decision_guard import DecisionGuard
+from .compliance_trace import ComplianceTrace
+
+
+__all__ = [
+    "IntelligenceGovernor",
+    "RuntimePolicy",
+    "AccessControl",
+    "DecisionGuard",
+    "ComplianceTrace",
+]
+
+======================================================================
+health/__init__.py
+
+from .health_monitor import IntelligenceHealthMonitor
+
+__all__ = [
+    "IntelligenceHealthMonitor",
+]
+
+======================================================================
+integration/__init__.py
+
+from .intelligence_bridge import IntelligenceBridge
+from .system_connector import IntelligenceSystemConnector
+
+__all__ = [
+    "IntelligenceBridge",
+    "IntelligenceSystemConnector",
+]
+
+======================================================================
+integration/adapters/__init__.py
+
+from .memory_adapter import IntelligenceMemoryAdapter
+from .knowledge_adapter import KnowledgeAdapter
+from .decision_adapter import DecisionAdapter
+from .provenance_adapter import ProvenanceAdapter
+from .audit_adapter import AuditAdapter
+
+__all__ = [
+    "IntelligenceMemoryAdapter",
+    "KnowledgeAdapter",
+    "DecisionAdapter",
+    "ProvenanceAdapter",
+    "AuditAdapter",
+]
+
+======================================================================
+kernel/__init__.py
+
+from .cognitive_kernel import (
+    CognitiveKernel,
+)
+
+from .intelligence_registry import (
+    IntelligenceRegistry,
+)
+
+from .kernel_runtime import (
+    IntelligenceKernel,
+)
+
+
+
+def create_kernel():
+
+    return IntelligenceKernel()
+
+
+
+__all__ = [
+    "CognitiveKernel",
+    "IntelligenceRegistry",
+    "IntelligenceKernel",
+    "create_kernel",
+]
+
+======================================================================
+knowledge/__init__.py
+
+from .entity import KnowledgeEntity
+from .relationship import KnowledgeRelationship
+from .entity_resolution import EntityResolver
+from .inference import KnowledgeInference
+from .knowledge_fabric import KnowledgeFabric
+
+
+__all__ = [
+    "KnowledgeEntity",
+    "KnowledgeRelationship",
+    "EntityResolver",
+    "KnowledgeInference",
+    "KnowledgeFabric",
+]
+
+======================================================================
+learning/__init__.py
+
+from .memory_event import MemoryEvent
+from .feedback_engine import FeedbackEngine
+from .adaptation_engine import AdaptationEngine
+from .learning_engine import LearningEngine
+
+
+__all__ = [
+    "MemoryEvent",
+    "FeedbackEngine",
+    "AdaptationEngine",
+    "LearningEngine",
+]
+
+======================================================================
+lifecycle/__init__.py
+
+from .lifecycle_manager import LifecycleManager
+
+__all__ = [
+    "LifecycleManager",
+]
+
+======================================================================
+memory/__init__.py
+
+from .memory_artifact import MemoryArtifact
+from .memory_index import MemoryIndex
+from .retrieval_engine import RetrievalEngine
+from .consolidator import MemoryConsolidator
+from .intelligence_memory_system import IntelligenceMemorySystem
+
+
+__all__ = [
+    "MemoryArtifact",
+    "MemoryIndex",
+    "RetrievalEngine",
+    "MemoryConsolidator",
+    "IntelligenceMemorySystem",
+]
+
+from .intelligence_memory import IntelligenceMemory
+
+======================================================================
+metrics/__init__.py
+
+from .intelligence_metrics import IntelligenceMetrics
+
+__all__ = [
+    "IntelligenceMetrics",
+]
+
+======================================================================
+observability/__init__.py
+
+from .event_bus import IntelligenceEventBus
+from .execution_trace import ExecutionTrace
+from .metrics_collector import MetricsCollector
+from .intelligence_monitor import IntelligenceMonitor
+
+__all__ = [
+    "IntelligenceEventBus",
+    "ExecutionTrace",
+    "MetricsCollector",
+    "IntelligenceMonitor",
+]
+
+======================================================================
+observation/__init__.py
+
+
+======================================================================
+orchestration/__init__.py
+
+from .orchestrator import IntelligenceOrchestrator
+from .task_planner import TaskPlanner
+from .execution_graph import ExecutionGraph
+from .priority_engine import PriorityEngine
+
+__all__ = [
+    "IntelligenceOrchestrator",
+    "TaskPlanner",
+    "ExecutionGraph",
+    "PriorityEngine",
+]
+
+======================================================================
+pipeline/__init__.py
+
+from .intelligence_pipeline import IntelligencePipeline
+from .cognitive_pipeline import CognitivePipeline
+
+__all__ = [
+    "IntelligencePipeline",
+    "CognitivePipeline",
+]
+
+======================================================================
+provenance/__init__.py
+
+from .lineage import IntelligenceLineage
+from .evidence_tracker import EvidenceTracker
+from .decision_trace import DecisionTrace
+
+__all__ = [
+    "IntelligenceLineage",
+    "EvidenceTracker",
+    "DecisionTrace",
+]
+
+======================================================================
+reasoning/__init__.py
+
+from .reasoning_chain import ReasoningChain
+from .causal_engine import CausalEngine
+from .explanation_graph import ExplanationGraph
+
+__all__ = [
+    "ReasoningChain",
+    "CausalEngine",
+    "ExplanationGraph",
+]
+
+======================================================================
+registry/__init__.py
+
+from .intelligence_registry import IntelligenceRegistry
+
+__all__ = [
+    "IntelligenceRegistry",
+]
+
+======================================================================
+repository/__init__.py
+
+from .artifact import RepositoryArtifact
+from .module import IntelligenceModule
+from .architecture_map import ArchitectureMap
+from .dependency_analyzer import DependencyAnalyzer
+from .fingerprint_engine import (
+    FingerprintEngine,
+    SystemFingerprint,
+)
+from .repository_engine import (
+    RepositoryIntelligenceEngine,
+)
+
+
+__all__ = [
+    "RepositoryArtifact",
+    "IntelligenceModule",
+    "ArchitectureMap",
+    "DependencyAnalyzer",
+    "FingerprintEngine",
+    "SystemFingerprint",
+    "RepositoryIntelligenceEngine",
+]
+
+======================================================================
+runtime/__init__.py
+
+from .execution_context import ExecutionContext
+from .intelligence_session import IntelligenceSession
+from .runtime import IntelligenceRuntime
+
+
+__all__ = [
+    "ExecutionContext",
+    "IntelligenceSession",
+    "IntelligenceRuntime",
+]
+
+======================================================================
+simulation/__init__.py
+
+
+======================================================================
+system/__init__.py
+
+from .intelligence_system import IntelligenceSystem
+from .system_factory import create_intelligence_system
+
+
+__all__ = [
+    "IntelligenceSystem",
+    "create_intelligence_system",
+]
+
+======================================================================
+telemetry/__init__.py
+
+from .event import IntelligenceTelemetryEvent
+from .collector import TelemetryCollector
+from .metrics import IntelligenceMetrics
+from .telemetry_engine import TelemetryEngine
+
+
+__all__ = [
+    "IntelligenceTelemetryEvent",
+    "TelemetryCollector",
+    "IntelligenceMetrics",
+    "TelemetryEngine",
+]

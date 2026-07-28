@@ -1,0 +1,249 @@
+======================================================================
+IntelligenceMetrics
+  src/innovation_os/intelligence/telemetry/metrics.py
+  src/innovation_os/intelligence/metrics/intelligence_metrics.py
+
+======================================================================
+IntelligenceRegistry
+  src/innovation_os/intelligence/kernel/intelligence_registry.py
+  src/innovation_os/intelligence/registry/intelligence_registry.py
+
+======================================================================
+RepositoryIntelligenceEngine
+  src/innovation_os/intelligence/repository_intelligence.py
+  src/innovation_os/intelligence/repository/repository_engine.py
+
+======================================================================
+__init__
+  src/innovation_os/intelligence/pattern_engine.py
+  src/innovation_os/intelligence/cluster_engine.py
+  src/innovation_os/intelligence/duplicate_engine.py
+  src/innovation_os/intelligence/knowledge_graph.py
+  src/innovation_os/intelligence/project_scan.py
+  src/innovation_os/intelligence/explainer.py
+  src/innovation_os/intelligence/adapters/pattern_adapter.py
+  src/innovation_os/intelligence/adapters/cluster_adapter.py
+  src/innovation_os/intelligence/adapters/duplicate_adapter.py
+  src/innovation_os/intelligence/adapters/repository_adapter.py
+  src/innovation_os/intelligence/telemetry/collector.py
+  src/innovation_os/intelligence/telemetry/metrics.py
+  src/innovation_os/intelligence/memory/intelligence_memory.py
+  src/innovation_os/intelligence/memory/memory_index.py
+  src/innovation_os/intelligence/memory/retrieval_engine.py
+
+======================================================================
+__post_init__
+  src/innovation_os/intelligence/learning/memory_event.py
+  src/innovation_os/intelligence/telemetry/event.py
+
+======================================================================
+add
+  src/innovation_os/intelligence/pattern_engine.py
+  src/innovation_os/intelligence/cluster_engine.py
+  src/innovation_os/intelligence/duplicate_engine.py
+  src/innovation_os/intelligence/runtime/intelligence_session.py
+  src/innovation_os/intelligence/memory/memory_index.py
+  src/innovation_os/intelligence/provenance/evidence_tracker.py
+  src/innovation_os/intelligence/provenance/decision_trace.py
+  src/innovation_os/intelligence/reasoning/reasoning_chain.py
+  src/innovation_os/intelligence/evolution/knowledge_growth.py
+
+======================================================================
+add_node
+  src/innovation_os/intelligence/knowledge_graph.py
+  src/innovation_os/intelligence/reasoning/explanation_graph.py
+  src/innovation_os/intelligence/orchestration/execution_graph.py
+
+======================================================================
+add_relationship
+  src/innovation_os/intelligence/integration/adapters/knowledge_adapter.py
+  src/innovation_os/intelligence/knowledge/knowledge_fabric.py
+
+======================================================================
+all
+  src/innovation_os/intelligence/memory/artifact_store.py
+  src/innovation_os/intelligence/provenance/evidence_tracker.py
+
+======================================================================
+analyze
+  src/innovation_os/intelligence/repository_intelligence.py
+  src/innovation_os/intelligence/repository/dependency_analyzer.py
+  src/innovation_os/intelligence/repository/repository_engine.py
+
+======================================================================
+bootstrap_intelligence
+  src/innovation_os/intelligence/bootstrap.py
+  src/innovation_os/intelligence/bootstrap/__init__.py
+
+======================================================================
+connect
+  src/innovation_os/intelligence/knowledge_graph.py
+  src/innovation_os/intelligence/reasoning/causal_engine.py
+  src/innovation_os/intelligence/reasoning/explanation_graph.py
+  src/innovation_os/intelligence/integration/intelligence_bridge.py
+  src/innovation_os/intelligence/orchestration/execution_graph.py
+
+======================================================================
+consolidate
+  src/innovation_os/intelligence/memory/consolidator.py
+  src/innovation_os/intelligence/memory/intelligence_memory_system.py
+
+======================================================================
+count
+  src/innovation_os/intelligence/learning/adaptation_engine.py
+  src/innovation_os/intelligence/telemetry/collector.py
+  src/innovation_os/intelligence/observability/execution_trace.py
+  src/innovation_os/intelligence/decision/replay.py
+
+======================================================================
+create_intelligence_kernel
+  src/innovation_os/intelligence/bootstrap/__init__.py
+  src/innovation_os/intelligence/bootstrap/default_kernel.py
+
+======================================================================
+detect
+  src/innovation_os/intelligence/pattern_engine.py
+  src/innovation_os/intelligence/discovery/anomaly_detector.py
+
+======================================================================
+discover
+  src/innovation_os/intelligence/discovery/discovery_engine.py
+  src/innovation_os/intelligence/discovery/relationship_discovery.py
+
+======================================================================
+evaluate
+  src/innovation_os/intelligence/governance/governor.py
+  src/innovation_os/intelligence/integration/adapters/decision_adapter.py
+  src/innovation_os/intelligence/decision/decision_engine.py
+
+======================================================================
+execute
+  src/innovation_os/intelligence/pipeline/intelligence_pipeline.py
+  src/innovation_os/intelligence/kernel/cognitive_kernel.py
+  src/innovation_os/intelligence/runtime/runtime.py
+  src/innovation_os/intelligence/system/intelligence_system.py
+  src/innovation_os/intelligence/api/intelligence_service.py
+  src/innovation_os/intelligence/reasoning/reasoning_chain.py
+  src/innovation_os/intelligence/agents/intelligence_agent.py
+  src/innovation_os/intelligence/cognition/cycle.py
+  src/innovation_os/intelligence/orchestration/orchestrator.py
+
+======================================================================
+get
+  src/innovation_os/intelligence/telemetry/metrics.py
+  src/innovation_os/intelligence/metrics/intelligence_metrics.py
+  src/innovation_os/intelligence/memory/artifact_store.py
+  src/innovation_os/intelligence/memory/memory_index.py
+  src/innovation_os/intelligence/agents/capability_registry.py
+  src/innovation_os/intelligence/integration/intelligence_bridge.py
+  src/innovation_os/intelligence/observability/metrics_collector.py
+
+======================================================================
+history
+  src/innovation_os/intelligence/discovery/discovery_engine.py
+  src/innovation_os/intelligence/provenance/lineage.py
+
+======================================================================
+increment
+  src/innovation_os/intelligence/telemetry/metrics.py
+  src/innovation_os/intelligence/metrics/intelligence_metrics.py
+  src/innovation_os/intelligence/observability/metrics_collector.py
+
+======================================================================
+latest
+  src/innovation_os/intelligence/learning/feedback_engine.py
+  src/innovation_os/intelligence/governance/compliance_trace.py
+  src/innovation_os/intelligence/observability/event_bus.py
+
+======================================================================
+learn
+  src/innovation_os/intelligence/learning/learning_engine.py
+  src/innovation_os/intelligence/cognition/learner.py
+
+======================================================================
+observe
+  src/innovation_os/intelligence/telemetry/telemetry_engine.py
+  src/innovation_os/intelligence/cognition/observer.py
+  src/innovation_os/intelligence/observability/intelligence_monitor.py
+
+======================================================================
+process
+  src/innovation_os/intelligence/pipeline/cognitive_pipeline.py
+  src/innovation_os/intelligence/adapters/base_adapter.py
+  src/innovation_os/intelligence/engines/observation_engine.py
+  src/innovation_os/intelligence/engines/perception_engine.py
+  src/innovation_os/intelligence/engines/context_engine.py
+  src/innovation_os/intelligence/engines/knowledge_engine.py
+  src/innovation_os/intelligence/engines/inference_engine.py
+  src/innovation_os/intelligence/engines/hypothesis_engine.py
+  src/innovation_os/intelligence/engines/confidence_engine.py
+  src/innovation_os/intelligence/engines/evidence_engine.py
+
+======================================================================
+record
+  src/innovation_os/intelligence/learning/feedback_engine.py
+  src/innovation_os/intelligence/telemetry/collector.py
+  src/innovation_os/intelligence/metrics/intelligence_metrics.py
+  src/innovation_os/intelligence/governance/compliance_trace.py
+  src/innovation_os/intelligence/provenance/lineage.py
+  src/innovation_os/intelligence/integration/adapters/provenance_adapter.py
+  src/innovation_os/intelligence/observability/execution_trace.py
+  src/innovation_os/intelligence/decision/replay.py
+
+======================================================================
+register
+  src/innovation_os/intelligence/pipeline/cognitive_pipeline.py
+  src/innovation_os/intelligence/kernel/kernel_runtime.py
+  src/innovation_os/intelligence/agents/capability_registry.py
+  src/innovation_os/intelligence/health/health_monitor.py
+  src/innovation_os/intelligence/registry/intelligence_registry.py
+
+======================================================================
+register_adapter
+  src/innovation_os/intelligence/kernel/cognitive_kernel.py
+  src/innovation_os/intelligence/kernel/intelligence_registry.py
+
+======================================================================
+register_engine
+  src/innovation_os/intelligence/kernel/cognitive_kernel.py
+  src/innovation_os/intelligence/kernel/intelligence_registry.py
+
+======================================================================
+resolve
+  src/innovation_os/intelligence/kernel/kernel_runtime.py
+  src/innovation_os/intelligence/registry/intelligence_registry.py
+
+======================================================================
+retrieve
+  src/innovation_os/intelligence/memory/retrieval_engine.py
+  src/innovation_os/intelligence/integration/adapters/memory_adapter.py
+
+======================================================================
+score
+  src/innovation_os/intelligence/orchestration/priority_engine.py
+  src/innovation_os/intelligence/decision/risk_engine.py
+  src/innovation_os/intelligence/decision/decision_scorer.py
+
+======================================================================
+size
+  src/innovation_os/intelligence/memory/memory_index.py
+  src/innovation_os/intelligence/evolution/knowledge_growth.py
+
+======================================================================
+store
+  src/innovation_os/intelligence/memory/intelligence_memory_system.py
+  src/innovation_os/intelligence/integration/adapters/memory_adapter.py
+
+======================================================================
+translate
+  src/innovation_os/intelligence/adapters/pattern_adapter.py
+  src/innovation_os/intelligence/adapters/cluster_adapter.py
+  src/innovation_os/intelligence/adapters/duplicate_adapter.py
+  src/innovation_os/intelligence/adapters/repository_adapter.py
+  src/innovation_os/intelligence/adapters/base_adapter.py
+
+======================================================================
+validate
+  src/innovation_os/intelligence/contracts/intelligence_artifact.py
+  src/innovation_os/intelligence/contracts/confidence.py
+  src/innovation_os/intelligence/governance/guardrails.py
