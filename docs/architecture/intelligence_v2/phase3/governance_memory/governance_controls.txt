@@ -1,0 +1,7 @@
+src/innovation_os/intelligence/system/intelligence_system.py:            approved = self.governance.validate(
+src/innovation_os/intelligence/governance/__init__.py:from .runtime_policy import RuntimePolicy
+src/innovation_os/intelligence/governance/guardrails.py:    def validate(self, confidence):
+src/innovation_os/intelligence/governance/governor.py:    Coordinates policy, access, and decision controls.
+src/innovation_os/intelligence/governance/governor.py:    policy: object = None
+src/innovation_os/intelligence/governance/governor.py:        if self.policy:
+src/innovation_os/intelligence/governance/governor.py:            if not self.policy.allows(operation):

@@ -1,0 +1,10 @@
+src/innovation_os/intelligence/integration/adapters/memory_adapter.py
+src/innovation_os/intelligence/learning/memory_event.py
+src/innovation_os/intelligence/memory/artifact_store.py
+src/innovation_os/intelligence/memory/consolidator.py
+src/innovation_os/intelligence/memory/__init__.py
+src/innovation_os/intelligence/memory/intelligence_memory.py
+src/innovation_os/intelligence/memory/intelligence_memory_system.py
+src/innovation_os/intelligence/memory/memory_artifact.py
+src/innovation_os/intelligence/memory/memory_index.py
+src/innovation_os/intelligence/memory/retrieval_engine.py
