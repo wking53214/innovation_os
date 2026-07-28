@@ -1,0 +1,8 @@
+src/innovation_os/intelligence/kernel/cognitive_kernel.py:    def register_engine(self, name, engine):
+src/innovation_os/intelligence/kernel/cognitive_kernel.py:        self.registry.register_engine(name, engine)
+src/innovation_os/intelligence/kernel/cognitive_kernel.py:    def register_adapter(self, name, adapter):
+src/innovation_os/intelligence/kernel/cognitive_kernel.py:        self.registry.register_adapter(name, adapter)
+src/innovation_os/intelligence/kernel/intelligence_registry.py:    def register_engine(self, name: str, engine: Any):
+src/innovation_os/intelligence/kernel/intelligence_registry.py:    def register_adapter(self, name: str, adapter: Any):
+src/innovation_os/intelligence/kernel/intelligence_registry.py:    def register_contract(self, name: str, contract: Type):
+src/innovation_os/intelligence/kernel/kernel_runtime.py:    def register(
