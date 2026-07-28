@@ -1,12 +1,12 @@
 from innovation_os.memory import IntelligenceMemory
-from innovation_os.api import IntelligenceService
+from innovation_os.application.intelligence_application import IntelligenceApplication
 
 
 class AnalysisService:
 
     def __init__(self):
 
-        self.service = IntelligenceService()
+        self.application = IntelligenceApplication()
         self.memory = IntelligenceMemory()
 
 
@@ -18,7 +18,7 @@ class AnalysisService:
         objective=None,
     ):
 
-        result = self.service.analyze(
+        result = self.application.analyze(
             payload=payload,
             context=context,
             objective=objective,
