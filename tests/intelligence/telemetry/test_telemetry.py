@@ -1,19 +1,34 @@
 from innovation_os.intelligence.telemetry import (
+    IntelligenceTelemetryEvent,
+    TelemetryCollector,
+    IntelligenceMetrics,
     TelemetryEngine,
 )
 
 
 def test_telemetry():
 
-    telemetry = TelemetryEngine()
+    engine = TelemetryEngine(
+        TelemetryCollector(),
+        IntelligenceMetrics(),
+    )
 
-    telemetry.record(
-        "execution",
+
+    event = IntelligenceTelemetryEvent(
+        "inference",
+        "engine",
         {
-            "status": "success"
+            "confidence": .9
         }
     )
 
-    assert len(
-        telemetry.events
+
+    engine.observe(
+        event
+    )
+
+
+    assert engine.collector.count() == 1
+    assert engine.metrics.get(
+        "inference"
     ) == 1

@@ -1,50 +1,26 @@
-from dataclasses import dataclass, field
-from typing import List, Dict, Any
-from datetime import datetime, timezone
+from dataclasses import dataclass
 
 
 @dataclass
 class TelemetryEngine:
-    """
-    Intelligence execution telemetry collector.
-    """
 
-    events: List[Dict[str, Any]] = field(
-        default_factory=list
-    )
+    collector: object
+
+    metrics: object
 
 
-    def record(
+
+    def observe(
         self,
-        event_type: str,
-        payload: Dict[str, Any]
+        event
     ):
 
-        event = {
-            "type": event_type,
-            "payload": payload,
-            "timestamp": datetime.now(
-                timezone.utc
-            ),
-        }
-
-        self.events.append(
+        self.collector.record(
             event
         )
 
+        self.metrics.increment(
+            event.event_type
+        )
+
         return event
-
-
-    def query(
-        self,
-        event_type=None
-    ):
-
-        if event_type is None:
-            return self.events
-
-        return [
-            event
-            for event in self.events
-            if event["type"] == event_type
-        ]
