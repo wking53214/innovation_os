@@ -1,25 +1,29 @@
-from innovation_os.intelligence.bootstrap import (
-    create_intelligence_kernel,
-)
-
 from innovation_os.intelligence.runtime import (
-    IntelligenceRuntime,
+    ExecutionContext,
+    IntelligenceSession,
 )
 
 
-def test_runtime_execution():
+def test_context():
 
-    kernel = create_intelligence_kernel()
-
-    runtime = IntelligenceRuntime(
-        kernel
+    context = ExecutionContext(
+        "session-1"
     )
 
-    artifact = runtime.execute(
-        {
-            "event": "test"
-        }
+    assert context.session_id == "session-1"
+
+
+
+def test_session():
+
+    session = IntelligenceSession(
+        ExecutionContext(
+            "s"
+        )
     )
 
-    assert artifact.intelligence_type == "inference"
-    assert artifact.validate()
+    session.add(
+        "artifact"
+    )
+
+    assert len(session.artifacts) == 1
