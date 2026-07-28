@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+
+  innovation-os:
+
+    image: innovation-os:latest
+
+    environment:
+
+      INNOVATION_OS_ENV: production
+
+      INNOVATION_OS_VERSION: "2.0"
+
+    restart: unless-stopped
