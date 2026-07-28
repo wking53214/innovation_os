@@ -3,22 +3,32 @@ from innovation_os.intelligence.system import (
 )
 
 
-def test_intelligence_system():
+class DummyPipeline:
 
-    system = create_intelligence_system()
 
-    artifact = system.process(
-        {
-            "event": "integration_test"
-        }
+    def process(
+        self,
+        data,
+        context
+    ):
+
+        return data
+
+
+
+def test_system_bootstrap():
+
+    system = create_intelligence_system(
+        DummyPipeline()
     )
 
-    assert artifact
 
-    assert system.metrics.get(
-        "executions"
-    ) == 1
+    result = system.execute(
+        {
+            "signal": "test"
+        },
+        {}
+    )
 
-    assert len(
-        system.memory.history()
-    ) == 1
+
+    assert result["signal"] == "test"

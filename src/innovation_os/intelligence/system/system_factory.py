@@ -1,24 +1,41 @@
-from innovation_os.intelligence.system.intelligence_system import (
-    IntelligenceSystem,
-)
-
 from innovation_os.intelligence.runtime import (
     IntelligenceRuntime,
 )
 
-from innovation_os.intelligence.bootstrap import (
-    create_intelligence_kernel,
+from innovation_os.intelligence.memory import (
+    IntelligenceMemory,
 )
 
+from innovation_os.intelligence.telemetry import (
+    TelemetryCollector,
+    IntelligenceMetrics,
+    TelemetryEngine,
+)
 
-def create_intelligence_system():
+from .intelligence_system import IntelligenceSystem
 
-    kernel = create_intelligence_kernel()
+
+
+def create_intelligence_system(
+    pipeline
+):
+
+    memory = IntelligenceMemory()
 
     runtime = IntelligenceRuntime(
-        kernel
+        pipeline,
+        memory,
     )
 
+
+    telemetry = TelemetryEngine(
+        TelemetryCollector(),
+        IntelligenceMetrics(),
+    )
+
+
     return IntelligenceSystem(
-        runtime=runtime
+        runtime=runtime,
+        memory=memory,
+        telemetry=telemetry,
     )

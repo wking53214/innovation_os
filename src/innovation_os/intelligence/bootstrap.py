@@ -1,8 +1,12 @@
-from innovation_os.intelligence.kernel import (
-    CognitiveKernel,
+from innovation_os.intelligence.system import (
+    create_intelligence_system,
 )
 
 
-def create_intelligence_kernel():
+def bootstrap_intelligence(
+    pipeline
+):
 
-    return CognitiveKernel()
+    return create_intelligence_system(
+        pipeline
+    )

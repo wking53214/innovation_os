@@ -1,113 +1,45 @@
-from dataclasses import dataclass, field
-
-
-from innovation_os.intelligence.runtime import (
-    IntelligenceRuntime,
-)
-
-from innovation_os.intelligence.memory import (
-    IntelligenceMemory,
-)
-
-from innovation_os.intelligence.learning import (
-    FeedbackEngine,
-    AdaptationEngine,
-)
-
-from innovation_os.intelligence.metrics import (
-    IntelligenceMetrics,
-)
-
-from innovation_os.intelligence.telemetry import (
-    TelemetryEngine,
-)
-
-from innovation_os.intelligence.discovery import (
-    DiscoveryEngine,
-)
+from dataclasses import dataclass
 
 
 @dataclass
 class IntelligenceSystem:
-    """
-    Complete intelligence subsystem boundary.
 
-    Coordinates:
-    perception
-    reasoning
-    memory
-    learning
-    observability
-    discovery
-    """
+    runtime: object
 
-    runtime: IntelligenceRuntime
+    memory: object
 
-    memory: IntelligenceMemory = field(
-        default_factory=IntelligenceMemory
-    )
+    governance: object = None
 
-    feedback: FeedbackEngine = field(
-        default_factory=FeedbackEngine
-    )
-
-    adaptation: AdaptationEngine = field(
-        default_factory=AdaptationEngine
-    )
-
-    metrics: IntelligenceMetrics = field(
-        default_factory=IntelligenceMetrics
-    )
-
-    telemetry: TelemetryEngine = field(
-        default_factory=TelemetryEngine
-    )
-
-    discovery: DiscoveryEngine = field(
-        default_factory=DiscoveryEngine
-    )
+    telemetry: object = None
 
 
-    def process(
+    def execute(
         self,
-        input_data
+        input_data,
+        context
     ):
 
-        self.metrics.increment(
-            "executions"
+        if self.governance:
+
+            approved = self.governance.validate(
+                input_data
+            )
+
+            if not approved:
+                return None
+
+
+        result = self.runtime.execute(
+            input_data,
+            context
         )
 
 
-        self.telemetry.record(
-            "execution_started",
-            {
-                "input": input_data
-            }
-        )
+        if self.telemetry:
+
+            self.telemetry.observe(
+                result
+            )
 
 
-        artifact = self.runtime.execute(
-            input_data
-        )
-
-
-        self.memory.remember(
-            artifact
-        )
-
-
-        self.discovery.discover(
-            artifact
-        )
-
-
-        self.telemetry.record(
-            "execution_completed",
-            {
-                "artifact_id":
-                    artifact.artifact_id
-            }
-        )
-
-
-        return artifact
+        return result
