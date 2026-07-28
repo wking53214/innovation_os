@@ -1,16 +1,22 @@
 from dataclasses import dataclass
-import os
-
 
 
 @dataclass
-class InnovationSettings:
+class IntelligenceSettings:
 
-    environment: str
+    environment: str = "development"
 
-    debug: bool
+    debug: bool = False
 
-    project_root: str
+    system_name: str = "innovation_os"
+
+    version: str = "v2"
+
+    confidence_threshold: float = 0.5
+
+    governance_enabled: bool = True
+
+    memory_enabled: bool = True
 
 
 
@@ -19,20 +25,8 @@ class SettingsLoader:
 
     def load(self):
 
-        return InnovationSettings(
+        return IntelligenceSettings()
 
-            environment=os.getenv(
-                "INNOVATION_ENV",
-                "development",
-            ),
 
-            debug=os.getenv(
-                "INNOVATION_DEBUG",
-                "false",
-            ).lower() == "true",
 
-            project_root=os.getenv(
-                "INNOVATION_ROOT",
-                ".",
-            ),
-        )
+CONFIG = IntelligenceSettings()

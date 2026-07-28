@@ -1,14 +1,12 @@
 from .settings import (
-    InnovationSettings,
+    IntelligenceSettings,
     SettingsLoader,
+    CONFIG,
 )
 
 
-CONFIG = SettingsLoader().load()
-
-
 __all__ = [
-    "CONFIG",
-    "InnovationSettings",
+    "IntelligenceSettings",
     "SettingsLoader",
+    "CONFIG",
 ]

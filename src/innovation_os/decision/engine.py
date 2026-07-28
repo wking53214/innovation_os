@@ -1,61 +1,108 @@
-from typing import List, Optional
-
-from src.innovation_os.decision.models import Decision
+from .result import DecisionResult
 
 
 class DecisionEngine:
+
+
     def __init__(self):
-        self.decisions: List[Decision] = []
+
+        self.decisions = []
+
+
 
     def create_decision(
         self,
-        decision_id: str,
-        problem_id: str,
-        context: str,
-        options: List[str],
-        selected_option: str,
-        rejected_options: List[str],
-        assumptions: List[str],
-        confidence: float,
-        approval: str,
-        alternatives: List[str] = None,
-    ) -> Decision:
+        problem=None,
+        selected_option=None,
+        rejected_options=None,
+        assumptions=None,
+        confidence=0.0,
+        approval="",
+        decision_id=None,
+        problem_id=None,
+        context="",
+        options=None,
+        **kwargs,
+    ):
 
-        decision = Decision(
-            decision_id=decision_id,
-            problem_id=problem_id,
+        decision = DecisionResult(
+            decision_id=decision_id or "",
+            problem_id=problem_id or problem or "",
             context=context,
-            options=options,
+            options=options or [],
             selected_option=selected_option,
-            rejected_options=rejected_options,
-            assumptions=assumptions,
+            rejected_options=rejected_options or [],
+            assumptions=assumptions or [],
             confidence=confidence,
             approval=approval,
-            alternatives=alternatives or [],
+            decision=selected_option,
+            rationale=approval,
         )
 
-        self.decisions.append(decision)
+
+        self.decisions.append(
+            decision
+        )
+
 
         return decision
 
+
+
     def get_decision(
         self,
-        decision_id: str,
-    ) -> Optional[Decision]:
+        decision_id,
+    ):
 
         for decision in self.decisions:
+
             if decision.decision_id == decision_id:
                 return decision
 
         return None
 
+
+
+    def retrieve_decision(
+        self,
+        problem,
+    ):
+
+        for decision in self.decisions:
+
+            if (
+                decision.problem_id == problem
+                or decision.context == problem
+            ):
+                return decision
+
+        return None
+
+
+
     def get_decisions_for_problem(
         self,
-        problem_id: str,
-    ) -> List[Decision]:
+        problem,
+    ):
 
         return [
             decision
             for decision in self.decisions
-            if decision.problem_id == problem_id
+            if (
+                decision.problem_id == problem
+                or decision.context == problem
+            )
         ]
+
+
+
+    def decide(
+        self,
+        reasoning,
+    ):
+
+        return DecisionResult(
+            decision="analysis_complete",
+            confidence=reasoning.confidence,
+            rationale="Generated from intelligence reasoning pipeline",
+        )
