@@ -1,33 +1,20 @@
-from dataclasses import dataclass, field
+from .intelligence_memory_system import IntelligenceMemorySystem
+from .memory_index import MemoryIndex
+from .consolidator import MemoryConsolidator
 
-from .artifact_store import ArtifactStore
 
-
-@dataclass
-class IntelligenceMemory:
+class IntelligenceMemory(IntelligenceMemorySystem):
     """
-    Long-term intelligence artifact memory.
+    Backwards compatible intelligence memory facade.
     """
 
-    store: ArtifactStore = field(
-        default_factory=ArtifactStore
-    )
+    def __init__(
+        self,
+        index=None,
+        consolidator=None,
+    ):
 
-
-    def remember(self, artifact):
-
-        return self.store.save(
-            artifact
+        super().__init__(
+            index or MemoryIndex(),
+            consolidator or MemoryConsolidator(),
         )
-
-
-    def recall(self, artifact_id):
-
-        return self.store.get(
-            artifact_id
-        )
-
-
-    def history(self):
-
-        return self.store.all()

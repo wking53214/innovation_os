@@ -12,3 +12,5 @@ __all__ = [
     "MemoryConsolidator",
     "IntelligenceMemorySystem",
 ]
+
+from .intelligence_memory import IntelligenceMemory
