@@ -1,23 +1,62 @@
 from innovation_os.intelligence.learning import (
+    MemoryEvent,
     FeedbackEngine,
     AdaptationEngine,
+    LearningEngine,
 )
 
 
-def test_learning_loop():
+def test_memory_event():
+
+    event = MemoryEvent(
+        "observation",
+        {
+            "value": 1
+        }
+    )
+
+    assert event.event_type == "observation"
+
+
+
+def test_feedback_engine():
+
+    engine = FeedbackEngine()
+
+    engine.record(
+        "positive"
+    )
+
+    assert engine.latest() == "positive"
+
+
+
+def test_adaptation_engine():
+
+    engine = AdaptationEngine()
+
+    result = engine.adapt(
+        "feedback"
+    )
+
+    assert result["status"] == "adapted"
+
+
+
+def test_learning_cycle():
 
     feedback = FeedbackEngine()
 
-    result = feedback.record(
-        "artifact",
-        "success",
-        .9
-    )
-
     adaptation = AdaptationEngine()
 
-    output = adaptation.adapt(
-        result
+    learning = LearningEngine(
+        feedback,
+        adaptation,
     )
 
-    assert output
+    result = learning.learn(
+        "new_pattern"
+    )
+
+    assert result["status"] == "adapted"
+    assert adaptation.count() == 1

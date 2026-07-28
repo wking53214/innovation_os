@@ -1,38 +1,32 @@
 from dataclasses import dataclass, field
-from typing import List, Dict, Any
 
 
 @dataclass
 class FeedbackEngine:
     """
-    Captures intelligence performance feedback.
+    Captures intelligence feedback signals.
     """
 
-    feedback: List[Dict[str, Any]] = field(
+    feedback: list = field(
         default_factory=list
     )
 
 
     def record(
         self,
-        artifact_id,
-        outcome,
-        score
+        feedback
     ):
 
-        item = {
-            "artifact_id": artifact_id,
-            "outcome": outcome,
-            "score": score,
-        }
-
         self.feedback.append(
-            item
+            feedback
         )
 
-        return item
+        return feedback
 
 
-    def history(self):
+    def latest(self):
 
-        return self.feedback
+        if not self.feedback:
+            return None
+
+        return self.feedback[-1]

@@ -1,15 +1,14 @@
 from dataclasses import dataclass, field
-from typing import Dict, Any
 
 
 @dataclass
 class AdaptationEngine:
     """
-    Converts feedback into intelligence adjustments.
+    Converts feedback into intelligence adaptations.
     """
 
-    adjustments: Dict[str, Any] = field(
-        default_factory=dict
+    adaptations: list = field(
+        default_factory=list
     )
 
 
@@ -18,8 +17,21 @@ class AdaptationEngine:
         feedback
     ):
 
-        self.adjustments[
-            "last_feedback"
-        ] = feedback
+        update = {
+            "source": feedback,
+            "status": "adapted",
+        }
 
-        return self.adjustments
+        self.adaptations.append(
+            update
+        )
+
+        return update
+
+
+
+    def count(self):
+
+        return len(
+            self.adaptations
+        )
