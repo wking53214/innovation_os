@@ -1,0 +1,55 @@
+src/innovation_os/intelligence/knowledge_graph.py:    relationship: str
+src/innovation_os/intelligence/knowledge_graph.py:        self.relationships: List[GraphRelationship] = []
+src/innovation_os/intelligence/knowledge_graph.py:    def connect(
+src/innovation_os/intelligence/knowledge_graph.py:        relationship: str,
+src/innovation_os/intelligence/knowledge_graph.py:            relationship,
+src/innovation_os/intelligence/knowledge_graph.py:        self.relationships.append(
+src/innovation_os/intelligence/knowledge_graph.py:            for edge in self.relationships
+src/innovation_os/intelligence/knowledge_graph.py:    def related_path(
+src/innovation_os/intelligence/knowledge_graph.py:        def walk(current, path):
+src/innovation_os/intelligence/knowledge_graph.py:                return path
+src/innovation_os/intelligence/knowledge_graph.py:                        path + [neighbor],
+src/innovation_os/intelligence/repository_intelligence.py:    path: str
+src/innovation_os/intelligence/repository_intelligence.py:                path="",
+src/innovation_os/intelligence/repository_intelligence.py:            path="",
+src/innovation_os/intelligence/engines/context_engine.py:            "relationships": [],
+src/innovation_os/intelligence/discovery/__init__.py:from .relationship_discovery import RelationshipDiscovery
+src/innovation_os/intelligence/discovery/relationship_discovery.py:    Identifies relationships between
+src/innovation_os/intelligence/discovery/relationship_discovery.py:    relationships: List[Dict[str, Any]] = field(
+src/innovation_os/intelligence/discovery/relationship_discovery.py:        relationship_type="related"
+src/innovation_os/intelligence/discovery/relationship_discovery.py:        relationship = {
+src/innovation_os/intelligence/discovery/relationship_discovery.py:            "type": relationship_type,
+src/innovation_os/intelligence/discovery/relationship_discovery.py:        self.relationships.append(
+src/innovation_os/intelligence/discovery/relationship_discovery.py:            relationship
+src/innovation_os/intelligence/discovery/relationship_discovery.py:        return relationship
+src/innovation_os/intelligence/reasoning/causal_engine.py:    Models cause and effect relationships.
+src/innovation_os/intelligence/reasoning/causal_engine.py:    relationships: List[Dict[str, str]] = field(
+src/innovation_os/intelligence/reasoning/causal_engine.py:    def connect(
+src/innovation_os/intelligence/reasoning/causal_engine.py:        self.relationships.append(
+src/innovation_os/intelligence/reasoning/causal_engine.py:            for r in self.relationships
+src/innovation_os/intelligence/reasoning/explanation_graph.py:    def connect(
+src/innovation_os/intelligence/evolution/concept_mapper.py:    Maps concepts and semantic relationships.
+src/innovation_os/intelligence/integration/__init__.py:from .system_connector import IntelligenceSystemConnector
+src/innovation_os/intelligence/integration/intelligence_bridge.py:    def connect(
+src/innovation_os/intelligence/integration/intelligence_bridge.py:    def connected_systems(self):
+src/innovation_os/intelligence/integration/system_connector.py:        return self.bridge.connect(
+src/innovation_os/intelligence/integration/adapters/knowledge_adapter.py:    def add_relationship(
+src/innovation_os/intelligence/integration/adapters/knowledge_adapter.py:            "connect"
+src/innovation_os/intelligence/integration/adapters/knowledge_adapter.py:            return self.graph.connect(
+src/innovation_os/intelligence/orchestration/execution_graph.py:    def connect(
+src/innovation_os/intelligence/knowledge/inference.py:    Generates derived knowledge relationships.
+src/innovation_os/intelligence/knowledge/inference.py:    relationships: list = field(
+src/innovation_os/intelligence/knowledge/inference.py:        relationship
+src/innovation_os/intelligence/knowledge/inference.py:        self.relationships.append(
+src/innovation_os/intelligence/knowledge/inference.py:            relationship
+src/innovation_os/intelligence/knowledge/inference.py:        return relationship
+src/innovation_os/intelligence/knowledge/knowledge_fabric.py:    relationships: list = field(
+src/innovation_os/intelligence/knowledge/knowledge_fabric.py:    def add_relationship(
+src/innovation_os/intelligence/knowledge/knowledge_fabric.py:        relationship
+src/innovation_os/intelligence/knowledge/knowledge_fabric.py:        self.relationships.append(
+src/innovation_os/intelligence/knowledge/knowledge_fabric.py:            relationship
+src/innovation_os/intelligence/knowledge/knowledge_fabric.py:        return relationship
+src/innovation_os/intelligence/knowledge/__init__.py:from .relationship import KnowledgeRelationship
+src/innovation_os/intelligence/decision/alternative.py:    Represents a possible decision path.
+src/innovation_os/intelligence/repository/module.py:    path: str
+src/innovation_os/intelligence/repository/fingerprint_engine.py:                "path": module.path,

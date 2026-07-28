@@ -1,0 +1,12 @@
+src/innovation_os/intelligence/adapters/knowledge_graph_adapter.py
+src/innovation_os/intelligence/contracts/knowledge.py
+src/innovation_os/intelligence/engines/knowledge_engine.py
+src/innovation_os/intelligence/evolution/knowledge_growth.py
+src/innovation_os/intelligence/integration/adapters/knowledge_adapter.py
+src/innovation_os/intelligence/knowledge/entity.py
+src/innovation_os/intelligence/knowledge/entity_resolution.py
+src/innovation_os/intelligence/knowledge_graph.py
+src/innovation_os/intelligence/knowledge/inference.py
+src/innovation_os/intelligence/knowledge/__init__.py
+src/innovation_os/intelligence/knowledge/knowledge_fabric.py
+src/innovation_os/intelligence/knowledge/relationship.py
