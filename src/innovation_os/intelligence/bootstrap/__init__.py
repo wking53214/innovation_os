@@ -64,7 +64,20 @@ def create_intelligence_kernel():
         kernel.registry.contracts[contract] = None
 
 
-    return kernel
+    
+kernel.registry.engines.update(
+    {
+        "observation": None,
+        "perception": None,
+        "context": None,
+        "knowledge": None,
+        "inference": None,
+        "hypothesis": None,
+    }
+)
+
+return kernel
+
 
 
 
@@ -86,7 +99,20 @@ def bootstrap_intelligence(
     )
 
 
-    return kernel
+    
+kernel.registry.engines.update(
+    {
+        "observation": None,
+        "perception": None,
+        "context": None,
+        "knowledge": None,
+        "inference": None,
+        "hypothesis": None,
+    }
+)
+
+return kernel
+
 
 
 
