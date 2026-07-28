@@ -1,11 +1,38 @@
 from dataclasses import dataclass
+from innovation_os.intelligence.contracts import IntelligenceArtifact
 
 
 @dataclass
 class IntelligenceRuntime:
 
     pipeline: object
+
     memory: object
+
+
+
+    def _normalize(
+        self,
+        result
+    ):
+
+        if hasattr(
+            result,
+            "artifact_id"
+        ):
+
+            return result
+
+
+        return IntelligenceArtifact(
+            intelligence_type="runtime_result",
+            source_system="intelligence_runtime",
+            confidence=1.0,
+            metadata={
+                "payload": result
+            },
+        )
+
 
 
     def execute(
@@ -19,8 +46,15 @@ class IntelligenceRuntime:
             context
         )
 
-        self.memory.remember(
+
+        artifact = self._normalize(
             result
         )
+
+
+        self.memory.remember(
+            artifact
+        )
+
 
         return result
