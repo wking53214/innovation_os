@@ -1,0 +1,1 @@
+src/innovation_os/intelligence/runtime/runtime.py:from innovation_os.intelligence.contracts import IntelligenceArtifact
