@@ -3,7 +3,7 @@ from src.innovation_os.models import (
     Question,
     Concept,
     Decision,
-    Artifact,
+    ArtifactRecord,
     Relationship,
 )
 

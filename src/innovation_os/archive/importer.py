@@ -5,7 +5,7 @@ import hashlib
 
 
 @dataclass
-class ImportedArtifact:
+class ArchiveImportRecord:
 
     artifact_id: str
     source_path: str
@@ -25,7 +25,7 @@ class ArchiveImporter:
     def import_directory(
         self,
         directory: str,
-    ) -> List[ImportedArtifact]:
+    ) -> List[ArchiveImportRecord]:
 
         results = []
 
@@ -36,7 +36,7 @@ class ArchiveImporter:
 
             if file.is_file():
 
-                artifact = ImportedArtifact(
+                artifact = ArchiveImportRecord(
                     self._create_id(file),
                     str(file),
                     self._classify(file),

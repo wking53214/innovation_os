@@ -38,7 +38,7 @@ class Decision:
 
 
 @dataclass
-class Artifact:
+class ArtifactRecord:
     id: str
     name: str
     artifact_type: str

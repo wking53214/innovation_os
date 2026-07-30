@@ -3,7 +3,7 @@ from typing import List
 
 
 @dataclass
-class ConversationArtifact:
+class ParsedConversation:
 
     conversation_id: str
     messages: List[str]
@@ -32,7 +32,7 @@ class ConversationImporter:
         )
 
 
-        return ConversationArtifact(
+        return ParsedConversation(
             conversation_id,
             messages,
             keywords,

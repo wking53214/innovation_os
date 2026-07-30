@@ -1,14 +1,7 @@
-from dataclasses import dataclass
 from pathlib import Path
 from typing import List
 
-
-@dataclass
-class ArchiveArtifact:
-
-    path: str
-    artifact_type: str
-    name: str
+from src.innovation_os.archive.models import ArchiveArtifact
 
 
 class ArchiveConnector:
