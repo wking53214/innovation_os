@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 @dataclass
@@ -30,7 +30,7 @@ class VersionRegistry:
         record = VersionRecord(
             artifact_id,
             version,
-            datetime.utcnow(),
+            datetime.now(timezone.utc),
             status,
         )
 

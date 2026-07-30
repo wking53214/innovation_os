@@ -1,5 +1,5 @@
-from .intelligence_registry import IntelligenceRegistry
+from .intelligence_registry import ComponentRegistry
 
 __all__ = [
-    "IntelligenceRegistry",
+    "ComponentRegistry",
 ]

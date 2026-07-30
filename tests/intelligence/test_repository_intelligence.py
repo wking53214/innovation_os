@@ -1,5 +1,5 @@
 from src.innovation_os.intelligence.repository_intelligence import (
-    RepositoryIntelligenceEngine,
+    RepositoryArtifactEngine,
 )
 
 from src.innovation_os.registry.artifact_registry import (
@@ -31,7 +31,7 @@ def test_repository_intelligence():
     ]
 
 
-    result = RepositoryIntelligenceEngine().analyze(
+    result = RepositoryArtifactEngine().analyze(
         artifacts
     )
 

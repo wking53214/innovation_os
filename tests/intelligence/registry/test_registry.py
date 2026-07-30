@@ -1,11 +1,11 @@
 from innovation_os.intelligence.registry import (
-    IntelligenceRegistry,
+    ComponentRegistry,
 )
 
 
 def test_registry():
 
-    registry = IntelligenceRegistry()
+    registry = ComponentRegistry()
 
     registry.register(
         "runtime",

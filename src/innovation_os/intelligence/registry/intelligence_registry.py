@@ -3,7 +3,7 @@ from typing import Dict, Any
 
 
 @dataclass
-class IntelligenceRegistry:
+class ComponentRegistry:
     """
     Central registry for intelligence components.
     """

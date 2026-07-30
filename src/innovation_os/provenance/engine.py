@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List
 
 
@@ -35,7 +35,7 @@ class ProvenanceEngine:
         record = ProvenanceRecord(
             artifact_id=artifact_id,
             source=source,
-            created_at=datetime.utcnow().isoformat(),
+            created_at=datetime.now(timezone.utc).isoformat(),
             metadata=metadata or {},
         )
 

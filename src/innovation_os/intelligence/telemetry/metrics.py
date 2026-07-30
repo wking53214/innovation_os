@@ -1,35 +1,8 @@
-class IntelligenceMetrics:
+# The telemetry subsystem used to keep its own copy of IntelligenceMetrics.
+# It now re-exports the canonical implementation from the metrics package
+# so there is a single source of truth for this class.
+from innovation_os.intelligence.metrics.intelligence_metrics import (
+    IntelligenceMetrics,
+)
 
-
-    def __init__(self):
-
-        self.values = {}
-
-
-
-    def increment(
-        self,
-        name,
-        value=1
-    ):
-
-        self.values[name] = (
-            self.values.get(
-                name,
-                0
-            )
-            +
-            value
-        )
-
-
-
-    def get(
-        self,
-        name
-    ):
-
-        return self.values.get(
-            name,
-            0
-        )
+__all__ = ["IntelligenceMetrics"]

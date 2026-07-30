@@ -21,7 +21,7 @@ class RepositoryIntelligence:
 
 
 
-class RepositoryIntelligenceEngine:
+class RepositoryArtifactEngine:
 
 
     def analyze(

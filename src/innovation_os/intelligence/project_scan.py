@@ -5,7 +5,7 @@ from src.innovation_os.repository.mapper import (
 )
 
 from src.innovation_os.intelligence.repository_intelligence import (
-    RepositoryIntelligenceEngine,
+    RepositoryArtifactEngine,
 )
 
 
@@ -28,7 +28,7 @@ class ProjectScanner:
 
         self.mapper = RepositoryMapper()
 
-        self.engine = RepositoryIntelligenceEngine()
+        self.engine = RepositoryArtifactEngine()
 
 
 
