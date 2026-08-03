@@ -1,0 +1,47 @@
+schema_version: "1"
+record_type: artifact
+artifact_id: perceive-consolidated
+title: PERCEIVE Governance Kernel consolidated module
+kind: source
+status: missing
+
+filenames:
+  - perceive_consolidated.py
+canonical_path: null
+content_hash: null
+language: python
+line_count: null
+
+summary: >
+  Consolidated governance kernel for policy evaluation, gates, audit chaining,
+  and optional DGK consensus. Full body not in ledger yet.
+symbols_named:
+  - PerceiveGovernanceKernel
+  - PolicyRequest
+  - PolicyVerdict
+  - ConsensusEngine
+  - DGKGateway
+  - ImmutableAuditLedger
+  - GovernanceState
+
+body_available: missing
+body_ref: null
+
+related_decisions:
+  - observe-perceive-not-prod-ready
+  - observe-vs-perceive-split
+  - advisory-default-off
+related_episodes:
+  - observe-perceive-prod-readiness-review
+related_frames: []
+
+provenance: VERIFIED
+confidence: 0.7
+
+created_at: null
+updated_at: null
+notes: CANNOT ACCESS FILE from transcript recovery; supply path/hash/body later.
+ingest_tags:
+  - perceive
+  - python
+  - governance

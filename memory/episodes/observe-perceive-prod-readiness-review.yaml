@@ -1,0 +1,153 @@
+schema_version: "1"
+record_type: episode
+episode_id: observe-perceive-prod-readiness-review
+title: OBSERVE/PERCEIVE production-readiness review
+episode_kind: ops
+
+transcript_span:
+  focus: Assess observe_consolidated.py and perceive_consolidated.py; production readiness
+  related_topics:
+    - production readiness
+    - monolith consolidation
+    - advisory vs enforced
+    - DGK consensus
+    - audit ledger
+
+source_refs:
+  - type: interview
+    locator: observe-perceive-readiness-chat
+    note: R1+R2+attestation merge
+  - type: attachment
+    locator: observe_consolidated.py
+    note: attached file; full body not recoverable from transcript
+  - type: attachment
+    locator: perceive_consolidated.py
+    note: attached file; full body not recoverable from transcript
+
+question: What is the production readiness of the consolidated OBSERVE and PERCEIVE files?
+chose: Not production-ready yet; modularize, test, harden observability and deployment controls
+rejected:
+  - item: Ship consolidated single-file kernels as production
+    provenance: VERIFIED
+    basis: assistant verdict and risk list
+constraints:
+  - item: User asked for production-readiness judgment on the pasted/attached code
+    provenance: ATTESTED
+    basis: user messages in source chat
+open_questions:
+  - Exact test coverage and execution evidence outside the transcript
+  - Runtime environment and deploy target
+  - Canonical filesystem paths and content hashes for both files
+  - Production-readiness checklist was promised but not delivered in-chat
+
+supports_decisions:
+  - decision_id: observe-perceive-not-prod-ready
+    strength: supports
+  - decision_id: observe-vs-perceive-split
+    strength: supports
+  - decision_id: advisory-default-off
+    strength: supports
+frames_referenced: []
+artifacts_referenced:
+  - observe-consolidated
+  - perceive-consolidated
+
+evidence:
+  - kind: name
+    anchor: ObserveClinicalEngine
+    role: OBSERVE core engine symbol
+  - kind: name
+    anchor: PerceiveGovernanceKernel
+    role: PERCEIVE core kernel symbol
+  - kind: name
+    anchor: ImmutableAuditLedger
+    role: append-only SHA256-chained audit trail
+  - kind: name
+    anchor: DGKGateway
+    role: optional multi-node consensus for critical decisions
+  - kind: statement
+    anchor: not production-ready yet
+    role: explicit readiness verdict
+  - kind: attestation
+    anchor: advisory default OFF to honor opt-in; baseline unchanged
+    role: founding constraint for enforcement mode
+  - kind: attestation
+    anchor: OBSERVE clinical risk vs PERCEIVE governance/consensus
+    role: split rationale
+
+participants_decisions:
+  - actor: user
+    did: constrained
+    content: Asked for assessment and production-readiness judgment
+  - actor: assistant
+    did: chose
+    content: Rated not production-ready; recommended modularize, test, harden
+  - actor: user
+    did: attested
+    content: Confirmed split why and advisory-default-OFF why after interview
+
+code_evolution: []
+final_code:
+  available: partial
+  language: python
+  filename_hint: observe_consolidated.py; perceive_consolidated.py
+  content_hash: null
+  notes: >
+    Attachments summarized in source chat; CANNOT ACCESS FILE for full bodies.
+    Recovery requires local disk or re-attach.
+
+structural_snapshot:
+  systems_named:
+    - OBSERVE Clinical AI System
+    - PERCEIVE Governance Kernel
+  symbols_named:
+    - VitalsSnapshot
+    - RiskOutput
+    - FusedVerdict
+    - AsyncJobScheduler
+    - ProvisionalStore
+    - PolicyRequest
+    - PolicyVerdict
+    - ConsensusEngine
+    - DGKGateway
+    - decisionfingerprint
+    - behavioralvaccine
+  identity_sentence: >
+    Two consolidated Python kernels—clinical risk observation and policy
+    governance—with rich internal structure but not production-ready as monoliths.
+
+provenance:
+  question: ATTESTED
+  chose: VERIFIED
+  notes: >
+    Web glossary citations appearing in intermediate model answers were
+    excluded; file-specific risks retained.
+
+overall_rationale_quality:
+  repair: strong
+  architecture: partial
+  ontology: missing
+
+confidence:
+  identity: 0.9
+  repair_rationale: 0.88
+  architecture_rationale: 0.72
+  ontology_rationale: 0.0
+  completeness: 0.58
+
+interview:
+  rounds_completed: 2
+  status: ready_to_ingest
+  contamination_flags:
+    - intermediate_answers_cited_external_prod_readiness_articles
+
+ingest_tags:
+  - observe
+  - perceive
+  - production-readiness
+  - interview
+needs_human_attestation:
+  - Add content hash or canonical repo path when files land in git
+  - Optional: attach full source for final_code full
+created_at: null
+notes: Merged from Innovation OS interview pipeline; first seeded episode.

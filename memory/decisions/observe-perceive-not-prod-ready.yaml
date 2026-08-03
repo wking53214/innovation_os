@@ -1,0 +1,52 @@
+schema_version: "1"
+record_type: decision
+decision_id: observe-perceive-not-prod-ready
+title: OBSERVE/PERCEIVE consolidated kernels not production-ready
+domain: observe-perceive
+status: active
+
+question: Are observe_consolidated.py and perceive_consolidated.py production-ready?
+chose: >
+  Not production-ready yet. Requires modularization away from single-file
+  concatenation, stronger tests, and operational hardening (observability, deploy controls).
+rejected:
+  - item: Treat current consolidated files as production-ready
+    why_rejected: Monolith density, hidden context contracts, insufficient verified test/ops evidence
+    provenance: VERIFIED
+constraints:
+  - item: Production readiness requires reliability, observability, and operational standards—not only code presence
+    provenance: ATTESTED
+    basis: readiness review episode
+
+rationale_provenance: MIXED
+rationale_quality: strong
+confidence: 0.88
+
+supersedes: []
+superseded_by: null
+related_decisions:
+  - decision_id: observe-vs-perceive-split
+    relation: depends_on
+  - decision_id: advisory-default-off
+    relation: related_to
+
+frames: []
+artifacts:
+  - observe-consolidated
+  - perceive-consolidated
+evidence_episodes:
+  - observe-perceive-prod-readiness-review
+
+open_implications:
+  - Do not deploy these consolidated files as-is without modularization and tests
+
+created_at: null
+updated_at: null
+attested_by: null
+ingest_tags:
+  - observe
+  - perceive
+  - production-readiness
+notes: >
+  Seeded from interview R1/R2 on production-readiness chat.
+  External web glossary citations were excluded from evidence.

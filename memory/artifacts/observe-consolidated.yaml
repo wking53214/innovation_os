@@ -1,0 +1,47 @@
+schema_version: "1"
+record_type: artifact
+artifact_id: observe-consolidated
+title: OBSERVE Clinical AI consolidated module
+kind: source
+status: missing
+
+filenames:
+  - observe_consolidated.py
+canonical_path: null
+content_hash: null
+language: python
+line_count: null
+
+summary: >
+  Consolidated clinical AI / pediatric risk assessment engine discussed in
+  production-readiness review. Full body not in ledger yet.
+symbols_named:
+  - ObserveClinicalEngine
+  - VitalsSnapshot
+  - RiskOutput
+  - FusedVerdict
+  - AsyncJobScheduler
+  - ProvisionalStore
+  - ImmutableAuditLedger
+  - behavioralvaccine
+  - decisionfingerprint
+
+body_available: missing
+body_ref: null
+
+related_decisions:
+  - observe-perceive-not-prod-ready
+  - observe-vs-perceive-split
+related_episodes:
+  - observe-perceive-prod-readiness-review
+related_frames: []
+
+provenance: VERIFIED
+confidence: 0.7
+
+created_at: null
+updated_at: null
+notes: CANNOT ACCESS FILE from transcript recovery; supply path/hash/body later.
+ingest_tags:
+  - observe
+  - python

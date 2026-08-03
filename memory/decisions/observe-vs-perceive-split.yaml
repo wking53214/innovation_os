@@ -1,0 +1,42 @@
+schema_version: "1"
+record_type: decision
+decision_id: observe-vs-perceive-split
+title: OBSERVE and PERCEIVE remain separate systems
+domain: observe-perceive
+status: active
+
+question: Why are OBSERVE and PERCEIVE separate systems?
+chose: >
+  OBSERVE is the clinical AI system for pediatric risk assessment;
+  PERCEIVE is the governance kernel for policy evaluation and consensus.
+rejected: []
+constraints: []
+
+rationale_provenance: ATTESTED
+rationale_quality: partial
+confidence: 0.72
+
+supersedes: []
+superseded_by: null
+related_decisions:
+  - decision_id: observe-perceive-not-prod-ready
+    relation: enables
+
+frames: []
+artifacts:
+  - observe-consolidated
+  - perceive-consolidated
+evidence_episodes:
+  - observe-perceive-prod-readiness-review
+
+open_implications:
+  - Boundaries and contracts between clinical risk and governance must stay explicit
+
+created_at: null
+updated_at: null
+attested_by: wking53214
+ingest_tags:
+  - observe
+  - perceive
+  - architecture
+notes: Attested after interview; transcript described roles more than deep founding history.

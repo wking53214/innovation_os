@@ -1,0 +1,47 @@
+schema_version: "1"
+record_type: decision
+decision_id: advisory-default-off
+title: Advisory enforcement defaults OFF
+domain: perceive
+status: active
+
+question: Should governance policy gates enforce by default or only record?
+chose: >
+  Default OFF (advisory / opt-in). Gate still runs and records what it would
+  decide; enforcement only when explicitly enabled—so baseline behavior is unchanged.
+rejected:
+  - item: Default ON (enforce)
+    why_rejected: Would change baseline behavior without explicit opt-in
+    provenance: ATTESTED
+constraints:
+  - item: Baseline behavior must remain unchanged until enforcement is enabled
+    provenance: ATTESTED
+    basis: attestation after observe/perceive readiness interview
+
+rationale_provenance: ATTESTED
+rationale_quality: strong
+confidence: 0.9
+
+supersedes: []
+superseded_by: null
+related_decisions:
+  - decision_id: observe-perceive-not-prod-ready
+    relation: related_to
+
+frames: []
+artifacts:
+  - perceive-consolidated
+evidence_episodes:
+  - observe-perceive-prod-readiness-review
+
+open_implications:
+  - Operators must explicitly enable enforcement per environment
+
+created_at: null
+updated_at: null
+attested_by: wking53214
+ingest_tags:
+  - perceive
+  - governance
+  - advisory
+notes: null
