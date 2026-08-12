@@ -10,8 +10,9 @@ from src.innovation_os.ingestion.pipeline import (
     IngestionPipeline,
 )
 
-from src.innovation_os.provenance.provenance import (
+from src.innovation_os.provenance import (
     ProvenanceEngine,
+    ProvenanceStatus,
 )
 
 from src.innovation_os.relationships import (
@@ -71,13 +72,21 @@ class Sentinel:
         provenance = ProvenanceEngine()
 
 
+        #
+        # A directory scan establishes where the file was found, not who
+        # originated the idea in it. PROVENANCE_UNCERTAIN is the honest
+        # category for an ingest path that cannot show origin.
+        #
         record = provenance.register(
             "CODE-001",
-            archive.source,
+            ProvenanceStatus.PROVENANCE_UNCERTAIN,
+            source=archive.source,
         )
 
 
         assert record.source == directory
+
+        assert record.status is ProvenanceStatus.PROVENANCE_UNCERTAIN
 
 
 
