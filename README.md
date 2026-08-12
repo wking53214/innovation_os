@@ -1,5 +1,7 @@
 # Innovation OS
 
+[![Innovation OS Tests](https://github.com/wking53214/innovation_os/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/wking53214/innovation_os/actions/workflows/tests.yml)
+
 ## Governed Innovation Operating System
 
 Innovation OS is a framework for capturing, connecting, evaluating, and developing ideas.
