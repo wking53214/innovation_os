@@ -100,7 +100,9 @@ query engine is currently implemented for it.
 ## Conventions
 
 - Use standard-library Python only unless a change explicitly adds a dependency;
-  `pyproject.toml` currently declares no runtime dependencies.
+  `pyproject.toml` declares no runtime dependencies. `pytest` is the sole
+  dependency, pinned under `[project.optional-dependencies] dev`, installed
+  via `pip install -e ".[dev]"`.
 - Models are generally `@dataclass` types; engines are stateful classes with
   simple CRUD/query methods and in-memory lists or dictionaries.
 - Prefer type annotations and keep methods narrowly focused.  Existing
@@ -118,7 +120,7 @@ query engine is currently implemented for it.
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e .
+python -m pip install -e ".[dev]"
 pytest -q
 python3 -m demos.run_innovation_demo
 python -m innovation_os.cli.main status

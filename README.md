@@ -38,6 +38,14 @@ Implementation
 - Nature Inspired Engine
 - Human Approval Governance
 
+## Setup
+
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+pip install -e ".[dev]"
+
 ## Running Tests
 
 pytest

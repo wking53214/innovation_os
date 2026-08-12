@@ -16,6 +16,6 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install pytest==9.1.1
+      - run: pip install -e ".[dev]"
 
       - run: pytest -q
