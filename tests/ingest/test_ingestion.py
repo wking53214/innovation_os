@@ -1,7 +1,7 @@
 import tempfile
 import os
 
-from src.innovation_os.ingest.pipeline import (
+from innovation_os.ingest.pipeline import (
     KnowledgeIngestionPipeline,
 )
 

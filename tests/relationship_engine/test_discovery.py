@@ -1,4 +1,4 @@
-from src.innovation_os.relationship_engine.discovery import (
+from innovation_os.relationship_engine.discovery import (
     RelationshipDiscoveryEngine,
 )
 

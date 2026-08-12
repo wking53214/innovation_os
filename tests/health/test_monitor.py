@@ -1,4 +1,4 @@
-from src.innovation_os.health.monitor import (
+from innovation_os.health.monitor import (
     InnovationHealthMonitor,
 )
 

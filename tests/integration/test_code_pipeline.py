@@ -1,7 +1,7 @@
 import tempfile
 import os
 
-from src.innovation_os.integration.code_pipeline import (
+from innovation_os.integration.code_pipeline import (
     CodeIntegrationPipeline,
 )
 

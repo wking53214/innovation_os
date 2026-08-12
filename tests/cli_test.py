@@ -1,4 +1,4 @@
-from src.innovation_os.cli.main import (
+from innovation_os.cli.main import (
     status,
 )
 

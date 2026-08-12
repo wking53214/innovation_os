@@ -1,4 +1,4 @@
-from src.innovation_os.core.pipeline import (
+from innovation_os.core.pipeline import (
     InnovationPipeline,
 )
 

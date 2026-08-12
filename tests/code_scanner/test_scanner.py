@@ -1,7 +1,7 @@
 import tempfile
 import os
 
-from src.innovation_os.code_scanner.scanner import (
+from innovation_os.code_scanner.scanner import (
     CodeScanner,
 )
 

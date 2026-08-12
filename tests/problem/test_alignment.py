@@ -1,4 +1,4 @@
-from src.innovation_os.problem.alignment import (
+from innovation_os.problem.alignment import (
     ProblemAlignmentEngine,
 )
 

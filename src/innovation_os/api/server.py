@@ -1,6 +1,6 @@
 from dataclasses import asdict
 
-from src.innovation_os.search.engine import (
+from innovation_os.search.engine import (
     SearchEngine,
 )
 

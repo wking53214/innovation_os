@@ -1,7 +1,7 @@
 import tempfile
 from pathlib import Path
 
-from src.innovation_os.projects.project_discovery import (
+from innovation_os.projects.project_discovery import (
     ProjectDiscovery,
 )
 

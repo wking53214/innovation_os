@@ -2,7 +2,7 @@ import tempfile
 from pathlib import Path
 
 
-from src.innovation_os.code.relationship_extractor import (
+from innovation_os.code.relationship_extractor import (
     CodeRelationshipExtractor,
 )
 

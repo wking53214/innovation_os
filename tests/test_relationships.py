@@ -1,4 +1,4 @@
-from src.innovation_os.relationships import RelationshipEngine
+from innovation_os.relationships import RelationshipEngine
 
 
 def test_create_relationship():

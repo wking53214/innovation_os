@@ -1,4 +1,4 @@
-from src.innovation_os.attribution.engine import (
+from innovation_os.attribution.engine import (
     CodeAttributionEngine,
 )
 

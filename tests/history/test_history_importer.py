@@ -2,7 +2,7 @@ from pathlib import Path
 import tempfile
 
 
-from src.innovation_os.history.importer import (
+from innovation_os.history.importer import (
     InnovationHistoryImporter,
 )
 

@@ -25,9 +25,10 @@ pyproject.toml                  # package and pytest configuration
 ```
 
 The project uses the `src/` layout and setuptools.  The distribution is named
-`innovation-os`, while much of the current code imports modules as
-`src.innovation_os...`; preserve the import style already used by nearby code
-unless deliberately undertaking a packaging cleanup.
+`innovation-os` and is installed editable (`pip install -e .`), so all code
+imports modules as `innovation_os...` (no `src.` prefix).  The package is
+importable from any working directory once installed; `pytest.ini` adds
+`src` and the repo root to `sys.path` for test collection.
 
 ## Architecture
 
@@ -64,7 +65,7 @@ surfaces; do not merge or remove them incidentally.
 
 ### Intelligence V2
 
-`src/innovation_os/intelligence/` is the larger, newer subsystem.  It is
+`innovation_os/intelligence/` is the larger, newer subsystem.  It is
 organized around stable contracts and an `IntelligenceArtifact` output:
 
 ```text
@@ -119,8 +120,8 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e .
 pytest -q
-python3 demos/run_innovation_demo.py
-python -m src.innovation_os.cli.main status
+python3 -m demos.run_innovation_demo
+python -m innovation_os.cli.main status
 ```
 
 `pytest.ini`/`pyproject.toml` point pytest at `tests/` and add the repository

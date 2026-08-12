@@ -1,4 +1,4 @@
-from src.innovation_os.knowledge_graph.engine import (
+from innovation_os.knowledge_graph.engine import (
     KnowledgeGraphEngine,
 )
 

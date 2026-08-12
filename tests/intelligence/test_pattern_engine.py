@@ -1,4 +1,4 @@
-from src.innovation_os.intelligence.pattern_engine import (
+from innovation_os.intelligence.pattern_engine import (
     PatternDetectionEngine,
 )
 

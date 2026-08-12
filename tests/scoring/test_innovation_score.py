@@ -1,4 +1,4 @@
-from src.innovation_os.scoring.innovation_score import (
+from innovation_os.scoring.innovation_score import (
     InnovationScoringEngine,
 )
 

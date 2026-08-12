@@ -1,4 +1,4 @@
-from src.innovation_os.interface.cli import (
+from innovation_os.interface.cli import (
     InnovationInterface,
 )
 

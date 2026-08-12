@@ -1,4 +1,4 @@
-from src.innovation_os.ideation.engine import (
+from innovation_os.ideation.engine import (
     IdeationEngine,
 )
 

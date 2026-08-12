@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-from src.innovation_os.history.evolution import (
+from innovation_os.history.evolution import (
     InnovationEvolutionEngine,
 )
 

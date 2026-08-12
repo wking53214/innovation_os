@@ -1,7 +1,7 @@
 import json
 
-from src.innovation_os.continuity import ContinuityEngine
-from src.innovation_os.packet import ContinuityPacketExporter
+from innovation_os.continuity import ContinuityEngine
+from innovation_os.packet import ContinuityPacketExporter
 
 
 def test_export_continuity_packet(tmp_path):

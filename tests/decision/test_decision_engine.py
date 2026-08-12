@@ -1,4 +1,4 @@
-from src.innovation_os.decision.engine import DecisionEngine
+from innovation_os.decision.engine import DecisionEngine
 
 
 def test_create_decision():

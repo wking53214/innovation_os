@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import List
 
-from src.innovation_os.archive.models import ArchiveArtifact
+from innovation_os.archive.models import ArchiveArtifact
 
 
 class ArchiveConnector:

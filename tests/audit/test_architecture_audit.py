@@ -1,4 +1,4 @@
-from src.innovation_os.audit.architecture_audit import (
+from innovation_os.audit.architecture_audit import (
     ArchitectureAudit,
 )
 

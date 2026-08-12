@@ -1,7 +1,7 @@
 import json
 from dataclasses import asdict
 
-from src.innovation_os.continuity import ContinuityState
+from innovation_os.continuity import ContinuityState
 
 
 class ContinuityPacketExporter:

@@ -8,7 +8,7 @@ Two things must hold:
 
 import pytest
 
-from src.innovation_os.provenance import (
+from innovation_os.provenance import (
     ProvenanceEngine,
     ProvenanceStatus,
 )

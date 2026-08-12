@@ -1,7 +1,7 @@
 import tempfile
 import os
 
-from src.innovation_os.workflows.ingestion_workflow import (
+from innovation_os.workflows.ingestion_workflow import (
     FullIngestionWorkflow,
 )
 

@@ -52,6 +52,6 @@ python3 -m demos.mvp2_demo
 
 ## CLI
 
-python3 -m src.innovation_os.cli.main status
+python3 -m innovation_os.cli.main status
 
-python3 -m src.innovation_os.ingest <folder>
+python3 -m innovation_os.ingest <folder>

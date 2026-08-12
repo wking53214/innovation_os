@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from src.innovation_os.timeline.engine import (
+from innovation_os.timeline.engine import (
     TimelineEngine,
 )
 

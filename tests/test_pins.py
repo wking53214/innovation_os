@@ -1,4 +1,4 @@
-from src.innovation_os.pins import PinRegistry
+from innovation_os.pins import PinRegistry
 
 
 def test_create_pin():

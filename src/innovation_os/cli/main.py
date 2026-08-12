@@ -1,7 +1,7 @@
 import argparse
 
-from src.innovation_os.config import CONFIG
-from src.innovation_os.health.monitor import SystemHealth
+from innovation_os.config import CONFIG
+from innovation_os.health.monitor import SystemHealth
 
 
 

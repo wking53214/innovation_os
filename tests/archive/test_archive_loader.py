@@ -1,7 +1,7 @@
 import tempfile
 from pathlib import Path
 
-from src.innovation_os.archive.archive_loader import (
+from innovation_os.archive.archive_loader import (
     ArchiveLoader,
 )
 

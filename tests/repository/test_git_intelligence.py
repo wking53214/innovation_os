@@ -3,7 +3,7 @@ import tempfile
 from pathlib import Path
 
 
-from src.innovation_os.repository.git_intelligence import (
+from innovation_os.repository.git_intelligence import (
     GitIntelligence,
 )
 

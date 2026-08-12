@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from src.innovation_os.repository.importer import (
+from innovation_os.repository.importer import (
     RepositoryImporter,
 )
 

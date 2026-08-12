@@ -1,7 +1,7 @@
 import tempfile
 from pathlib import Path
 
-from src.innovation_os.ingestion.pipeline import (
+from innovation_os.ingestion.pipeline import (
     IngestionPipeline,
 )
 

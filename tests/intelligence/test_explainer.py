@@ -1,4 +1,4 @@
-from src.innovation_os.intelligence.explainer import (
+from innovation_os.intelligence.explainer import (
     InnovationExplainer,
 )
 

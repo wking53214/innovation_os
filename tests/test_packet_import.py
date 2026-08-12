@@ -1,5 +1,5 @@
-from src.innovation_os.continuity import ContinuityEngine
-from src.innovation_os.packet import (
+from innovation_os.continuity import ContinuityEngine
+from innovation_os.packet import (
     ContinuityPacketExporter,
     ContinuityPacketImporter,
 )

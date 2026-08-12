@@ -1,7 +1,7 @@
 import tempfile
 from pathlib import Path
 
-from src.innovation_os.reconstruction.archive_engine import (
+from innovation_os.reconstruction.archive_engine import (
     ArchiveReconstructionEngine,
 )
 

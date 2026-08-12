@@ -1,4 +1,4 @@
-from src.innovation_os.memory.innovation_memory import (
+from innovation_os.memory.innovation_memory import (
     InnovationMemory,
 )
 

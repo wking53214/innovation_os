@@ -2,20 +2,20 @@ import tempfile
 from pathlib import Path
 
 
-from src.innovation_os.archive.archive_loader import (
+from innovation_os.archive.archive_loader import (
     ArchiveLoader,
 )
 
-from src.innovation_os.ingestion.pipeline import (
+from innovation_os.ingestion.pipeline import (
     IngestionPipeline,
 )
 
-from src.innovation_os.provenance import (
+from innovation_os.provenance import (
     ProvenanceEngine,
     ProvenanceStatus,
 )
 
-from src.innovation_os.relationships import (
+from innovation_os.relationships import (
     RelationshipEngine,
 )
 

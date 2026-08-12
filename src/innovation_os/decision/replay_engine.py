@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from src.innovation_os.decision.replay import DecisionReplay
+from innovation_os.decision.replay import DecisionReplay
 
 
 class ReplayEngine:

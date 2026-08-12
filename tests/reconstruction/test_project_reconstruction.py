@@ -1,4 +1,4 @@
-from src.innovation_os.reconstruction.project_reconstruction import (
+from innovation_os.reconstruction.project_reconstruction import (
     ProjectReconstructionEngine,
 )
 

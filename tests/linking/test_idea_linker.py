@@ -1,4 +1,4 @@
-from src.innovation_os.linking.idea_linker import (
+from innovation_os.linking.idea_linker import (
     IdeaLinker,
 )
 

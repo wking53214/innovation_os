@@ -1,4 +1,4 @@
-from src.innovation_os.decision.alternative_engine import (
+from innovation_os.decision.alternative_engine import (
     AlternativeEngine,
 )
 

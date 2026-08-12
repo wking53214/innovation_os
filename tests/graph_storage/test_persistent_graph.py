@@ -1,4 +1,4 @@
-from src.innovation_os.graph_storage.persistent_graph import (
+from innovation_os.graph_storage.persistent_graph import (
     PersistentInnovationGraph,
 )
 

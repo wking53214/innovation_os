@@ -1,4 +1,4 @@
-from src.innovation_os.governance.engine import (
+from innovation_os.governance.engine import (
     ApprovalEngine,
 )
 

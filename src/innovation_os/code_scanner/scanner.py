@@ -1,7 +1,7 @@
 import os
 from typing import List
 
-from src.innovation_os.code_scanner.models import (
+from innovation_os.code_scanner.models import (
     ScannedArtifact,
 )
 

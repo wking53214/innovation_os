@@ -1,4 +1,4 @@
-from src.innovation_os.graph.models import (
+from innovation_os.graph.models import (
     InnovationGraph,
 )
 

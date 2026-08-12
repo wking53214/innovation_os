@@ -1,4 +1,4 @@
-from src.innovation_os.config.settings import (
+from innovation_os.config.settings import (
     SettingsLoader,
 )
 

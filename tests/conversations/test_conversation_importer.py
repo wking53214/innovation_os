@@ -1,4 +1,4 @@
-from src.innovation_os.conversations.importer import (
+from innovation_os.conversations.importer import (
     ConversationImporter,
 )
 

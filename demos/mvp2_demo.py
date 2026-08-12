@@ -1,11 +1,11 @@
 import tempfile
 import os
 
-from src.innovation_os.workflows.ingestion_workflow import (
+from innovation_os.workflows.ingestion_workflow import (
     FullIngestionWorkflow,
 )
 
-from src.innovation_os.api.server import (
+from innovation_os.api.server import (
     InnovationAPI,
 )
 

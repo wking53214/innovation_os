@@ -1,4 +1,4 @@
-from src.innovation_os.continuity import ContinuityEngine
+from innovation_os.continuity import ContinuityEngine
 
 
 def test_create_continuity_state():

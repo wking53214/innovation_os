@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 
-from src.innovation_os.ideation.idea_extractor import (
+from innovation_os.ideation.idea_extractor import (
     IdeaExtractor,
 )
 

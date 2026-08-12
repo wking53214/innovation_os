@@ -1,4 +1,4 @@
-from src.innovation_os.code_registry.engine import (
+from innovation_os.code_registry.engine import (
     CodeRegistryEngine,
 )
 

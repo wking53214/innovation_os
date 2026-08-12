@@ -1,4 +1,4 @@
-from src.innovation_os.dashboard.engine import (
+from innovation_os.dashboard.engine import (
     InnovationDashboard,
 )
 

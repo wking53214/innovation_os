@@ -1,4 +1,4 @@
-from src.innovation_os.dashboard.dashboard_model import (
+from innovation_os.dashboard.dashboard_model import (
     DashboardBuilder,
 )
 

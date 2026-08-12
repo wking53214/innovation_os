@@ -1,4 +1,4 @@
-from src.innovation_os.map.innovation_map import (
+from innovation_os.map.innovation_map import (
     InnovationMap,
 )
 

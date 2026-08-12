@@ -1,7 +1,7 @@
 import tempfile
 from pathlib import Path
 
-from src.innovation_os.repository.mapper import (
+from innovation_os.repository.mapper import (
     RepositoryMapper,
 )
 

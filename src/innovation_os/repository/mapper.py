@@ -64,7 +64,7 @@ class RepositoryMapper:
         for repository ingestion.
         """
 
-        from src.innovation_os.registry.artifact_registry import (
+        from innovation_os.registry.artifact_registry import (
             Artifact,
         )
 

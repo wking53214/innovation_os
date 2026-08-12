@@ -1,4 +1,4 @@
-from src.innovation_os.scoring.engine import (
+from innovation_os.scoring.engine import (
     InnovationScoringEngine,
 )
 

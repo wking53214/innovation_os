@@ -1,4 +1,4 @@
-from src.innovation_os.decisions.intelligence import (
+from innovation_os.decisions.intelligence import (
     DecisionIntelligenceEngine,
 )
 

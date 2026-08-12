@@ -1,6 +1,6 @@
 import sys
 
-from src.innovation_os.ingest.pipeline import (
+from innovation_os.ingest.pipeline import (
     KnowledgeIngestionPipeline,
 )
 
@@ -9,7 +9,7 @@ def main():
 
     if len(sys.argv) < 2:
         print(
-            "Usage: python3 -m src.innovation_os.ingest <folder>"
+            "Usage: python3 -m innovation_os.ingest <folder>"
         )
         return
 

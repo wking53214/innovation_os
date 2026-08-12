@@ -1,4 +1,4 @@
-from src.innovation_os.intelligence.cluster_engine import (
+from innovation_os.intelligence.cluster_engine import (
     IdeaClusterEngine,
 )
 

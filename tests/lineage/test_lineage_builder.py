@@ -1,4 +1,4 @@
-from src.innovation_os.lineage.builder import (
+from innovation_os.lineage.builder import (
     ArtifactLineageBuilder,
 )
 

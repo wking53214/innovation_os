@@ -1,4 +1,4 @@
-from src.innovation_os.personal_graph.engine import (
+from innovation_os.personal_graph.engine import (
     PersonalInnovationGraph,
 )
 

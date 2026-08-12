@@ -1,4 +1,4 @@
-from src.innovation_os.lifecycle.state_machine import (
+from innovation_os.lifecycle.state_machine import (
     InnovationLifecycleEngine,
     LifecycleState,
 )

@@ -1,4 +1,4 @@
-from src.innovation_os.decisions.decision_tracker import (
+from innovation_os.decisions.decision_tracker import (
     DecisionTracker,
 )
 

@@ -1,4 +1,4 @@
-from src.innovation_os.interface.natural_language import (
+from innovation_os.interface.natural_language import (
     NaturalLanguageInterface,
 )
 

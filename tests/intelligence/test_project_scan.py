@@ -2,7 +2,7 @@ import tempfile
 from pathlib import Path
 
 
-from src.innovation_os.intelligence.project_scan import (
+from innovation_os.intelligence.project_scan import (
     ProjectScanner,
 )
 

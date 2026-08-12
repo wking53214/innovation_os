@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from src.innovation_os.ideation.models import Idea
+from innovation_os.ideation.models import Idea
 
 
 class IdeationEngine:

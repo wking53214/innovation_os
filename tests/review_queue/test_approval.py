@@ -1,4 +1,4 @@
-from src.innovation_os.review_queue.approval import (
+from innovation_os.review_queue.approval import (
     ApprovalQueue,
 )
 

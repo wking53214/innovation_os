@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from src.innovation_os.decision.alternatives import (
+from innovation_os.decision.alternatives import (
     DecisionAlternative,
 )
 

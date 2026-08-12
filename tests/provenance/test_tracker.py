@@ -5,7 +5,7 @@ That store is gone. The same intent (one artifact accumulating a record of
 where it came from over time) is expressed against the canonical store.
 """
 
-from src.innovation_os.provenance import (
+from innovation_os.provenance import (
     ProvenanceEngine,
     ProvenanceStatus,
 )

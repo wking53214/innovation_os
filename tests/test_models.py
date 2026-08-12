@@ -1,4 +1,4 @@
-from src.innovation_os.models import (
+from innovation_os.models import (
     Problem,
     Question,
     Concept,

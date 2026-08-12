@@ -1,4 +1,4 @@
-from src.innovation_os.health.release_report import (
+from innovation_os.health.release_report import (
     ReleaseHealth,
 )
 

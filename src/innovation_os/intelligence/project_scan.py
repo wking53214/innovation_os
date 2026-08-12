@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 
-from src.innovation_os.repository.mapper import (
+from innovation_os.repository.mapper import (
     RepositoryMapper,
 )
 
-from src.innovation_os.intelligence.repository_intelligence import (
+from innovation_os.intelligence.repository_intelligence import (
     RepositoryArtifactEngine,
 )
 

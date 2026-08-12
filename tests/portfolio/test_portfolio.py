@@ -1,4 +1,4 @@
-from src.innovation_os.portfolio.engine import (
+from innovation_os.portfolio.engine import (
     InnovationPortfolioEngine,
 )
 

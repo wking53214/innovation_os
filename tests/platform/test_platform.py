@@ -1,8 +1,8 @@
-from src.innovation_os.platform.health import (
+from innovation_os.platform.health import (
     SystemHealth,
 )
 
-from src.innovation_os.platform.version import (
+from innovation_os.platform.version import (
     VersionRegistry,
 )
 

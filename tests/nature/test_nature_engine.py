@@ -1,4 +1,4 @@
-from src.innovation_os.nature.engine import (
+from innovation_os.nature.engine import (
     NatureInspiredEngine,
 )
 

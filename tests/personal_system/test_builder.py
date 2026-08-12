@@ -1,4 +1,4 @@
-from src.innovation_os.personal_system.builder import (
+from innovation_os.personal_system.builder import (
     PersonalSystemBuilder,
 )
 

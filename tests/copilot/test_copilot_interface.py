@@ -1,4 +1,4 @@
-from src.innovation_os.copilot.interface import (
+from innovation_os.copilot.interface import (
     InnovationCopilot,
 )
 

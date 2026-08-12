@@ -1,7 +1,7 @@
 import tempfile
 import os
 
-from src.innovation_os.importer.importer import (
+from innovation_os.importer.importer import (
     InnovationImporter,
 )
 

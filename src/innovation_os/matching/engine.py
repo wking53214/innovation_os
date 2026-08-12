@@ -1,6 +1,6 @@
 from typing import Dict, List
 
-from src.innovation_os.matching.models import (
+from innovation_os.matching.models import (
     MatchResult,
 )
 

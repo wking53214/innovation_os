@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from typing import List
 
-from src.innovation_os.importer.models import (
+from innovation_os.importer.models import (
     ImportedArtifact,
 )
 

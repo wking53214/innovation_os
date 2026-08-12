@@ -1,4 +1,4 @@
-from src.innovation_os.assistant.research import (
+from innovation_os.assistant.research import (
     ResearchAssistant,
 )
 

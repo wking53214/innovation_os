@@ -1,4 +1,4 @@
-from src.innovation_os.classification.classifier import (
+from innovation_os.classification.classifier import (
     ArtifactClassifier,
 )
 

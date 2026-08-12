@@ -1,4 +1,4 @@
-from src.innovation_os.cli.innovation_cli import (
+from innovation_os.cli.innovation_cli import (
     InnovationCLI,
 )
 

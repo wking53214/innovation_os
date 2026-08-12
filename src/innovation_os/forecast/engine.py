@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from src.innovation_os.forecast.models import (
+from innovation_os.forecast.models import (
     Scenario,
 )
 

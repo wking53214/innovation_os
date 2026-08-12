@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from src.innovation_os.solution.models import Solution
+from innovation_os.solution.models import Solution
 
 
 class SolutionEngine:

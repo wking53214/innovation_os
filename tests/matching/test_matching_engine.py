@@ -1,4 +1,4 @@
-from src.innovation_os.matching.engine import (
+from innovation_os.matching.engine import (
     IdeaMatchingEngine,
 )
 

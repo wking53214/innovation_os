@@ -1,4 +1,4 @@
-from src.innovation_os.api.server import (
+from innovation_os.api.server import (
     InnovationAPI,
 )
 

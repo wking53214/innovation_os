@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from src.innovation_os.branches.models import Branch
+from innovation_os.branches.models import Branch
 
 
 class BranchEngine:

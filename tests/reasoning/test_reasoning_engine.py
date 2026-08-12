@@ -1,4 +1,4 @@
-from src.innovation_os.reasoning.engine import (
+from innovation_os.reasoning.engine import (
     ReasoningEngine,
 )
 

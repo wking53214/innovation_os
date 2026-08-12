@@ -1,4 +1,4 @@
-from src.innovation_os.projects.manifest import (
+from innovation_os.projects.manifest import (
     ProjectManifest,
     ProjectRegistry,
 )

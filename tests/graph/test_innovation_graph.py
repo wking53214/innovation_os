@@ -1,4 +1,4 @@
-from src.innovation_os.graph.innovation_graph import (
+from innovation_os.graph.innovation_graph import (
     InnovationGraph,
 )
 

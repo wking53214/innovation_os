@@ -1,4 +1,4 @@
-from src.innovation_os.recommendation.recommendation_engine import (
+from innovation_os.recommendation.recommendation_engine import (
     RecommendationEngine,
 )
 

@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from src.innovation_os.decision.models import Decision
+from innovation_os.decision.models import Decision
 
 
 class DecisionEngine:

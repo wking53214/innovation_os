@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from src.innovation_os.review.models import Review
+from innovation_os.review.models import Review
 
 
 class ReviewEngine:

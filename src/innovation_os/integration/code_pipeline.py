@@ -1,12 +1,12 @@
-from src.innovation_os.code_scanner.scanner import (
+from innovation_os.code_scanner.scanner import (
     CodeScanner,
 )
 
-from src.innovation_os.registry.artifact_registry import (
+from innovation_os.registry.artifact_registry import (
     ArtifactRegistry,
 )
 
-from src.innovation_os.graph.models import (
+from innovation_os.graph.models import (
     InnovationGraph,
 )
 

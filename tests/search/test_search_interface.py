@@ -1,4 +1,4 @@
-from src.innovation_os.search.interface import (
+from innovation_os.search.interface import (
     InnovationSearch,
 )
 

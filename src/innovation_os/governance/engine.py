@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from src.innovation_os.governance.models import (
+from innovation_os.governance.models import (
     ApprovalRecord,
 )
 

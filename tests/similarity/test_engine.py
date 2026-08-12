@@ -1,4 +1,4 @@
-from src.innovation_os.similarity.engine import (
+from innovation_os.similarity.engine import (
     SimilarityEngine,
 )
 

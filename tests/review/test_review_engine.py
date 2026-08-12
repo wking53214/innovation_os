@@ -1,4 +1,4 @@
-from src.innovation_os.review.engine import ReviewEngine
+from innovation_os.review.engine import ReviewEngine
 
 
 def test_create_review():

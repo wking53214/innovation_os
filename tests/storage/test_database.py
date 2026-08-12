@@ -1,4 +1,4 @@
-from src.innovation_os.storage.database import (
+from innovation_os.storage.database import (
     InnovationDatabase,
 )
 

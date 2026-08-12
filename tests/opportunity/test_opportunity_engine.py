@@ -1,4 +1,4 @@
-from src.innovation_os.opportunity.engine import (
+from innovation_os.opportunity.engine import (
     OpportunityDetectionEngine,
 )
 

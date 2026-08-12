@@ -1,4 +1,4 @@
-from src.innovation_os.personal_map.engine import (
+from innovation_os.personal_map.engine import (
     PersonalInnovationMap,
 )
 

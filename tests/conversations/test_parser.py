@@ -1,7 +1,7 @@
 import tempfile
 from pathlib import Path
 
-from src.innovation_os.conversations.parser import (
+from innovation_os.conversations.parser import (
     ConversationParser,
 )
 

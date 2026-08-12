@@ -4,7 +4,7 @@ a second ProvenanceEngine under a colliding name. Same intent (metadata on
 registration, free-text history events), now against the canonical store.
 """
 
-from src.innovation_os.provenance import (
+from innovation_os.provenance import (
     ProvenanceEngine,
     ProvenanceStatus,
 )

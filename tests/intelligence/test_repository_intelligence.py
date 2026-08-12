@@ -1,8 +1,8 @@
-from src.innovation_os.intelligence.repository_intelligence import (
+from innovation_os.intelligence.repository_intelligence import (
     RepositoryArtifactEngine,
 )
 
-from src.innovation_os.registry.artifact_registry import (
+from innovation_os.registry.artifact_registry import (
     Artifact,
 )
 

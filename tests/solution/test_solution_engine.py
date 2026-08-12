@@ -1,4 +1,4 @@
-from src.innovation_os.solution.engine import (
+from innovation_os.solution.engine import (
     SolutionEngine,
 )
 

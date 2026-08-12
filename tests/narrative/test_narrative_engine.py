@@ -1,4 +1,4 @@
-from src.innovation_os.narrative.engine import (
+from innovation_os.narrative.engine import (
     ExecutiveNarrativeEngine,
 )
 

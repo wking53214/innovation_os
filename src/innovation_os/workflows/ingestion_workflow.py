@@ -1,12 +1,12 @@
-from src.innovation_os.ingest.pipeline import (
+from innovation_os.ingest.pipeline import (
     KnowledgeIngestionPipeline,
 )
 
-from src.innovation_os.registry.artifact_registry import (
+from innovation_os.registry.artifact_registry import (
     ArtifactRegistry,
 )
 
-from src.innovation_os.relationship_engine.discovery import (
+from innovation_os.relationship_engine.discovery import (
     RelationshipDiscoveryEngine,
 )
 
