@@ -1,6 +1,9 @@
 from dataclasses import dataclass
 from typing import Dict, List, Optional
 
+from ..provenance import ProvenanceEngine
+from ..context_envelope import ContextEnvelopeStore
+
 
 @dataclass
 class Artifact:
@@ -37,13 +40,36 @@ class Artifact:
 
 
 class ArtifactRegistry:
+    """
+    First production wiring point for Article II (provenance) and Article
+    XV.A (context envelope) -- both unratified/partially-unratified, see
+    provenance/status.py and context_envelope/envelope.py. Both engines
+    are optional and default to None: existing callers that construct
+    ArtifactRegistry() with no arguments are unaffected.
+
+    Context envelope registration is unconditional -- an empty envelope
+    makes no claim, so there is nothing to get wrong by creating one.
+
+    Provenance registration only happens if the caller passes an explicit
+    provenance_status to register(). ProvenanceEngine.register() requires
+    a status with no default by design (status.py: "must not guess
+    provenance"); this wiring does not create a default it isn't entitled
+    to. An artifact registered without a status simply has no provenance
+    record yet, which is an honest absence, not a guess.
+    """
 
 
-    def __init__(self):
+    def __init__(
+        self,
+        provenance_engine: Optional[ProvenanceEngine] = None,
+        context_envelope_store: Optional[ContextEnvelopeStore] = None,
+    ):
 
         self.artifacts: Dict[str, Artifact] = {}
         self.counter = 0
         self.idea_links = {}
+        self.provenance_engine = provenance_engine
+        self.context_envelope_store = context_envelope_store
 
 
 
@@ -58,11 +84,19 @@ class ArtifactRegistry:
 
         New:
             register(Artifact)
+            register(Artifact, provenance_status=ProvenanceStatus.X)
 
         Legacy:
             register(filename, path, language)
+
+        provenance_status is optional and keyword-only. See class
+        docstring: no default is applied when it's omitted.
         """
 
+        provenance_status = kwargs.pop(
+            "provenance_status",
+            None,
+        )
 
         if (
             len(args) == 1
@@ -100,6 +134,25 @@ class ArtifactRegistry:
         self.artifacts[
             artifact.artifact_id
         ] = artifact
+
+
+        if self.context_envelope_store is not None:
+
+            self.context_envelope_store.register(
+                artifact.artifact_id
+            )
+
+
+        if (
+            self.provenance_engine is not None
+            and provenance_status is not None
+        ):
+
+            self.provenance_engine.register(
+                artifact.artifact_id,
+                provenance_status,
+                source=artifact.source,
+            )
 
 
         return artifact

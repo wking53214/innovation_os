@@ -1,7 +1,9 @@
 """
 Canonical provenance taxonomy.
 
-Source of truth: Cognitive Continuity Constitution, Article II (ratified).
+Source of truth: Cognitive Continuity Constitution, Article II. Settled in
+the V1 working draft; the CCC as a whole has no formal ratification event
+recorded yet.
 
 These six categories are closed. Do not add, rename, or merge members
 without a ratified amendment to Article II. The enum values below are the
