@@ -10,8 +10,8 @@ def status():
     health = SystemHealth().check()
 
     return {
-        "name": CONFIG.name,
-        "version": CONFIG.version,
+        "environment": CONFIG.environment,
+        "version": health.version,
         "healthy": health.healthy,
     }
 
@@ -36,7 +36,7 @@ def main():
         result = status()
 
         print(
-            f"{result['name']} {result['version']}"
+            f"innovation-os {result['version']} ({result['environment']})"
         )
 
         print(

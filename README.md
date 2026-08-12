@@ -49,3 +49,9 @@ python3 demos/run_innovation_demo.py
 ## Running MVP 2.0 Demo
 
 python3 demos/mvp2_demo.py
+
+## CLI
+
+python3 -m src.innovation_os.cli.main status
+
+python3 -m src.innovation_os.ingest <folder>
