@@ -43,7 +43,9 @@ def test_get_solution():
         "SOLUTION-0002"
     )
 
-    assert solution is not None
+    assert solution.solution_id == "SOLUTION-0002"
+    assert solution.problem_id == "PROBLEM-0002"
+    assert solution.title == "Test solution"
 
 
 def test_update_solution_status():

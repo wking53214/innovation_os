@@ -28,11 +28,24 @@ def test_intelligence_flow():
     hypothesis = HypothesisEngine().process(evidence)
     inference = InferenceEngine().process(hypothesis)
 
-    assert observation
-    assert perception
-    assert context
-    assert knowledge
-    assert evidence
+    assert observation.source == "test"
+    assert observation.subject == "event"
+    assert observation.data == {"value": 1}
+
+    assert perception["subject"] == "event"
+    assert perception["features"] == {"value": 1}
+
+    assert context["context"] is perception
+
+    assert knowledge["knowledge"] is context
+
+    assert evidence.content is knowledge
+    assert evidence.source == "knowledge_engine"
+
     assert confidence.validate()
-    assert hypothesis
-    assert inference
+
+    assert hypothesis.supporting_data["evidence"] is evidence
+
+    assert inference.conclusion == hypothesis.statement
+    assert inference.confidence == hypothesis.confidence
+    assert inference.reasoning["hypothesis"] is hypothesis

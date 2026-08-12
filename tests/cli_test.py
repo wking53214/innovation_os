@@ -3,6 +3,10 @@ from innovation_os.cli.main import (
 )
 
 
-def test_cli_import():
+def test_cli_status():
 
-    assert status is not None
+    result = status()
+
+    assert result["healthy"] is True
+    assert result["environment"] == "development"
+    assert result["version"] == "1.0.0"

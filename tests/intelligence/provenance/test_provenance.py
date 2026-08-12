@@ -3,6 +3,7 @@ from innovation_os.intelligence.provenance import (
     EvidenceTracker,
     DecisionTrace,
 )
+from innovation_os.provenance import ProvenanceStatus
 
 
 def test_provenance():
@@ -26,6 +27,14 @@ def test_provenance():
         "reason"
     )
 
-    assert lineage.history()
-    assert evidence.all()
-    assert trace.replay()
+    history = lineage.history()
+    assert history == [
+        {
+            "artifact_id": "artifact",
+            "source": "runtime",
+            "status": ProvenanceStatus.PROVENANCE_UNCERTAIN,
+        }
+    ]
+
+    assert evidence.all() == ["signal"]
+    assert trace.replay() == ["reason"]

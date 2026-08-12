@@ -21,6 +21,9 @@ def test_memory_store():
         artifact
     )
 
-    assert memory.recall(
+    recalled = memory.recall(
         artifact.artifact_id
     )
+
+    assert recalled is artifact
+    assert memory.recall("unknown-id") is None

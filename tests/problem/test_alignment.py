@@ -51,4 +51,6 @@ def test_alignment_lookup():
         "IDEA-0003"
     )
 
-    assert result is not None
+    assert result.idea_id == "IDEA-0003"
+    assert result.problem_id == "PROBLEM-0002"
+    assert result.score == 80

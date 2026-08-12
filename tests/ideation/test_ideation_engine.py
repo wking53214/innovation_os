@@ -44,7 +44,9 @@ def test_get_idea():
         "IDEA-0002"
     )
 
-    assert idea is not None
+    assert idea.idea_id == "IDEA-0002"
+    assert idea.problem_id == "PROBLEM-0002"
+    assert idea.title == "Test idea"
 
 
 def test_find_by_problem():

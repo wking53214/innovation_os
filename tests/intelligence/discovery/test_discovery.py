@@ -37,4 +37,8 @@ def test_anomaly():
         expected=5
     )
 
-    assert result
+    assert result == {"value": 10, "expected": 5}
+    assert detector.anomalies == [result]
+
+    assert detector.detect(5, expected=5) is None
+    assert detector.anomalies == [result]

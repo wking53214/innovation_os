@@ -33,10 +33,13 @@ def test_entity_resolution():
         "technology"
     )
 
-    assert resolver.match(
-        a,
-        b
+    c = KnowledgeEntity(
+        "Robotics",
+        "technology"
     )
+
+    assert resolver.match(a, b) is True
+    assert resolver.match(a, c) is False
 
 
 

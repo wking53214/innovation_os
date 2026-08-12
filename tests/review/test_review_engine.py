@@ -45,4 +45,6 @@ def test_get_review():
         "REVIEW-0002"
     )
 
-    assert review is not None
+    assert review.review_id == "REVIEW-0002"
+    assert review.target_id == "IDEA-0002"
+    assert review.score == 70

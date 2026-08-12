@@ -12,4 +12,11 @@ def test_health():
         True
     )
 
-    assert monitor.healthy()
+    assert monitor.healthy() is True
+
+    monitor.register(
+        "storage",
+        False
+    )
+
+    assert monitor.healthy() is False

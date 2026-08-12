@@ -9,14 +9,16 @@ def test_capability_registry():
 
     registry = CapabilityRegistry()
 
+    capability = lambda x: x
+
     registry.register(
         "echo",
-        lambda x: x
+        capability
     )
 
-    assert registry.get(
-        "echo"
-    )
+    assert registry.get("echo") is capability
+    assert registry.get("unknown") is None
+    assert registry.list() == ["echo"]
 
 
 def test_agent_execution():

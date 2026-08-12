@@ -1,6 +1,7 @@
 from innovation_os.intelligence.bootstrap import (
     bootstrap_intelligence,
 )
+from innovation_os.intelligence.system import IntelligenceSystem
 
 
 
@@ -18,14 +19,22 @@ class DummyPipeline:
 
 def test_bootstrap():
 
+    pipeline = DummyPipeline()
+
     kernel = bootstrap_intelligence(
-        DummyPipeline()
+        pipeline
     )
 
-
-    assert (
-        kernel.resolve(
-            "intelligence_system"
-        )
-        is not None
+    system = kernel.resolve(
+        "intelligence_system"
     )
+
+    assert isinstance(system, IntelligenceSystem)
+    assert system.runtime.pipeline is pipeline
+
+    result = system.execute(
+        "payload",
+        {"key": "value"},
+    )
+
+    assert result == "payload"

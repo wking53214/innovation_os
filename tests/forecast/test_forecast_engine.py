@@ -42,7 +42,9 @@ def test_get_scenario():
         "SCENARIO-0002"
     )
 
-    assert result is not None
+    assert result.scenario_id == "SCENARIO-0002"
+    assert result.solution_id == "SOLUTION-0002"
+    assert result.probability == 0.25
 
 
 def test_find_by_solution():

@@ -42,7 +42,9 @@ def test_get_artifact():
         "CODE-0002"
     )
 
-    assert artifact is not None
+    assert artifact.artifact_id == "CODE-0002"
+    assert artifact.file_name == "engine.py"
+    assert artifact.idea_id == "IDEA-0002"
 
 
 def test_find_by_idea():

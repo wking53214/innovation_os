@@ -38,7 +38,9 @@ def test_get_pattern():
         "NATURE-0002"
     )
 
-    assert result is not None
+    assert result.pattern_id == "NATURE-0002"
+    assert result.organism == "Termite colony"
+    assert result.transferable_principle == "Self-regulation"
 
 
 def test_find_by_principle():

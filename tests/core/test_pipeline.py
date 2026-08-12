@@ -44,4 +44,8 @@ def test_pipeline_lookup():
         "PROBLEM-0002"
     )
 
-    assert result is not None
+    assert result.problem_id == "PROBLEM-0002"
+    assert result.solution_id == "SOLUTION-0002"
+    assert result.aligned is True
+    assert result.reviewed is False
+    assert result.approved is False

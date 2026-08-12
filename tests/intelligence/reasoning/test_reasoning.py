@@ -10,8 +10,9 @@ def test_reasoning():
     chain = ReasoningChain()
 
     chain.add("observe")
+    chain.add("infer")
 
-    assert chain.execute()
+    assert chain.execute() == ["observe", "infer"]
 
 
 def test_causal():
@@ -23,9 +24,8 @@ def test_causal():
         "decision"
     )
 
-    assert engine.causes(
-        "decision"
-    )
+    assert engine.causes("decision") == ["signal"]
+    assert engine.causes("unrelated") == []
 
 
 def test_explanation():
@@ -45,4 +45,5 @@ def test_explanation():
         "B"
     )
 
-    assert graph.edges
+    assert graph.nodes == {"A": {}, "B": {}}
+    assert graph.edges == [("A", "B")]

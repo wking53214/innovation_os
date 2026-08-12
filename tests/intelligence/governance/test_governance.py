@@ -38,6 +38,10 @@ def test_access_control():
         "normal"
     )
 
+    assert not user.can_execute(
+        "restricted"
+    )
+
     assert admin.can_execute(
         "restricted"
     )
