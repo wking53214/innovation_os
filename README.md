@@ -44,11 +44,11 @@ pytest
 
 ## Running Demo
 
-python3 demos/run_innovation_demo.py
+python3 -m demos.run_innovation_demo
 
 ## Running MVP 2.0 Demo
 
-python3 demos/mvp2_demo.py
+python3 -m demos.mvp2_demo
 
 ## CLI
 
